@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "extends": ["universe/native", "universe/node"],
+  "plugins": ["unused-imports", "react-native"],
+  "rules": {
+    "import/no-cycle": "error",
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal", "object"],
+        "pathGroups": [
+          {
+            "group": "object",
+            "pattern": "*.@(jpg|png|svg)",
+            "patternOptions": { "matchBase": true }
+          },
+          {
+            "group": "internal",
+            "pattern": "@components/**"
+          },
+          {
+            "group": "internal",
+            "pattern": "@screens/**"
+          },
+          {
+            "group": "internal",
+            "pattern": "@navigation/**"
+          },
+          {
+            "group": "internal",
+            "pattern": "@constants/**"
+          },
+          {
+            "group": "internal",
+            "pattern": "@assets/**"
+          },
+          {
+            "group": "internal",
+            "pattern": "@hooks/**"
+          },
+          {
+            "group": "internal",
+            "pattern": "@libs/**"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "no-console": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "react/jsx-key": ["error", { "checkFragmentShorthand": true }],
+    "react-native/no-unused-styles": 2
+  }
+}
