@@ -1,7 +1,5 @@
 A Bike Sharing app made in Expo (iOS, Android), React Native. 🚴🚴🏾‍♀️🚴🏽‍♂️
 
-The main purpose of this app is to simplify my transit in Rouen, my city.
-
 You can reuse this project by plugin any [GBFS](https://github.com/NABSA/gbfs) API. eg: [list of GBFS API](https://github.com/NABSA/gbfs/blob/master/systems.csv)
 
 <p float="left">
