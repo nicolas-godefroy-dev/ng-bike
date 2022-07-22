@@ -10,6 +10,14 @@ npm-debug.*
 *.orig.*
 .env
 
+# https://yarnpkg.com/getting-started/qa/#which-files-should-be-gitignored
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Expo build artefacts
 index.js 
 ios
