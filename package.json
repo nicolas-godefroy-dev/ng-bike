@@ -13,8 +13,10 @@
     "eject": "expo eject",
     "test": "jest",
     "typecheck": "tsc",
+    "lint": "eslint .",
     "lint-staged": "lint-staged --allow-empty",
     "prepare": "husky install",
+    "dependenciescheck": "yarn dedupe --check",
     "postinstall": "npx typesync"
   },
   "jest": {
@@ -97,6 +99,9 @@
     "@types/react-dom": "17.0.2",
     "@types/react-native": "0.69.1",
     "shell-quote": ">=1.7.3"
+  },
+  "engines": {
+    "node": ">=16.15.0"
   },
   "packageManager": "yarn@3.2.2"
 }
