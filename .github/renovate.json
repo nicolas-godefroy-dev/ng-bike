@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:base", ":dependencyDashboard"],
   "schedule": "every weekend",
   "timezone": "Europe/Paris",
   "labels": ["dependencies"],
@@ -8,6 +8,9 @@
     "enabled": true
   },
   "postUpdateOptions": ["yarnDedupe"],
+  "major": {
+    "dependencyDashboardApproval": true
+  },
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
@@ -21,7 +24,7 @@
     },
     {
       "depTypeList": ["dependencies"],
-      "updateTypes": ["minor"],
+      "updateTypes": ["minor", "patch"],
       "automerge": false,
       "stabilityDays": 3
     },
