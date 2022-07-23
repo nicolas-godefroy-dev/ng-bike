@@ -1520,7 +1520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^17.0.3":
+"@commitlint/config-conventional@npm:17.0.3":
   version: 17.0.3
   resolution: "@commitlint/config-conventional@npm:17.0.3"
   dependencies:
@@ -6248,7 +6248,7 @@ __metadata:
   resolution: "expo-bike-sharing@workspace:."
   dependencies:
     "@babel/core": 7.18.9
-    "@commitlint/config-conventional": ^17.0.3
+    "@commitlint/config-conventional": 17.0.3
     "@expo-google-fonts/open-sans": 0.2.2
     "@gorhom/bottom-sheet": 4.4.2
     "@react-native-community/netinfo": 8.2.0
