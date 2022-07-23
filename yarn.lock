@@ -3188,12 +3188,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.2":
-  version: 17.0.2
-  resolution: "@types/react-dom@npm:17.0.2"
+"@types/react-dom@npm:17.0.17":
+  version: 17.0.17
+  resolution: "@types/react-dom@npm:17.0.17"
   dependencies:
-    "@types/react": "*"
-  checksum: 1725928a1c3a0026044e6401e6b53729e1a88849034fc67138d7784ec44a5132fe2e9056a19b741ccb462ff0ec0d8c2c01ef316bda19be0e31f2ead9346f600b
+    "@types/react": ^17
+  checksum: 23caf98aa03e968811560f92a2c8f451694253ebe16b670929b24eaf0e7fa62ba549abe9db0ac028a9d8a9086acd6ab9c6c773f163fa21224845edbc00ba6232
   languageName: node
   linkType: hard
 
@@ -6220,7 +6220,7 @@ __metadata:
     "@types/lodash": 4.14.182
     "@types/prettier": 2.6.3
     "@types/react": 17.0.47
-    "@types/react-dom": 17.0.2
+    "@types/react-dom": 17.0.17
     "@types/react-native": 0.69.1
     "@types/react-test-renderer": 17.0.2
     "@typescript-eslint/eslint-plugin": 5.30.7
