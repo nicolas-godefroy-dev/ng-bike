@@ -15,8 +15,8 @@
     "lint": "eslint .",
     "lint-staged": "lint-staged --allow-empty",
     "prepare": "husky install",
-    "dependenciescheck": "yarn dedupe --check",
-    "postinstall": "npx typesync"
+    "postinstall": "npx typesync",
+    "check-dependencies": "yarn dedupe --check"
   },
   "jest": {
     "preset": "jest-expo"

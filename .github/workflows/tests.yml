@@ -20,7 +20,7 @@ jobs:
           key: yarn-cache-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
           restore-keys: yarn-cache-
       - run: yarn install --immutable
-      - run: yarn dependenciescheck
+      - run: yarn check-dependencies
       - run: yarn typecheck
       - run: yarn test
       - run: yarn lint
