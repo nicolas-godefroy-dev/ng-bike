@@ -14,12 +14,6 @@
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
-    },
-    {
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["minor"],
       "automerge": true
     },
     {
@@ -29,7 +23,7 @@
       "stabilityDays": 3
     },
     {
-      "depTypeList": ["devDependencies", "dependencies"],
+      "depTypeList": ["dependencies"],
       "updateTypes": ["major"],
       "automerge": false,
       "stabilityDays": 7
