@@ -1,0 +1,31 @@
+name: "Quality Assurance 🔍"
+
+on:
+  push:
+    branches:
+      - main
+      - renovate/**
+  pull_request:
+
+jobs:
+  build:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.x
+      - name: Setup Yarn
+        uses: actions/cache@v2.1.7
+        with:
+          path: node_modules
+          key: yarn-cache-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+          restore-keys: yarn-cache-
+      - run: yarn install --immutable
+      - run: yarn dependenciescheck
+      - run: yarn typecheck
+      - run: yarn test --ci
+      - run: yarn lint
