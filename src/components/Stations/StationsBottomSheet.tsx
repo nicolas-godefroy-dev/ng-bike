@@ -7,11 +7,11 @@ import { useSafeAreaInsets } from "react-native-safe-area-context"
 import WeatherIndicator, {
   WEATHER_INDICATOR_HEIGHT,
 } from "@components/Weather/WeatherIndicator"
-import BorderRadius from "@constants/BorderRadius"
-import Spacing from "@constants/Spacing"
 import useTheme from "@hooks/useTheme"
 import { Coordinate } from "@libs/distance"
-import { Station } from "@libs/gbfsApi"
+import { Station } from "@libs/gbfsClient"
+import borderRadius from "@theme/borderRadius"
+import spacing from "@theme/spacing"
 
 import StationListError from "./StationListError"
 import StationListItem, { STATION_LIST_ITEM_HEIGHT } from "./StationListItem"
@@ -38,7 +38,7 @@ const StationsBottomSheet = memo(
     const insets = useSafeAreaInsets()
     const animatedPosition = useSharedValue(0)
     const animatedStyle = useAnimatedStyle(() => ({
-      top: animatedPosition.value - Spacing["3"] - WEATHER_INDICATOR_HEIGHT,
+      top: animatedPosition.value - spacing["3"] - WEATHER_INDICATOR_HEIGHT,
     }))
     const theme = useTheme()
     const bottomSheetRef = useRef<BottomSheet>(null)
@@ -120,10 +120,10 @@ const StationsBottomSheet = memo(
 
 const styles = StyleSheet.create({
   background: {
-    borderRadius: BorderRadius["md"],
+    borderRadius: borderRadius["md"],
   },
   handle: {
-    height: Spacing[4],
+    height: spacing[4],
   },
   handleIndicator: {
     width: 36,
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   weatherIndicator: {
     position: "absolute",
-    right: Spacing["5"],
+    right: spacing["5"],
   },
 })
 

@@ -1,10 +1,10 @@
 import React, { memo } from "react"
 import { StyleSheet, View } from "react-native"
 
-import BorderRadius from "@constants/BorderRadius"
-import Shadows from "@constants/Shadows"
-import Spacing from "@constants/Spacing"
 import useTheme from "@hooks/useTheme"
+import borderRadius from "@theme/borderRadius"
+import shadows from "@theme/shadows"
+import spacing from "@theme/spacing"
 
 import StationCapacity, { StationCapacityProps } from "./StationCapacity"
 
@@ -24,11 +24,11 @@ const StationCapacityMarker = memo(
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: BorderRadius["3xl"],
+    borderRadius: borderRadius["3xl"],
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: Spacing[2],
-    ...Shadows["md"],
+    paddingHorizontal: spacing[2],
+    ...shadows["md"],
   },
 })
 

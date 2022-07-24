@@ -1,8 +1,8 @@
-import Colors from "@constants/Colors"
+import colors from "@theme/colors"
 
 import useColorScheme from "./useColorScheme"
 
-export type Theme = typeof Colors["light"] | typeof Colors["dark"]
+export type Theme = typeof colors["light"] | typeof colors["dark"]
 
 /**
  * Get the colors of the current color scheme
@@ -15,7 +15,7 @@ export type Theme = typeof Colors["light"] | typeof Colors["dark"]
 const useTheme = (): Theme => {
   const colorScheme = useColorScheme()
 
-  return Colors[colorScheme]
+  return colors[colorScheme]
 }
 
 export default useTheme

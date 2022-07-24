@@ -2,9 +2,9 @@ import React from "react"
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
 
 import Skeleton from "@components/Skeleton"
-import Spacing from "@constants/Spacing"
-import Typography from "@constants/Typography"
 import useTheme, { Theme } from "@hooks/useTheme"
+import spacing from "@theme/spacing"
+import typography from "@theme/typography"
 
 import BikeIllustration from "@assets/images/bike.svg"
 import DockIllustration from "@assets/images/dock.svg"
@@ -37,7 +37,7 @@ const StationCapacity = ({ bikes, docks }: StationCapacityProps) => {
       <Text
         style={[
           styles.textBase,
-          { color: theme.text.base, marginRight: Spacing[2] },
+          { color: theme.text.base, marginRight: spacing[2] },
         ]}>
         {bikes}
       </Text>
@@ -63,19 +63,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical: Spacing[2],
+    paddingVertical: spacing[2],
   },
   textBase: {
-    ...Typography.callout,
-    marginLeft: Spacing[1],
+    ...typography.callout,
+    marginLeft: spacing[1],
   },
   docksSkeleton: {
-    marginLeft: Spacing[2],
+    marginLeft: spacing[2],
     height: 21,
     width: 36,
   },
   bikesSkeleton: {
-    marginLeft: Spacing[1],
+    marginLeft: spacing[1],
     height: 21,
     width: 36,
   },

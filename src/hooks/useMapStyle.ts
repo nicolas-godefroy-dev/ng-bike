@@ -1,7 +1,7 @@
 import { Platform } from "react-native"
-import { MapStyleElement } from "react-native-maps"
+import type { MapStyleElement } from "react-native-maps"
 
-import MapStyle from "@constants/Map"
+import map from "@theme/map"
 
 import useThemeSelect from "./useThemeSelect"
 
@@ -14,14 +14,14 @@ const useMapStyle = (): MapStyleElement[] | undefined => {
   const style = useThemeSelect<MapStyleElement[] | undefined>({
     light: {
       mapStyle: Platform.select({
-        ios: MapStyle.planLight,
-        android: MapStyle.googleMapLight,
+        ios: map.light.applePlans,
+        android: map.light.googleMap,
       }),
     },
     dark: {
       mapStyle: Platform.select({
-        ios: MapStyle.planDark,
-        android: MapStyle.googleMapDark,
+        ios: map.dark.applePlans,
+        android: map.dark.googleMap,
       }),
     },
   })

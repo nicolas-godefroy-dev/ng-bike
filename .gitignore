@@ -19,7 +19,6 @@ npm-debug.*
 !.yarn/versions
 
 # Expo build artefacts
-index.js 
 ios
 android
 web-build

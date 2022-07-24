@@ -1,4 +1,6 @@
-import useColorScheme, { ColorScheme } from "./useColorScheme"
+import { ColorScheme } from "@theme/types"
+
+import useColorScheme from "./useColorScheme"
 
 export type StyleSheetWithColorScheme<T = any> = Record<
   ColorScheme,

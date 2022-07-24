@@ -1,7 +1,7 @@
 import create from "zustand"
 import { devtools } from "zustand/middleware"
 
-import { ROUEN_REGION } from "@constants/Map"
+import { ROUEN_REGION } from "@constants/map"
 import { Coordinate } from "@libs/distance"
 
 export type AppState = {
@@ -26,4 +26,4 @@ const useStore = create<AppState, [["zustand/devtools", never]]>(
   })),
 )
 
-export { useStore }
+export default useStore

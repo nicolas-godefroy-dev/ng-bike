@@ -4,13 +4,13 @@ import Animated from "react-native-reanimated"
 import { SvgProps } from "react-native-svg"
 import { useQuery } from "react-query"
 
-import BorderRadius from "@constants/BorderRadius"
-import Shadows from "@constants/Shadows"
-import Spacing from "@constants/Spacing"
-import Typography from "@constants/Typography"
 import useTheme from "@hooks/useTheme"
 import { Coordinate } from "@libs/distance"
-import { getWeather, Weather } from "@libs/weatherApi"
+import { getWeather, Weather } from "@libs/weatherClient"
+import borderRadius from "@theme/borderRadius"
+import shadows from "@theme/shadows"
+import spacing from "@theme/spacing"
+import typography from "@theme/typography"
 
 import CloudDrizzleIcon from "@assets/icons/cloud-drizzle.svg"
 import CloudLightningIcon from "@assets/icons/cloud-lightning.svg"
@@ -81,17 +81,17 @@ const WeatherIndicator = ({
 const styles = StyleSheet.create({
   container: {
     height: WEATHER_INDICATOR_HEIGHT,
-    borderRadius: BorderRadius["md"],
+    borderRadius: borderRadius["md"],
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: Spacing["2"],
-    paddingVertical: Spacing["1.5"],
-    ...Shadows["md"],
+    paddingHorizontal: spacing["2"],
+    paddingVertical: spacing["1.5"],
+    ...shadows["md"],
   },
   text: {
-    paddingLeft: Spacing["1"],
-    ...Typography["body"],
+    paddingLeft: spacing["1"],
+    ...typography["body"],
   },
 })
 

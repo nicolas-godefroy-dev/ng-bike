@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native"
 
-const Shadows = StyleSheet.create({
+const shadows = StyleSheet.create({
   sm: {
     shadowOffset: { width: 1, height: 1 },
     shadowColor: `#000`,
@@ -52,4 +52,4 @@ const Shadows = StyleSheet.create({
   },
 })
 
-export default Shadows
+export default shadows

@@ -9,7 +9,7 @@ import { ColorSchemeName } from "react-native"
 
 import MapScreen from "@screens/MapScreen"
 
-import LinkingConfiguration from "./LinkingConfiguration"
+import linking from "./linking"
 import { RootStackParamList } from "./types"
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -28,7 +28,7 @@ const RootNavigator = () => (
 
 const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => (
   <NavigationContainer
-    linking={LinkingConfiguration}
+    linking={linking}
     theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
     <RootNavigator />
   </NavigationContainer>

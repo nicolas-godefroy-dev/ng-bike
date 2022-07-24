@@ -1,12 +1,6 @@
 import { Dimensions } from "react-native"
 
-const width = Dimensions.get("window").width
-const height = Dimensions.get("window").height
+const WINDOW_WIDTH = Dimensions.get("window").width
+const WINDOW_HEIGHT = Dimensions.get("window").height
 
-const Layout = {
-  window: {
-    width,
-    height,
-  },
-}
-export default Layout
+export { WINDOW_WIDTH, WINDOW_HEIGHT }

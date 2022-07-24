@@ -1,4 +1,4 @@
-const Base = {
+const base = {
   base: {
     black: "#000",
     white: "#fff",
@@ -34,40 +34,40 @@ const Base = {
   },
 }
 
-const Theme = {
+const theme = {
   light: {
     surface: {
-      base: Base.base["white"],
-      50: Base.neutral["50"],
-      100: Base.neutral["100"],
-      200: Base.neutral["200"],
-      300: Base.neutral["300"],
+      base: base.base["white"],
+      50: base.neutral["50"],
+      100: base.neutral["100"],
+      200: base.neutral["200"],
+      300: base.neutral["300"],
     },
     text: {
-      base: Base.neutral["800"],
-      danger: Base.danger["900"],
-      success: Base.primary["500"],
+      base: base.neutral["800"],
+      danger: base.danger["900"],
+      success: base.primary["500"],
     },
   },
   dark: {
     surface: {
-      base: Base.neutral["800"],
-      50: Base.neutral["750"],
-      100: Base.neutral["700"],
-      200: Base.neutral["600"],
-      300: Base.neutral["500"],
+      base: base.neutral["800"],
+      50: base.neutral["750"],
+      100: base.neutral["700"],
+      200: base.neutral["600"],
+      300: base.neutral["500"],
     },
     text: {
-      base: Base.neutral["50"],
-      danger: Base.danger["300"],
-      success: Base.primary["50"],
+      base: base.neutral["50"],
+      danger: base.danger["300"],
+      success: base.primary["50"],
     },
   },
 }
 
-const Colors = {
-  ...Base,
-  ...Theme,
+const colors = {
+  ...base,
+  ...theme,
 }
 
-export default Colors
+export default colors

@@ -2,7 +2,7 @@
  * Based on tailwind values
  * @see https://tailwindcss.com/docs/height
  */
-const Spacing = {
+const spacing = {
   px: 1,
   "0.5": 2,
   "1": 4,
@@ -56,4 +56,4 @@ const Spacing = {
   full: "100%",
 }
 
-export default Spacing
+export default spacing

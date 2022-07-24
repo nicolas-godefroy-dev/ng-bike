@@ -12,7 +12,7 @@
       "@assets/*": ["src/assets/*"],
       "@hooks/*": ["src/hooks/*"],
       "@libs/*": ["src/libs/*"],
-      "@store": ["src/store.ts"]
+      "@theme/*": ["src/theme/*"]
     }
   }
 }

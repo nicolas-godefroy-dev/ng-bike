@@ -1,9 +1,9 @@
 import React from "react"
 import { StyleProp, StyleSheet, View, ViewStyle } from "react-native"
 
-import BorderRadius from "@constants/BorderRadius"
-import Shadows from "@constants/Shadows"
 import useTheme from "@hooks/useTheme"
+import borderRadius from "@theme/borderRadius"
+import shadows from "@theme/shadows"
 
 export type SkeletonProps = {
   style?: StyleProp<ViewStyle>
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   container: {
     height: 12,
     width: 12,
-    borderRadius: BorderRadius["base"],
-    ...Shadows["none"],
+    borderRadius: borderRadius["base"],
+    ...shadows["none"],
   },
 })
 

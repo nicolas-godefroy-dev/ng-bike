@@ -10,11 +10,11 @@ import {
 } from "react-native"
 
 import Skeleton from "@components/Skeleton"
-import BorderRadius from "@constants/BorderRadius"
-import Spacing from "@constants/Spacing"
-import Typography from "@constants/Typography"
 import useTheme from "@hooks/useTheme"
-import { Station } from "@libs/gbfsApi"
+import { Station } from "@libs/gbfsClient"
+import borderRadius from "@theme/borderRadius"
+import spacing from "@theme/spacing"
+import typography from "@theme/typography"
 
 import StationCapacity, { StationCapacitySkeleton } from "./StationCapacity"
 
@@ -73,30 +73,30 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",
-    paddingHorizontal: Spacing[4],
-    paddingVertical: Spacing[2.5],
+    paddingHorizontal: spacing[4],
+    paddingVertical: spacing[2.5],
   },
   row: {
     alignItems: "center",
     flexDirection: "row",
     flex: 1,
-    paddingRight: Spacing[12],
+    paddingRight: spacing[12],
   },
   id: {
-    ...Typography.title1,
+    ...typography.title1,
   },
   idSkeleton: {
     height: 28,
     width: 28,
-    borderRadius: BorderRadius["md"],
+    borderRadius: borderRadius["md"],
   },
   name: {
-    ...Typography.footnote,
-    marginLeft: Spacing[2],
+    ...typography.footnote,
+    marginLeft: spacing[2],
     textTransform: "capitalize",
   },
   nameSkeleton: {
-    marginLeft: Spacing[2],
+    marginLeft: spacing[2],
     height: 13,
     width: "45%",
   },

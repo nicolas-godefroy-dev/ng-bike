@@ -44,7 +44,7 @@
           },
           {
             "group": "internal",
-            "pattern": "@store"
+            "pattern": "@theme/**"
           }
         ],
         "pathGroupsExcludedImportTypes": [],

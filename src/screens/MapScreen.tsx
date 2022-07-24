@@ -15,14 +15,14 @@ import { useQuery } from "react-query"
 import MyPositionButton from "@components/Map/MyPositionButton"
 import StationCapacityMarker from "@components/Stations/StationCapacityMarker"
 import StationsBottomSheet from "@components/Stations/StationsBottomSheet"
-import Layout from "@constants/Layout"
-import { ROUEN_REGION } from "@constants/Map"
-import Spacing from "@constants/Spacing"
+import { WINDOW_HEIGHT, WINDOW_WIDTH } from "@constants/layout"
+import { ROUEN_REGION } from "@constants/map"
 import useMapStyle from "@hooks/useMapStyle"
+import useStore from "@hooks/useStore"
 import { distance } from "@libs/distance"
-import { getStations, sortStationsByDistance, Station } from "@libs/gbfsApi"
+import { getStations, sortStationsByDistance, Station } from "@libs/gbfsClient"
 import { RootStackScreenProps } from "@navigation/types"
-import { useStore } from "@store"
+import spacing from "@theme/spacing"
 
 const MapScreen = (_props: RootStackScreenProps<"Map">) => {
   const mapStyle = useMapStyle()
@@ -60,10 +60,10 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
   const mapPadding: EdgePadding = useMemo(() => {
     const platformGap = Platform.OS === "android" ? 6 : 0
     const bottomSheetHeight =
-      Layout.window.height * 0.25 - insets.bottom - Spacing["8"] + platformGap
+      WINDOW_HEIGHT * 0.25 - insets.bottom - spacing["8"] + platformGap
 
     return {
-      top: insets.top + Spacing["5"],
+      top: insets.top + spacing["5"],
       right: insets.right,
       bottom: bottomSheetHeight,
       left: insets.left,
@@ -147,6 +147,16 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
 
   return (
     <>
+      <BlurView
+        intensity={26}
+        style={[
+          styles.blurView,
+          {
+            height: insets.top,
+            zIndex: 10,
+          },
+        ]}
+      />
       <MapView
         ref={mapRef}
         onUserLocationChange={onUserLocationChange}
@@ -177,7 +187,7 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
       </MapView>
       <MyPositionButton
         active={isFollowingUser}
-        style={[styles.myPositionButton, { top: insets.top + Spacing[5] }]}
+        style={[styles.myPositionButton, { top: insets.top + spacing[5] }]}
         onPress={handlePressMyLocation}
       />
       <StationsBottomSheet
@@ -187,15 +197,6 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
         isTooFar={isTooFar}
         userLocation={userLocation}
         onPressStation={onPressStation}
-      />
-      <BlurView
-        intensity={26}
-        style={[
-          styles.blurView,
-          {
-            height: insets.top,
-          },
-        ]}
       />
     </>
   )
@@ -210,11 +211,11 @@ const styles = StyleSheet.create({
   },
   myPositionButton: {
     position: "absolute",
-    right: Spacing[5],
+    right: spacing[5],
   },
   map: {
-    width: Layout.window.width,
-    height: Layout.window.height,
+    width: WINDOW_WIDTH,
+    height: WINDOW_HEIGHT,
   },
 })
 
