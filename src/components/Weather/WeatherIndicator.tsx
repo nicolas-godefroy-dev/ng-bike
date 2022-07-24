@@ -4,8 +4,8 @@ import Animated from "react-native-reanimated"
 import { SvgProps } from "react-native-svg"
 import { useQuery } from "react-query"
 
+import useStore from "@hooks/useStore"
 import useTheme from "@hooks/useTheme"
-import { Coordinate } from "@libs/distance"
 import { getWeather, Weather } from "@libs/weatherClient"
 import borderRadius from "@theme/borderRadius"
 import spacing from "@theme/spacing"
@@ -20,7 +20,7 @@ import Sun from "@assets/icons/sun.svg"
 
 export const WEATHER_INDICATOR_HEIGHT = 34
 
-export type WeatherIndicatorProps = Coordinate & {
+export type WeatherIndicatorProps = {
   style?: StyleProp<ViewStyle>
 }
 
@@ -41,15 +41,13 @@ const getWeatherIcon = (weather: Weather["weather"]): React.FC<SvgProps> => {
   }
 }
 
-const WeatherIndicator = ({
-  latitude,
-  longitude,
-  style,
-}: WeatherIndicatorProps) => {
+const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
+  const userLocation = useStore(state => state.userLocation)
+
   const { colors, shadows } = useTheme()
   const { isError, isLoading, data } = useQuery(
     "weather",
-    () => getWeather({ latitude, longitude }),
+    () => getWeather(userLocation),
     {
       refetchInterval: 1000 * 60 * 30, // Refetch at 30 minutes interval
     },

@@ -8,7 +8,6 @@ import WeatherIndicator, {
   WEATHER_INDICATOR_HEIGHT,
 } from "@components/Weather/WeatherIndicator"
 import useTheme from "@hooks/useTheme"
-import { Coordinate } from "@libs/distance"
 import { Station } from "@libs/gbfsClient"
 import borderRadius from "@theme/borderRadius"
 import spacing from "@theme/spacing"
@@ -22,7 +21,6 @@ export type StationsBottomSheetProps = {
   isLoading?: boolean
   isError?: boolean
   isTooFar?: boolean
-  userLocation: Coordinate
   onPressStation: (station: Station) => void
 }
 
@@ -32,7 +30,6 @@ const StationsBottomSheet = memo(
     isError,
     isTooFar,
     isLoading,
-    userLocation,
     onPressStation,
   }: StationsBottomSheetProps) => {
     const insets = useSafeAreaInsets()
@@ -42,8 +39,9 @@ const StationsBottomSheet = memo(
     }))
     const { colors } = useTheme()
     const bottomSheetRef = useRef<BottomSheet>(null)
+    const data = isTooFar || isTooFar ? [] : stations
     const snapPoints = useMemo(() => {
-      if (isError) return ["25%"]
+      if (isError || isTooFar) return ["25%"]
       return ["25%", "64%"]
     }, [])
 
@@ -77,19 +75,16 @@ const StationsBottomSheet = memo(
       useCallback(() => {
         if (isLoading) {
           return <StationListLoading />
-        } else if (isError) {
+        } else if (isError || isTooFar) {
           return <StationListError error={isTooFar ? "distance" : "network"} />
         }
 
         return null
-      }, [isError, isLoading, isTooFar, stations.length])
+      }, [isError, isLoading, isTooFar])
 
     return (
       <>
-        <WeatherIndicator
-          {...userLocation}
-          style={[styles.weatherIndicator, animatedStyle]}
-        />
+        <WeatherIndicator style={[styles.weatherIndicator, animatedStyle]} />
         <BottomSheet
           ref={bottomSheetRef}
           animatedPosition={animatedPosition}
@@ -105,7 +100,7 @@ const StationsBottomSheet = memo(
           ]}
           snapPoints={snapPoints}>
           <BottomSheetFlatList
-            data={stations}
+            data={data}
             ListEmptyComponent={ListEmptyComponent}
             keyExtractor={keyExtractor}
             renderItem={renderItem}

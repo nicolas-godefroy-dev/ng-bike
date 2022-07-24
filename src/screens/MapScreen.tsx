@@ -37,8 +37,10 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
   } = useStore()
 
   const isTooFar = useMemo(() => {
-    const isToFarOfRouen = distance(userLocation, ROUEN_REGION) > 10
-    return isToFarOfRouen
+    const DISTANCE_MAX = 30000 // 30 KM
+    const isToFar = distance(userLocation, ROUEN_REGION) > DISTANCE_MAX
+
+    return isToFar
   }, [userLocation.latitude, userLocation.longitude])
 
   const {
@@ -46,7 +48,7 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     data: stations,
     isLoading,
   } = useQuery("stations", getStations, {
-    refetchInterval: 1000 * 10, // Refetch at 10 seconds interval
+    refetchInterval: 1000 * 60, // Refetch at 10 seconds interval
     enabled: !isTooFar,
   })
 
@@ -195,7 +197,6 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
         isLoading={isLoading}
         isError={isError}
         isTooFar={isTooFar}
-        userLocation={userLocation}
         onPressStation={onPressStation}
       />
     </>
