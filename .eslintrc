@@ -41,6 +41,10 @@
           {
             "group": "internal",
             "pattern": "@libs/**"
+          },
+          {
+            "group": "internal",
+            "pattern": "@store"
           }
         ],
         "pathGroupsExcludedImportTypes": [],
