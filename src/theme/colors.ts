@@ -34,7 +34,7 @@ const base = {
   },
 }
 
-const theme = {
+const colors = {
   light: {
     surface: {
       base: base.base["white"],
@@ -63,11 +63,6 @@ const theme = {
       success: base.primary["50"],
     },
   },
-}
-
-const colors = {
-  ...base,
-  ...theme,
 }
 
 export default colors

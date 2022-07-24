@@ -18,7 +18,7 @@ const StationListError = ({
   style,
   error = "network",
 }: StationListErrorProps) => {
-  const theme = useTheme()
+  const { colors } = useTheme()
   const Icon = useMemo(
     () => (error === "network" ? WifiOffIcon : PinIcon),
     [error],
@@ -28,8 +28,8 @@ const StationListError = ({
 
   return (
     <View style={[styles.container, style]}>
-      <Icon width={spacing[12]} height={spacing[12]} color={theme.text.base} />
-      <Text style={[styles.text, { color: theme.text.base }]}>{text}</Text>
+      <Icon width={spacing[12]} height={spacing[12]} color={colors.text.base} />
+      <Text style={[styles.text, { color: colors.text.base }]}>{text}</Text>
     </View>
   )
 }

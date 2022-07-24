@@ -17,15 +17,15 @@ import StationCapacityMarker from "@components/Stations/StationCapacityMarker"
 import StationsBottomSheet from "@components/Stations/StationsBottomSheet"
 import { WINDOW_HEIGHT, WINDOW_WIDTH } from "@constants/layout"
 import { ROUEN_REGION } from "@constants/map"
-import useMapStyle from "@hooks/useMapStyle"
 import useStore from "@hooks/useStore"
+import useTheme from "@hooks/useTheme"
 import { distance } from "@libs/distance"
 import { getStations, sortStationsByDistance, Station } from "@libs/gbfsClient"
 import { RootStackScreenProps } from "@navigation/types"
 import spacing from "@theme/spacing"
 
 const MapScreen = (_props: RootStackScreenProps<"Map">) => {
-  const mapStyle = useMapStyle()
+  const { mapStyle } = useTheme()
   const insets = useSafeAreaInsets()
   const mapRef = useRef<MapView>(null)
   const {

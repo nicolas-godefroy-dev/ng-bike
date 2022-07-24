@@ -1,9 +1,8 @@
-import React, { useMemo } from "react"
+import React from "react"
 import { Pressable, StyleProp, StyleSheet, ViewStyle } from "react-native"
 
 import useTheme from "@hooks/useTheme"
 import borderRadius from "@theme/borderRadius"
-import shadows from "@theme/shadows"
 import spacing from "@theme/spacing"
 
 import NavigationFilledIcon from "@assets/icons/navigation-filled.svg"
@@ -20,17 +19,22 @@ const MyPositionButton = ({
   onPress,
   active,
 }: MyPositionButtonProps) => {
-  const theme = useTheme()
-  const Icon = useMemo(
-    () => (active ? NavigationFilledIcon : NavigationIcon),
-    [active],
-  )
+  const { colors, shadows } = useTheme()
+  const Icon = active ? NavigationFilledIcon : NavigationIcon
 
   return (
     <Pressable
-      style={[styles.container, { backgroundColor: theme.surface.base }, style]}
+      style={[
+        styles.container,
+        {
+          backgroundColor: colors.surface.base,
+          borderRadius: borderRadius["md"],
+        },
+        shadows["md"],
+        style,
+      ]}
       onPress={onPress}>
-      <Icon width={spacing[5]} height={spacing[5]} color={theme.text.base} />
+      <Icon width={spacing[5]} height={spacing[5]} color={colors.text.base} />
     </Pressable>
   )
 }
@@ -42,7 +46,6 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius["md"],
     alignItems: "center",
     justifyContent: "center",
-    ...shadows["md"],
   },
 })
 

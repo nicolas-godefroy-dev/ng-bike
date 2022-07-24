@@ -3,18 +3,22 @@ import { StyleProp, StyleSheet, View, ViewStyle } from "react-native"
 
 import useTheme from "@hooks/useTheme"
 import borderRadius from "@theme/borderRadius"
-import shadows from "@theme/shadows"
 
 export type SkeletonProps = {
   style?: StyleProp<ViewStyle>
 }
 
 const Skeleton = ({ style }: SkeletonProps) => {
-  const theme = useTheme()
+  const { colors, shadows } = useTheme()
 
   return (
     <View
-      style={[styles.container, { backgroundColor: theme.surface[100] }, style]}
+      style={[
+        styles.container,
+        { backgroundColor: colors.surface[100] },
+        shadows["none"],
+        style,
+      ]}
     />
   )
 }
@@ -24,7 +28,6 @@ const styles = StyleSheet.create({
     height: 12,
     width: 12,
     borderRadius: borderRadius["base"],
-    ...shadows["none"],
   },
 })
 

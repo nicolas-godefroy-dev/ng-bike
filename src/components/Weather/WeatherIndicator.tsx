@@ -8,7 +8,6 @@ import useTheme from "@hooks/useTheme"
 import { Coordinate } from "@libs/distance"
 import { getWeather, Weather } from "@libs/weatherClient"
 import borderRadius from "@theme/borderRadius"
-import shadows from "@theme/shadows"
 import spacing from "@theme/spacing"
 import typography from "@theme/typography"
 
@@ -47,7 +46,7 @@ const WeatherIndicator = ({
   longitude,
   style,
 }: WeatherIndicatorProps) => {
-  const theme = useTheme()
+  const { colors, shadows } = useTheme()
   const { isError, isLoading, data } = useQuery(
     "weather",
     () => getWeather({ latitude, longitude }),
@@ -67,11 +66,12 @@ const WeatherIndicator = ({
     <Animated.View
       style={[
         styles.container,
-        { backgroundColor: theme.surface.base },
+        { backgroundColor: colors.surface.base },
+        shadows["md"],
         style,
       ]}>
-      <WeatherIcon width={16} height={16} color={theme.text.base} />
-      <Text style={[styles.text, { color: theme.text.base }]}>
+      <WeatherIcon width={16} height={16} color={colors.text.base} />
+      <Text style={[styles.text, { color: colors.text.base }]}>
         {data?.temp.toFixed(0)}°
       </Text>
     </Animated.View>
@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: spacing["2"],
     paddingVertical: spacing["1.5"],
-    ...shadows["md"],
   },
   text: {
     paddingLeft: spacing["1"],

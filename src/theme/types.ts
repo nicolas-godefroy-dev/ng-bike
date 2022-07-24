@@ -1,5 +1,3 @@
-import type { ColorSchemeName } from "react-native"
+export type ColorScheme = "light" | "dark"
 
-export type ColorScheme = NonNullable<ColorSchemeName>
-
-export type MapProvider = "applePlans" | "googleMap"
+export type ThemeRecord<T = any> = Record<ColorScheme, T>

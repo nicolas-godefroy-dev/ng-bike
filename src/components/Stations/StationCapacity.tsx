@@ -18,35 +18,37 @@ export type StationCapacitySkeletonProps = {
   style?: StyleProp<ViewStyle>
 }
 
-const getStatusColor = (capacity: number, theme: Theme) => {
+const getStatusColor = (capacity: number, colors: Theme["colors"]) => {
   const hasLowCapacity = capacity <= 2
 
-  return hasLowCapacity ? theme.text.danger : theme.text.success
+  return hasLowCapacity ? colors.text.danger : colors.text.success
 }
 
 const StationCapacity = ({ bikes, docks }: StationCapacityProps) => {
-  const theme = useTheme()
+  const { colors } = useTheme()
 
   return (
     <View style={styles.container}>
       <BikeIllustration
         width={26}
         height={18}
-        color={getStatusColor(bikes, theme)}
+        color={getStatusColor(bikes, colors)}
       />
       <Text
         style={[
           styles.textBase,
-          { color: theme.text.base, marginRight: spacing[2] },
+          { color: colors.text.base, marginRight: spacing[2] },
         ]}>
         {bikes}
       </Text>
       <DockIllustration
         width={4}
         height={18}
-        color={getStatusColor(docks, theme)}
+        color={getStatusColor(docks, colors)}
       />
-      <Text style={[styles.textBase, { color: theme.text.base }]}>{docks}</Text>
+      <Text style={[styles.textBase, { color: colors.text.base }]}>
+        {docks}
+      </Text>
     </View>
   )
 }

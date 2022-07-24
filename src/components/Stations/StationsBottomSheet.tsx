@@ -40,7 +40,7 @@ const StationsBottomSheet = memo(
     const animatedStyle = useAnimatedStyle(() => ({
       top: animatedPosition.value - spacing["3"] - WEATHER_INDICATOR_HEIGHT,
     }))
-    const theme = useTheme()
+    const { colors } = useTheme()
     const bottomSheetRef = useRef<BottomSheet>(null)
     const snapPoints = useMemo(() => {
       if (isError) return ["25%"]
@@ -97,11 +97,11 @@ const StationsBottomSheet = memo(
           handleStyle={[styles.handle]}
           backgroundStyle={[
             styles.background,
-            { backgroundColor: theme.surface.base },
+            { backgroundColor: colors.surface.base },
           ]}
           handleIndicatorStyle={[
             styles.handleIndicator,
-            { backgroundColor: theme.surface[300] },
+            { backgroundColor: colors.surface[300] },
           ]}
           snapPoints={snapPoints}>
           <BottomSheetFlatList

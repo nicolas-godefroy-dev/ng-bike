@@ -1,18 +1,13 @@
+import { Platform } from "react-native"
 import type { MapStyleElement } from "react-native-maps"
 
-import { ColorScheme, MapProvider } from "./types"
+import { ThemeRecord } from "./types"
 
-const map: Record<
-  ColorScheme,
-  Record<MapProvider, MapStyleElement[] | undefined>
-> = {
-  light: {
-    applePlans: undefined,
-    googleMap: undefined,
-  },
-  dark: {
-    applePlans: undefined,
-    googleMap: [
+const mapStyle: ThemeRecord<MapStyleElement[] | undefined> = {
+  light: undefined,
+  dark: Platform.select({
+    ios: undefined,
+    android: [
       {
         elementType: "geometry",
         stylers: [
@@ -173,7 +168,7 @@ const map: Record<
         ],
       },
     ],
-  },
+  }),
 }
 
-export default map
+export default mapStyle

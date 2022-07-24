@@ -35,16 +35,16 @@ const StationListItem = ({
   name,
   onPress,
 }: StationCapacityMarkerProps) => {
-  const theme = useTheme()
+  const { colors } = useTheme()
 
   return (
     <Pressable style={[styles.container]} onPress={onPress}>
       <View style={styles.row}>
-        <Text style={[styles.id, { color: theme.text.base }]}>
+        <Text style={[styles.id, { color: colors.text.base }]}>
           {station_id}
         </Text>
         <Text
-          style={[styles.name, { color: theme.text.base }]}
+          style={[styles.name, { color: colors.text.base }]}
           numberOfLines={1}>
           {name}
         </Text>
