@@ -4,8 +4,11 @@ on:
   push:
 
 jobs:
-  build:
-    name: Install Dependencies
+  quality-assurance:
+    permissions:
+      checks: write
+      pull-requests: write
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,5 +28,9 @@ jobs:
       - name: Validate all commits
         run: yarn dlx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
       - run: yarn typecheck
-      - run: yarn test --ci
+      - name: Jest coverage report 🧪
+        with:
+          package-manager: yarn
+          test-script: yarn test
+        uses: ArtiomTr/jest-coverage-report-action@v2
       - run: yarn lint
