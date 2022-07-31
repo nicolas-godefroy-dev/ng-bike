@@ -13,24 +13,25 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "postUpdateOptions": ["yarnDedupe"],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true,
+    "schedule": null,
+    "stabilityDays": 0
+  },
+  "postUpdateOptions": ["yarnDedupeHighest"],
   "major": {
     "dependencyDashboardApproval": true
   },
   "packageRules": [
     {
-      "depTypeList": ["devDependencies"],
+      "depTypeList": ["dependencies"],
+      "updateTypes": ["patch"],
       "automerge": true
     },
     {
-      "depTypeList": ["dependencies"],
-      "updateTypes": ["minor", "patch"],
-      "automerge": false,
-      "stabilityDays": 3
-    },
-    {
-      "depTypeList": ["dependencies"],
-      "updateTypes": ["major"],
+      "depTypeList": ["dependencies", "devDependencies"],
+      "updateTypes": ["minor", "major"],
       "automerge": false,
       "stabilityDays": 7
     }
