@@ -6263,7 +6263,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-native: 0.69.3
-    react-native-gesture-handler: 2.2.1
+    react-native-gesture-handler: 2.5.0
     react-native-maps: 0.30.2
     react-native-reanimated: 2.8.0
     react-native-safe-area-context: 4.2.4
@@ -11341,16 +11341,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:2.2.1":
-  version: 2.2.1
-  resolution: "react-native-gesture-handler@npm:2.2.1"
+"react-native-gesture-handler@npm:2.5.0":
+  version: 2.5.0
+  resolution: "react-native-gesture-handler@npm:2.5.0"
   dependencies:
     "@egjs/hammerjs": ^2.0.17
     hoist-non-react-statics: ^3.3.0
     invariant: ^2.2.4
     lodash: ^4.17.21
     prop-types: ^15.7.2
-  checksum: 41cf51551183553a20df044f8fce167c618dd8da6ac50b0501b4df18f58d2c3a6c4678df7e84fb621ece84e92f38fa423bc8f9a2ab6264a31f111d8db45da13a
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: d086f14da7f45c24c675402a4e9dec0a5c32e7279110f1af0c178cae0b6ca40dea99f878120d7034ce9c84f01465f68d0f21dcc9c3869fd527ebd18255b73432
   languageName: node
   linkType: hard
 
