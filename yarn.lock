@@ -2611,12 +2611,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/netinfo@npm:8.2.0":
-  version: 8.2.0
-  resolution: "@react-native-community/netinfo@npm:8.2.0"
+"@react-native-community/netinfo@npm:8.3.1":
+  version: 8.3.1
+  resolution: "@react-native-community/netinfo@npm:8.3.1"
   peerDependencies:
     react-native: ">=0.59"
-  checksum: ff5085d900de6d143759ee8936ceb7bcbb7d28a14bd66d54076b172fda47f0896ed26ea1168cf01f6bac493d49ba5d514d24eeff78292d65a781e2926307ef46
+  checksum: e1be3f323c4fab443b55b07b1d43ccf5bead5048598f42a74b6631c2df2e56dd3f06e4a9f65286e230f8f1fd92e290f631bfba15126c0043a3ed98ff9f96c1e3
   languageName: node
   linkType: hard
 
@@ -6221,7 +6221,7 @@ __metadata:
     "@commitlint/config-conventional": 17.0.3
     "@expo-google-fonts/open-sans": 0.2.2
     "@gorhom/bottom-sheet": 4.4.3
-    "@react-native-community/netinfo": 8.2.0
+    "@react-native-community/netinfo": 8.3.1
     "@react-navigation/native": 6.0.11
     "@react-navigation/native-stack": 6.7.0
     "@types/babel__core": 7.1.19
