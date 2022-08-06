@@ -33,7 +33,7 @@
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
     "babel-plugin-inline-dotenv": "1.7.0",
-    "expo": "45.0.8",
+    "expo": "46.0.2",
     "expo-asset": "8.6.1",
     "expo-blur": "11.2.0",
     "expo-constants": "13.2.3",
@@ -82,7 +82,7 @@
     "eslint-plugin-react-native": "4.0.0",
     "eslint-plugin-unused-imports": "2.0.0",
     "jest": "27.5.1",
-    "jest-expo": "45.0.1",
+    "jest-expo": "46.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "react-test-renderer": "17.0.2",
@@ -96,7 +96,7 @@
     "@types/react-dom": "17.0.17",
     "@types/react-native": "0.69.5",
     "shell-quote": ">=1.7.3",
-    "@expo/config-plugins": "^4.1.0"
+    "@expo/config-plugins": "^5.0.0"
   },
   "engines": {
     "node": ">=16.15.0"
