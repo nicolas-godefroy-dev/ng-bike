@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/open-sans": "0.2.2",
-    "@gorhom/bottom-sheet": "4.4.2",
+    "@gorhom/bottom-sheet": "4.4.3",
     "@react-native-community/netinfo": "8.2.0",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
