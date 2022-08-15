@@ -131,7 +131,7 @@
         "@shopify/flash-list",
         "@sentry/react-native"
       ],
-      "automerge": true
+      "enabled": false
     },
     {
       "groupName": "linting",
