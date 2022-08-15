@@ -1,6 +1,6 @@
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet"
 import React, { memo, useCallback, useMemo, useRef } from "react"
-import { FlatListProps, StyleSheet } from "react-native"
+import { FlatListProps, ListRenderItemInfo, StyleSheet } from "react-native"
 import { useAnimatedStyle, useSharedValue } from "react-native-reanimated"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
@@ -45,10 +45,10 @@ const StationsBottomSheet = memo(
       return ["25%", "64%"]
     }, [])
 
-    const keyExtractor = useCallback(item => item.station_id, [])
+    const keyExtractor = useCallback((item: Station) => item.station_id, [])
 
-    const renderItem: FlatListProps<Station>["renderItem"] = useCallback(
-      ({ item: station }) => (
+    const renderItem = useCallback(
+      ({ item: station }: ListRenderItemInfo<Station>) => (
         <StationListItem
           {...station}
           onPress={() => {
@@ -62,8 +62,8 @@ const StationsBottomSheet = memo(
       [onPressStation, bottomSheetRef],
     )
 
-    const getItemLayout: FlatListProps<Station>["getItemLayout"] = useCallback(
-      (_data, index) => ({
+    const getItemLayout = useCallback(
+      (_data: any, index: number) => ({
         length: STATION_LIST_ITEM_HEIGHT,
         offset: STATION_LIST_ITEM_HEIGHT * index,
         index,
