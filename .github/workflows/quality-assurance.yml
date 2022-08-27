@@ -25,8 +25,6 @@ jobs:
           restore-keys: yarn-cache-
       - run: yarn install --immutable
       - run: yarn check-dependencies
-      - name: Validate all commits
-        run: yarn dlx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
       - run: yarn typecheck
       - name: Jest coverage report 🧪
         with:

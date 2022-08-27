@@ -107,7 +107,6 @@
         "expo-updates",
         "expo-video-thumbnails",
         "expo-web-browser",
-        "lottie-react-native",
         "react",
         "react-dom",
         "react-native",
@@ -129,7 +128,25 @@
         "unimodules-image-loader-interface",
         "@shopify/react-native-skia",
         "@shopify/flash-list",
-        "@sentry/react-native"
+        "@sentry/react-native",
+        "victory-native",
+        "@types/react",
+        "@types/react-dom",
+        "react-is",
+        "moti",
+        "expo-yarn-workspaces",
+        "@expo/config-plugins",
+        "babel-preset-expo",
+        "expo",
+        "@react-navigation/bottom-tabs",
+        "@react-navigation/devtools",
+        "@react-navigation/native-stack",
+        "@react-navigation/stack",
+        "@segment/analytics-react-native",
+        "react-native-map-clustering",
+        "react-native-svg-transformer",
+        "react-native-tab-view",
+        "react-native-toast-notifications"
       ],
       "enabled": false
     },
@@ -147,6 +164,7 @@
         "lint-staged",
         "prettier",
         "@types/prettier",
+        "@commitlint/cli",
         "@commitlint/config-conventional"
       ],
       "automerge": true
@@ -157,15 +175,9 @@
       "automerge": true
     },
     {
-      "depTypeList": ["dependencies"],
-      "updateTypes": ["patch"],
-      "automerge": true
-    },
-    {
       "depTypeList": ["dependencies", "devDependencies"],
-      "updateTypes": ["minor", "major"],
-      "automerge": true,
-      "stabilityDays": 7
+      "updateTypes": ["patch", "minor", "major"],
+      "automerge": true
     }
   ]
 }
