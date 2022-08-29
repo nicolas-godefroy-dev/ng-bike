@@ -3671,14 +3671,14 @@ __metadata:
   linkType: hard
 
 "@urql/core@npm:>=2.3.1":
-  version: 3.0.1
-  resolution: "@urql/core@npm:3.0.1"
+  version: 3.0.2
+  resolution: "@urql/core@npm:3.0.2"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
     wonka: ^6.0.0
   peerDependencies:
     graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: c0e41543fadff66da91030d358b265860662bee4d90a04fd7011452a28b120eb8eec5b6b6bc99d4708e066db86f62b93eefef04998584a31e296314976301998
+  checksum: 3a609ddb037b8dad40e30a9b6531245f7148aa2ab30d92eb39aed56058caa7ef0d2754c6c6633f4ed62018032c8d9d366748a4c0520a17a361840fe94cb99d84
   languageName: node
   linkType: hard
 
@@ -4821,9 +4821,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001370":
-  version: 1.0.30001383
-  resolution: "caniuse-lite@npm:1.0.30001383"
-  checksum: 1830129858510163f6acfbeaf258e0a84061091901ea349ee12541cc04997a25dc17d0ba731e8518711d87f0e08fee2a762aa89264d86be5f329300d0ff9d421
+  version: 1.0.30001384
+  resolution: "caniuse-lite@npm:1.0.30001384"
+  checksum: 396f3fc70555e71202754dd2821311a5713294d6fb1a82713bf476d9da4a3530bc893fb4eb3c124a0ad545e0af225cdb9d1fd7f25236714e695157e82e395001
   languageName: node
   linkType: hard
 
