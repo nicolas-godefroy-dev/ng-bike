@@ -1,7 +1,7 @@
 import { BlurView } from "expo-blur"
 import * as Haptics from "expo-haptics"
 import * as Location from "expo-location"
-import React, { useCallback, useEffect, useMemo, useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import { Platform, StyleSheet } from "react-native"
 import MapView, {
   EdgePadding,
@@ -24,6 +24,8 @@ import { getStations, sortStationsByDistance, Station } from "@libs/gbfsClient"
 import { RootStackScreenProps } from "@navigation/types"
 import spacing from "@theme/spacing"
 
+const DISTANCE_MAX = 30000 // 30 KM
+
 const MapScreen = (_props: RootStackScreenProps<"Map">) => {
   const { mapStyle } = useTheme()
   const insets = useSafeAreaInsets()
@@ -36,13 +38,7 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     unfollowUserLocation,
   } = useStore()
 
-  const isTooFar = useMemo(() => {
-    const DISTANCE_MAX = 30000 // 30 KM
-    const isToFar = distance(userLocation, ROUEN_REGION) > DISTANCE_MAX
-
-    return isToFar
-  }, [userLocation.latitude, userLocation.longitude])
-
+  const isTooFar = distance(userLocation, ROUEN_REGION) > DISTANCE_MAX
   const {
     isError,
     data: stations,
@@ -52,41 +48,31 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     enabled: !isTooFar,
   })
 
-  const sortedStations = useMemo(
-    () => sortStationsByDistance(stations || [], userLocation),
-    [stations, userLocation.latitude, userLocation.longitude],
-  )
-
+  const sortedStations = sortStationsByDistance(stations || [], userLocation)
   const [status, requestPermission] = Location.useForegroundPermissions()
 
-  const mapPadding: EdgePadding = useMemo(() => {
-    const platformGap = Platform.OS === "android" ? 6 : 0
-    const bottomSheetHeight =
-      WINDOW_HEIGHT * 0.25 - insets.bottom - spacing["8"] + platformGap
-
-    return {
-      top: insets.top + spacing["5"],
-      right: insets.right,
-      bottom: bottomSheetHeight,
-      left: insets.left,
-    }
-  }, [])
+  const platformGap = Platform.OS === "android" ? 6 : 0
+  const bottomSheetHeight =
+    WINDOW_HEIGHT * 0.25 - insets.bottom - spacing["8"] + platformGap
+  const mapPadding: EdgePadding = {
+    top: insets.top + spacing["5"],
+    right: insets.right,
+    bottom: bottomSheetHeight,
+    left: insets.left,
+  }
 
   // Catch the user location
-  const onUserLocationChange = useCallback((event: EventUserLocation) => {
+  const onUserLocationChange = (event: EventUserLocation) =>
     setUserLocation({
       latitude: event.nativeEvent.coordinate.latitude,
       longitude: event.nativeEvent.coordinate.longitude,
     })
-  }, [])
 
   // Disable follow the user location
-  const onPanDrag = useCallback((_event: MapEvent<object>) => {
-    unfollowUserLocation()
-  }, [])
+  const onPanDrag = (_event: MapEvent<object>) => unfollowUserLocation()
 
   // Center the map on the pressed station
-  const onPressStation = useCallback((station: Station) => {
+  const onPressStation = (station: Station) => {
     if (!mapRef.current) return
 
     unfollowUserLocation()
@@ -99,9 +85,9 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
       zoom: 17,
       altitude: 1000,
     })
-  }, [])
+  }
 
-  const handlePressMyLocation = useCallback(() => {
+  const handlePressMyLocation = () => {
     if (!mapRef.current) return
 
     // Center the map on the user location
@@ -118,7 +104,7 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     if (Platform.OS === "ios") {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
     }
-  }, [mapRef.current, userLocation.latitude, userLocation.longitude])
+  }
 
   // Request user location
   useEffect(() => {

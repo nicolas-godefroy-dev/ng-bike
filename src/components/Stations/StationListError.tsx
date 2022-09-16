@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React from "react"
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
 
 import useTheme from "@hooks/useTheme"
@@ -19,10 +19,8 @@ const StationListError = ({
   error = "network",
 }: StationListErrorProps) => {
   const { colors } = useTheme()
-  const Icon = useMemo(
-    () => (error === "network" ? WifiOffIcon : PinIcon),
-    [error],
-  )
+  const Icon = error === "network" ? WifiOffIcon : PinIcon
+
   const text =
     error === "network" ? "The network is unreachable" : "Rouen is too far away"
 

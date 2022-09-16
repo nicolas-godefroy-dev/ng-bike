@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React from "react"
 import { StyleProp, StyleSheet, Text, ViewStyle } from "react-native"
 import Animated from "react-native-reanimated"
 import { SvgProps } from "react-native-svg"
@@ -53,10 +53,7 @@ const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
     },
   )
 
-  const WeatherIcon = useMemo(
-    () => getWeatherIcon(data?.weather ?? "Clouds"),
-    [data?.weather],
-  )
+  const WeatherIcon = getWeatherIcon(data?.weather ?? "Clouds")
 
   if (isError || isLoading) return null
 

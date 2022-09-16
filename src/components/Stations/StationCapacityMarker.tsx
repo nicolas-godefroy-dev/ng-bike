@@ -1,4 +1,4 @@
-import React, { memo } from "react"
+import React from "react"
 import { StyleSheet, View } from "react-native"
 
 import useTheme from "@hooks/useTheme"
@@ -9,27 +9,27 @@ import StationCapacity, { StationCapacityProps } from "./StationCapacity"
 
 export type StationCapacityMarkerProps = StationCapacityProps
 
-const StationCapacityMarker = memo(
-  (stationCapacityProps: StationCapacityMarkerProps) => {
-    const { colors, shadows } = useTheme()
+const StationCapacityMarker = (
+  stationCapacityProps: StationCapacityMarkerProps,
+) => {
+  const { colors, shadows } = useTheme()
 
-    return (
-      <View style={styles.container}>
-        <View
-          style={[
-            styles.content,
-            { backgroundColor: colors.surface.base },
-            shadows["md"],
-          ]}>
-          <StationCapacity {...stationCapacityProps} />
-        </View>
-        <View
-          style={[styles.triangle, { backgroundColor: colors.surface.base }]}
-        />
+  return (
+    <View style={styles.container}>
+      <View
+        style={[
+          styles.content,
+          { backgroundColor: colors.surface.base },
+          shadows["md"],
+        ]}>
+        <StationCapacity {...stationCapacityProps} />
       </View>
-    )
-  },
-)
+      <View
+        style={[styles.triangle, { backgroundColor: colors.surface.base }]}
+      />
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   triangle: {
