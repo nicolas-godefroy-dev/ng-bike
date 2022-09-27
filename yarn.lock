@@ -3429,12 +3429,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native@npm:0.70.0":
-  version: 0.70.0
-  resolution: "@types/react-native@npm:0.70.0"
+"@types/react-native@npm:0.70.4":
+  version: 0.70.4
+  resolution: "@types/react-native@npm:0.70.4"
   dependencies:
     "@types/react": "*"
-  checksum: 0150a5520925ae009e49eb81e4ca528548ec118b95c363516362bba39ffc068f0df97c43e4543c10ac8f514a42e48cad312c9da49e37257c62180b36f921fa84
+  checksum: b75c2322b6bbd9b5b599af76c6d53596f91dda1b4a3311c169043459e9be925d1438a3ff591d4064cec33a1990193cc48cc0bac33dfb07756fb5bbcc269987cc
   languageName: node
   linkType: hard
 
@@ -6559,7 +6559,7 @@ __metadata:
     "@types/prettier": 2.7.0
     "@types/react": ~18.0.0
     "@types/react-dom": ~18.0.0
-    "@types/react-native": 0.70.0
+    "@types/react-native": 0.70.4
     "@types/react-test-renderer": 18.0.0
     "@typescript-eslint/eslint-plugin": 5.37.0
     "@typescript-eslint/parser": 5.37.0
