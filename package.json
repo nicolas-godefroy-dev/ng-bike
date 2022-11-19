@@ -64,7 +64,7 @@
     "@babel/core": "^7.19.3",
     "@commitlint/cli": "17.2.0",
     "@commitlint/config-conventional": "17.2.0",
-    "@types/babel__core": "7.1.19",
+    "@types/babel__core": "7.1.20",
     "@types/eslint": "8.4.10",
     "@types/jest": "29.2.2",
     "@types/lodash": "4.14.189",
