@@ -1,4 +1,4 @@
-import { distance } from "../distance"
+import { distance } from "./distance"
 
 describe("distance", () => {
   test("should return the right distance", () => {
