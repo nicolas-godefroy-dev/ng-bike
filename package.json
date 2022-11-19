@@ -44,7 +44,7 @@
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
     "expo-updates": "~0.15.5",
-    "husky": "8.0.1",
+    "husky": "8.0.2",
     "lodash": "4.17.21",
     "react": "18.1.0",
     "react-dom": "18.1.0",
