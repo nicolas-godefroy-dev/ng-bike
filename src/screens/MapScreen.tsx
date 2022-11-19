@@ -3,12 +3,7 @@ import * as Haptics from "expo-haptics"
 import * as Location from "expo-location"
 import React, { useEffect, useRef } from "react"
 import { Platform, StyleSheet } from "react-native"
-import MapView, {
-  EdgePadding,
-  EventUserLocation,
-  MapEvent,
-  Marker,
-} from "react-native-maps"
+import MapView, { EdgePadding, MapViewProps, Marker } from "react-native-maps"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { useQuery } from "react-query"
 
@@ -62,14 +57,17 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
   }
 
   // Catch the user location
-  const onUserLocationChange = (event: EventUserLocation) =>
+  const onUserLocationChange: MapViewProps["onUserLocationChange"] = event => {
+    if (!event?.nativeEvent?.coordinate) return
+
     setUserLocation({
       latitude: event.nativeEvent.coordinate.latitude,
       longitude: event.nativeEvent.coordinate.longitude,
     })
+  }
 
   // Disable follow the user location
-  const onPanDrag = (_event: MapEvent<object>) => unfollowUserLocation()
+  const onPanDrag: MapViewProps["onPanDrag"] = _event => unfollowUserLocation()
 
   // Center the map on the pressed station
   const onPressStation = (station: Station) => {
