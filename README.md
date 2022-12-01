@@ -15,10 +15,6 @@ Feel free to reuse this [FIGMA](https://www.figma.com/file/STwur9wHa2T9eXOTIygLr
   <img src="./docs/figma.png?raw=true" width="480" />
 </p>
 
-## Known issue
-
-Pan down to close on BottomSheetScrollView not working on Expo IOS [868](https://github.com/gorhom/react-native-bottom-sheet/issues/868) ( Work on EAS builds and expo Android )
-
 ## License
 
 The app source code is made available under the MIT license.
