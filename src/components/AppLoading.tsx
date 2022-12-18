@@ -13,7 +13,11 @@ SplashScreen.preventAutoHideAsync().catch(() => {
   /* reloading the app might trigger some race conditions, ignore them */
 })
 
-const AppLoading = ({ children, loading, delay = 800 }: AppLoadingProps) => {
+export const AppLoading = ({
+  children,
+  loading,
+  delay = 800,
+}: AppLoadingProps) => {
   // Run the animation when the resources and the app logo are loaded
   useEffect(() => {
     if (!loading) {
@@ -36,5 +40,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 })
-
-export default AppLoading

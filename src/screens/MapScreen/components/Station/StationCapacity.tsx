@@ -1,8 +1,8 @@
 import React from "react"
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
 
-import Skeleton from "@components/Skeleton"
-import useTheme, { Theme } from "@hooks/useTheme"
+import { Skeleton } from "@components/Skeleton"
+import { Theme, useTheme } from "@hooks/useTheme"
 import spacing from "@theme/spacing"
 import typography from "@theme/typography"
 
@@ -24,7 +24,7 @@ const getStatusColor = (capacity: number, colors: Theme["colors"]) => {
   return hasLowCapacity ? colors.text.danger : colors.text.success
 }
 
-const StationCapacity = ({ bikes, docks }: StationCapacityProps) => {
+export const StationCapacity = ({ bikes, docks }: StationCapacityProps) => {
   const { colors } = useTheme()
 
   return (
@@ -53,7 +53,9 @@ const StationCapacity = ({ bikes, docks }: StationCapacityProps) => {
   )
 }
 
-const StationCapacitySkeleton = ({ style }: StationCapacitySkeletonProps) => (
+export const StationCapacitySkeleton = ({
+  style,
+}: StationCapacitySkeletonProps) => (
   <View style={[styles.container, style]}>
     <Skeleton style={styles.bikesSkeleton} />
     <Skeleton style={styles.docksSkeleton} />
@@ -82,7 +84,3 @@ const styles = StyleSheet.create({
     width: 36,
   },
 })
-
-export { StationCapacitySkeleton }
-
-export default StationCapacity

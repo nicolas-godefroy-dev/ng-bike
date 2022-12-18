@@ -1,15 +1,15 @@
 import React from "react"
 import { StyleSheet, View } from "react-native"
 
-import useTheme from "@hooks/useTheme"
+import { useTheme } from "@hooks/useTheme"
 import borderRadius from "@theme/borderRadius"
 import spacing from "@theme/spacing"
 
-import StationCapacity, { StationCapacityProps } from "./StationCapacity"
+import { StationCapacity, StationCapacityProps } from "./StationCapacity"
 
 export type StationCapacityMarkerProps = StationCapacityProps
 
-const StationCapacityMarker = (
+export const StationCapacityMarker = (
   stationCapacityProps: StationCapacityMarkerProps,
 ) => {
   const { colors, shadows } = useTheme()
@@ -52,5 +52,3 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing[2],
   },
 })
-
-export default StationCapacityMarker

@@ -9,14 +9,14 @@ import {
   ViewStyle,
 } from "react-native"
 
-import Skeleton from "@components/Skeleton"
-import useTheme from "@hooks/useTheme"
+import { Skeleton } from "@components/Skeleton"
+import { useTheme } from "@hooks/useTheme"
 import { Station } from "@libs/gbfsClient"
 import borderRadius from "@theme/borderRadius"
 import spacing from "@theme/spacing"
 import typography from "@theme/typography"
 
-import StationCapacity, { StationCapacitySkeleton } from "./StationCapacity"
+import { StationCapacity, StationCapacitySkeleton } from "./StationCapacity"
 
 export type StationCapacityMarkerProps = Station & {
   onPress: PressableProps["onPress"]
@@ -28,7 +28,7 @@ export type StationListItemSkeletonProps = {
 
 export const STATION_LIST_ITEM_HEIGHT = 58
 
-const StationListItem = ({
+export const StationListItem = ({
   num_bikes_available,
   num_docks_available,
   station_id,
@@ -57,7 +57,9 @@ const StationListItem = ({
   )
 }
 
-const StationListItemSkeleton = ({ style }: StationListItemSkeletonProps) => (
+export const StationListItemSkeleton = ({
+  style,
+}: StationListItemSkeletonProps) => (
   <View style={[styles.container, style]}>
     <View style={styles.row}>
       <Skeleton style={styles.idSkeleton} />
@@ -101,7 +103,3 @@ const styles = StyleSheet.create({
     width: "45%",
   },
 })
-
-export { StationListItemSkeleton }
-
-export default StationListItem

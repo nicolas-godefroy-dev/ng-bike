@@ -8,7 +8,7 @@ import { Feather } from "@expo/vector-icons"
 import * as Font from "expo-font"
 import { useEffect, useState } from "react"
 
-export default function useCachedResources() {
+export const useCachedResources = () => {
   const [isLoadingComplete, setLoadingComplete] = useState(false)
 
   // Load any resources or data that we need prior to rendering the app

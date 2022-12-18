@@ -1,7 +1,7 @@
 import React from "react"
 import { Pressable, StyleProp, StyleSheet, ViewStyle } from "react-native"
 
-import useTheme from "@hooks/useTheme"
+import { useTheme } from "@hooks/useTheme"
 import borderRadius from "@theme/borderRadius"
 import spacing from "@theme/spacing"
 
@@ -14,7 +14,7 @@ export type MyPositionButtonProps = {
   active: boolean
 }
 
-const MyPositionButton = ({
+export const MyPositionButton = ({
   style,
   onPress,
   active,
@@ -48,5 +48,3 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 })
-
-export default MyPositionButton

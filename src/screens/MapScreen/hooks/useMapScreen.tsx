@@ -1,27 +1,22 @@
-import { BlurView } from "expo-blur"
 import * as Haptics from "expo-haptics"
 import * as Location from "expo-location"
-import React, { useEffect, useRef } from "react"
-import { Platform, StyleSheet } from "react-native"
-import MapView, { EdgePadding, MapViewProps, Marker } from "react-native-maps"
+import { useEffect, useRef } from "react"
+import { Platform } from "react-native"
+import MapView, { EdgePadding, MapViewProps } from "react-native-maps"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { useQuery } from "react-query"
 
-import MyPositionButton from "@components/Map/MyPositionButton"
-import StationsBottomSheet from "@components/Station/StationBottomSheet"
-import StationCapacityMarker from "@components/Station/StationCapacityMarker"
-import { WINDOW_HEIGHT, WINDOW_WIDTH } from "@constants/layout"
+import { WINDOW_HEIGHT } from "@constants/layout"
 import { ROUEN_REGION } from "@constants/map"
-import useStore from "@hooks/useStore"
-import useTheme from "@hooks/useTheme"
+import { useStore } from "@hooks/useStore"
+import { useTheme } from "@hooks/useTheme"
 import { distance } from "@libs/distance"
 import { getStations, sortStationsByDistance, Station } from "@libs/gbfsClient"
-import { RootStackScreenProps } from "@navigation/types"
 import spacing from "@theme/spacing"
 
 const DISTANCE_MAX = 30000 // 30 KM
 
-const MapScreen = (_props: RootStackScreenProps<"Map">) => {
+export const useMapScreen = () => {
   const { mapStyle } = useTheme()
   const insets = useSafeAreaInsets()
   const mapRef = useRef<MapView>(null)
@@ -131,77 +126,19 @@ const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     focusUserPosition()
   }, [status, mapRef.current])
 
-  return (
-    <>
-      <BlurView
-        intensity={26}
-        style={[
-          styles.blurView,
-          {
-            height: insets.top,
-            zIndex: 10,
-          },
-        ]}
-      />
-      <MapView
-        ref={mapRef}
-        onUserLocationChange={onUserLocationChange}
-        onPanDrag={onPanDrag}
-        initialRegion={ROUEN_REGION}
-        style={styles.map}
-        customMapStyle={mapStyle}
-        showsUserLocation
-        minZoomLevel={13}
-        showsBuildings={false}
-        showsMyLocationButton={false}
-        showsCompass={false}
-        mapPadding={mapPadding}
-        followsUserLocation={isFollowingUser}>
-        {sortedStations.map(station => (
-          <Marker
-            key={station.station_id}
-            coordinate={{
-              latitude: station.lat,
-              longitude: station.lon,
-            }}>
-            <StationCapacityMarker
-              bikes={station.num_bikes_available}
-              docks={station.num_docks_available}
-            />
-          </Marker>
-        ))}
-      </MapView>
-      <MyPositionButton
-        active={isFollowingUser}
-        style={[styles.myPositionButton, { top: insets.top + spacing[5] }]}
-        onPress={handlePressMyLocation}
-      />
-      <StationsBottomSheet
-        stations={sortedStations}
-        isLoading={isLoading}
-        isError={isError}
-        isTooFar={isTooFar}
-        onPressStation={onPressStation}
-      />
-    </>
-  )
+  return {
+    handlePressMyLocation,
+    onPressStation,
+    onPanDrag,
+    onUserLocationChange,
+    mapPadding,
+    isFollowingUser,
+    mapStyle,
+    isError,
+    isLoading,
+    insets,
+    sortedStations,
+    isTooFar,
+    mapRef,
+  }
 }
-
-const styles = StyleSheet.create({
-  blurView: {
-    width: "100%",
-    position: "absolute",
-    top: 0,
-    left: 0,
-  },
-  myPositionButton: {
-    position: "absolute",
-    right: spacing[5],
-  },
-  map: {
-    width: WINDOW_WIDTH,
-    height: WINDOW_HEIGHT,
-  },
-})
-
-export default MapScreen

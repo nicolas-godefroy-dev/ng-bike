@@ -1,7 +1,7 @@
 import React from "react"
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
 
-import useTheme from "@hooks/useTheme"
+import { useTheme } from "@hooks/useTheme"
 import spacing from "@theme/spacing"
 import typography from "@theme/typography"
 
@@ -14,7 +14,7 @@ export type StationListErrorProps = {
   error?: "network" | "distance"
 }
 
-const StationListError = ({
+export const StationListError = ({
   style,
   error = "network",
 }: StationListErrorProps) => {
@@ -46,5 +46,3 @@ const styles = StyleSheet.create({
     marginTop: spacing["2"],
   },
 })
-
-export default StationListError

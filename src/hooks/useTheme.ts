@@ -1,6 +1,6 @@
 import themes from "@theme/themes"
 
-import useColorScheme from "./useColorScheme"
+import { useColorScheme } from "./useColorScheme"
 
 export type Theme = typeof themes["light"] | typeof themes["dark"]
 
@@ -11,10 +11,8 @@ export type Theme = typeof themes["light"] | typeof themes["dark"]
  *    backgroundColor: colors.surface.base
  * }
  */
-const useTheme = (): Theme => {
+export const useTheme = (): Theme => {
   const colorScheme = useColorScheme()
 
   return themes[colorScheme]
 }
-
-export default useTheme

@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import * as React from "react"
 import { ColorSchemeName } from "react-native"
 
-import MapScreen from "@screens/MapScreen"
+import { MapScreen } from "@screens/MapScreen/MapScreen"
 
 import linking from "./linking"
 import { RootStackParamList } from "./types"

@@ -7,7 +7,7 @@ export type StationListLoadingProps = {
   style?: StyleProp<ViewStyle>
 }
 
-const StationListLoading = ({ style }: StationListLoadingProps) => (
+export const StationListLoading = ({ style }: StationListLoadingProps) => (
   <View style={[styles.container, style]}>
     <StationListItemSkeleton />
     <StationListItemSkeleton />
@@ -23,5 +23,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 })
-
-export default StationListLoading

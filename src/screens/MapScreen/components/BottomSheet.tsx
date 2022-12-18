@@ -1,22 +1,26 @@
-import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet"
+import {
+  BottomSheetFlatList,
+  default as RNBottomSheet,
+} from "@gorhom/bottom-sheet"
 import React, { useRef } from "react"
 import { FlatListProps, ListRenderItemInfo, StyleSheet } from "react-native"
 import { useAnimatedStyle, useSharedValue } from "react-native-reanimated"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
-import WeatherIndicator, {
-  WEATHER_INDICATOR_HEIGHT,
-} from "@components/Weather/WeatherIndicator"
-import useTheme from "@hooks/useTheme"
+import { useTheme } from "@hooks/useTheme"
 import { Station } from "@libs/gbfsClient"
 import borderRadius from "@theme/borderRadius"
 import spacing from "@theme/spacing"
 
-import StationListError from "./StationListError"
-import StationListItem, { STATION_LIST_ITEM_HEIGHT } from "./StationListItem"
-import StationListLoading from "./StationListLoading"
+import { StationListError } from "./Station/StationListError"
+import {
+  StationListItem,
+  STATION_LIST_ITEM_HEIGHT,
+} from "./Station/StationListItem"
+import { StationListLoading } from "./Station/StationListLoading"
+import { WeatherIndicator, WEATHER_INDICATOR_HEIGHT } from "./WeatherIndicator"
 
-export type StationsBottomSheetProps = {
+export type BottomSheetProps = {
   stations?: Station[]
   isLoading?: boolean
   isError?: boolean
@@ -24,20 +28,20 @@ export type StationsBottomSheetProps = {
   onPressStation: (station: Station) => void
 }
 
-const StationsBottomSheet = ({
+export const BottomSheet = ({
   stations = [],
   isError,
   isTooFar,
   isLoading,
   onPressStation,
-}: StationsBottomSheetProps) => {
+}: BottomSheetProps) => {
   const insets = useSafeAreaInsets()
   const animatedPosition = useSharedValue(0)
   const animatedStyle = useAnimatedStyle(() => ({
     top: animatedPosition.value - spacing["3"] - WEATHER_INDICATOR_HEIGHT,
   }))
   const { colors } = useTheme()
-  const bottomSheetRef = useRef<BottomSheet>(null)
+  const bottomSheetRef = useRef<RNBottomSheet>(null)
   const data = isTooFar || isTooFar ? [] : stations
   const snapPoints = isError || isTooFar ? ["25%"] : ["25%", "64%"]
 
@@ -75,7 +79,7 @@ const StationsBottomSheet = ({
   return (
     <>
       <WeatherIndicator style={[styles.weatherIndicator, animatedStyle]} />
-      <BottomSheet
+      <RNBottomSheet
         ref={bottomSheetRef}
         animatedPosition={animatedPosition}
         index={0}
@@ -97,7 +101,7 @@ const StationsBottomSheet = ({
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: insets.bottom }}
         />
-      </BottomSheet>
+      </RNBottomSheet>
     </>
   )
 }
@@ -119,5 +123,3 @@ const styles = StyleSheet.create({
     right: spacing["5"],
   },
 })
-
-export default StationsBottomSheet

@@ -1,14 +1,14 @@
 import React from "react"
 import { StyleProp, StyleSheet, View, ViewStyle } from "react-native"
 
-import useTheme from "@hooks/useTheme"
+import { useTheme } from "@hooks/useTheme"
 import borderRadius from "@theme/borderRadius"
 
 export type SkeletonProps = {
   style?: StyleProp<ViewStyle>
 }
 
-const Skeleton = ({ style }: SkeletonProps) => {
+export const Skeleton = ({ style }: SkeletonProps) => {
   const { colors, shadows } = useTheme()
 
   return (
@@ -30,5 +30,3 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius["base"],
   },
 })
-
-export default Skeleton

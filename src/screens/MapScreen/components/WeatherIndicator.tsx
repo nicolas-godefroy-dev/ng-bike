@@ -4,8 +4,8 @@ import Animated from "react-native-reanimated"
 import { SvgProps } from "react-native-svg"
 import { useQuery } from "react-query"
 
-import useStore from "@hooks/useStore"
-import useTheme from "@hooks/useTheme"
+import { useStore } from "@hooks/useStore"
+import { useTheme } from "@hooks/useTheme"
 import { getWeather, Weather } from "@libs/weatherClient"
 import borderRadius from "@theme/borderRadius"
 import spacing from "@theme/spacing"
@@ -41,7 +41,7 @@ const getWeatherIcon = (weather: Weather["weather"]): React.FC<SvgProps> => {
   }
 }
 
-const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
+export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
   const userLocation = useStore(state => state.userLocation)
 
   const { colors, shadows } = useTheme()
@@ -88,5 +88,3 @@ const styles = StyleSheet.create({
     ...typography["body"],
   },
 })
-
-export default WeatherIndicator

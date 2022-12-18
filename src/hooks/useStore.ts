@@ -12,7 +12,7 @@ export type AppState = {
   unfollowUserLocation: () => void
 }
 
-const useStore = create<AppState, [["zustand/devtools", never]]>(
+export const useStore = create<AppState, [["zustand/devtools", never]]>(
   devtools(set => ({
     userLocation: {
       latitude: ROUEN_REGION.latitude,
@@ -25,5 +25,3 @@ const useStore = create<AppState, [["zustand/devtools", never]]>(
     unfollowUserLocation: () => set(_state => ({ isFollowingUser: false })),
   })),
 )
-
-export default useStore
