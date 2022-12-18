@@ -6,24 +6,24 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "start": "expo start",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "eject": "expo eject",
+    "start": "npx expo start",
+    "android": "npx expo run:android",
+    "ios": "npx expo run:ios",
+    "eject": "npx expo eject",
     "test": "jest",
     "updateSnapshots": "jest -u --coverage=false",
     "typecheck": "tsc",
-    "lint": "eslint .",
+    "lint": "npx eslint .",
     "lint-staged": "lint-staged --allow-empty",
     "prepare": "husky install",
     "check-dependencies": "yarn dedupe --check"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "npx eslint --fix",
+      "npx prettier --write"
     ],
-    "*.{md,json}": "prettier --write"
+    "*.{md,json}": "npx prettier --write"
   },
   "dependencies": {
     "@expo-google-fonts/open-sans": "0.2.2",
@@ -43,7 +43,7 @@
     "expo-location": "~15.0.1",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
-    "expo-updates": "~0.15.5",
+    "expo-updates": "~0.15.6",
     "husky": "8.0.3",
     "lodash": "4.17.21",
     "react": "18.1.0",
