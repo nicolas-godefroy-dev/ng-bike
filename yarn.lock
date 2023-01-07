@@ -6741,7 +6741,7 @@ __metadata:
     react-test-renderer: 18.2.0
     ts-node: 10.9.1
     typescript: ^4.6.3
-    zustand: 4.1.4
+    zustand: 4.2.0
   languageName: unknown
   linkType: soft
 
@@ -15029,9 +15029,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:4.1.4":
-  version: 4.1.4
-  resolution: "zustand@npm:4.1.4"
+"zustand@npm:4.2.0":
+  version: 4.2.0
+  resolution: "zustand@npm:4.2.0"
   dependencies:
     use-sync-external-store: 1.2.0
   peerDependencies:
@@ -15042,6 +15042,6 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: a9ceb7849ebf407d31a6121be09acfb041324f6f45ca9a3f62ab85e2d840d0f48f157abd99ed7b9e08b96ebb4e15480b4a196ed8b1df8a5a9a2ba9afd7c639a7
+  checksum: 70f9c9272c7ee6534d16e23e1f273822fdf4cb17a9865db588946ed250a51e169f8b0dcaf0a8d15e866239182263c015bca644756a69314ea1da4fe61ba1b67f
   languageName: node
   linkType: hard
