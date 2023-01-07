@@ -1,9 +1,7 @@
 import React from "react"
 import { Pressable, StyleProp, StyleSheet, ViewStyle } from "react-native"
 
-import { useTheme } from "@hooks/useTheme"
-import borderRadius from "@theme/borderRadius"
-import spacing from "@theme/spacing"
+import { borderRadius, spacing, useTheme } from "@theme"
 
 import NavigationFilledIcon from "@assets/icons/navigation-filled.svg"
 import NavigationIcon from "@assets/icons/navigation.svg"

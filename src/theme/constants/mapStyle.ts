@@ -3,7 +3,7 @@ import type { MapStyleElement } from "react-native-maps"
 
 import { ThemeRecord } from "./types"
 
-const mapStyle: ThemeRecord<MapStyleElement[] | undefined> = {
+export const mapStyle: ThemeRecord<MapStyleElement[] | undefined> = {
   light: undefined,
   dark: Platform.select({
     ios: undefined,
@@ -170,5 +170,3 @@ const mapStyle: ThemeRecord<MapStyleElement[] | undefined> = {
     ],
   }),
 }
-
-export default mapStyle

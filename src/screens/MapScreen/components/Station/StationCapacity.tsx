@@ -2,9 +2,7 @@ import React from "react"
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
 
 import { Skeleton } from "@components/Skeleton"
-import { Theme, useTheme } from "@hooks/useTheme"
-import spacing from "@theme/spacing"
-import typography from "@theme/typography"
+import { spacing, Theme, typography, useTheme } from "@theme"
 
 import BikeIllustration from "@assets/images/bike.svg"
 import DockIllustration from "@assets/images/dock.svg"

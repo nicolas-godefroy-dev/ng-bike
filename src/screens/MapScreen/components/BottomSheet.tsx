@@ -7,10 +7,8 @@ import { FlatListProps, ListRenderItemInfo, StyleSheet } from "react-native"
 import { useAnimatedStyle, useSharedValue } from "react-native-reanimated"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
-import { useTheme } from "@hooks/useTheme"
 import { Station } from "@libs/gbfsClient"
-import borderRadius from "@theme/borderRadius"
-import spacing from "@theme/spacing"
+import { borderRadius, spacing, useTheme } from "@theme"
 
 import { StationListError } from "./Station/StationListError"
 import {
@@ -18,7 +16,10 @@ import {
   STATION_LIST_ITEM_HEIGHT,
 } from "./Station/StationListItem"
 import { StationListLoading } from "./Station/StationListLoading"
-import { WeatherIndicator, WEATHER_INDICATOR_HEIGHT } from "./WeatherIndicator"
+import {
+  WeatherIndicator,
+  WEATHER_INDICATOR_HEIGHT,
+} from "./Weather/WeatherIndicator"
 
 export type BottomSheetProps = {
   stations?: Station[]

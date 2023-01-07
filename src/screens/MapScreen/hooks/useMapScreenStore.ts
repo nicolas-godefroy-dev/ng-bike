@@ -4,7 +4,7 @@ import { devtools } from "zustand/middleware"
 import { ROUEN_REGION } from "@constants/map"
 import { Coordinate } from "@libs/distance"
 
-export type AppState = {
+export type MapScreenState = {
   userLocation: Coordinate
   isFollowingUser: boolean
   setUserLocation: (userLocation: Coordinate) => void
@@ -12,7 +12,10 @@ export type AppState = {
   unfollowUserLocation: () => void
 }
 
-export const useStore = create<AppState, [["zustand/devtools", never]]>(
+export const useMapScreenStore = create<
+  MapScreenState,
+  [["zustand/devtools", never]]
+>(
   devtools(set => ({
     userLocation: {
       latitude: ROUEN_REGION.latitude,

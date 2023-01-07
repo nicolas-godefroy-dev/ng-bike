@@ -1,9 +1,7 @@
 import React from "react"
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
 
-import { useTheme } from "@hooks/useTheme"
-import spacing from "@theme/spacing"
-import typography from "@theme/typography"
+import { spacing, typography, useTheme } from "@theme"
 
 import PinIcon from "@assets/icons/pin.svg"
 import WifiOffIcon from "@assets/icons/wifi-off.svg"

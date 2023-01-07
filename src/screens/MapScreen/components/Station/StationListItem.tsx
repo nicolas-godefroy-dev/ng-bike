@@ -10,11 +10,8 @@ import {
 } from "react-native"
 
 import { Skeleton } from "@components/Skeleton"
-import { useTheme } from "@hooks/useTheme"
 import { Station } from "@libs/gbfsClient"
-import borderRadius from "@theme/borderRadius"
-import spacing from "@theme/spacing"
-import typography from "@theme/typography"
+import { borderRadius, spacing, typography, useTheme } from "@theme"
 
 import { StationCapacity, StationCapacitySkeleton } from "./StationCapacity"
 

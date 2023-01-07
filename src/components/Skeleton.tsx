@@ -1,8 +1,7 @@
 import React from "react"
 import { StyleProp, StyleSheet, View, ViewStyle } from "react-native"
 
-import { useTheme } from "@hooks/useTheme"
-import borderRadius from "@theme/borderRadius"
+import { borderRadius, useTheme } from "@theme"
 
 export type SkeletonProps = {
   style?: StyleProp<ViewStyle>

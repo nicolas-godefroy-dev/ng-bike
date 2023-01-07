@@ -1,9 +1,7 @@
 import React from "react"
 import { StyleSheet, View } from "react-native"
 
-import { useTheme } from "@hooks/useTheme"
-import borderRadius from "@theme/borderRadius"
-import spacing from "@theme/spacing"
+import { borderRadius, spacing, useTheme } from "@theme"
 
 import { StationCapacity, StationCapacityProps } from "./StationCapacity"
 

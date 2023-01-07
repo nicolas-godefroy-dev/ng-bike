@@ -45,7 +45,7 @@ const base = {
   },
 }
 
-const shadows = {
+export const shadows = {
   light: StyleSheet.create({
     sm: {
       ...base.sm,
@@ -114,5 +114,3 @@ const shadows = {
     },
   }),
 }
-
-export default shadows

@@ -1,4 +1,4 @@
-const borderRadius = {
+export const borderRadius = {
   none: 0,
   sm: 2,
   base: 4,
@@ -9,5 +9,3 @@ const borderRadius = {
   "3xl": 24,
   full: 9999,
 }
-
-export default borderRadius

@@ -1,4 +1,4 @@
-import themes from "@theme/themes"
+import { themes } from "@theme"
 
 import { useColorScheme } from "./useColorScheme"
 

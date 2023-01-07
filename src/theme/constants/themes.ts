@@ -1,6 +1,6 @@
-import colors from "./colors"
-import mapStyle from "./mapStyle"
-import shadows from "./shadows"
+import { colors } from "./colors"
+import { mapStyle } from "./mapStyle"
+import { shadows } from "./shadows"
 
 const lightTheme = {
   colors: colors.light,
@@ -14,9 +14,7 @@ const darkTheme = {
   shadows: shadows.dark,
 }
 
-const themes = {
+export const themes = {
   light: lightTheme,
   dark: darkTheme,
 }
-
-export default themes

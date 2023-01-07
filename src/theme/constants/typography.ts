@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native"
 
-const typography = StyleSheet.create({
+export const typography = StyleSheet.create({
   caption2: {
     fontFamily: "OpenSans_400Regular",
     fontSize: 11,
@@ -57,5 +57,3 @@ const typography = StyleSheet.create({
     lineHeight: 41,
   },
 })
-
-export default typography
