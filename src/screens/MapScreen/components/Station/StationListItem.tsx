@@ -35,7 +35,7 @@ export const StationListItem = ({
   const { colors } = useTheme()
 
   return (
-    <Pressable style={[styles.container]} onPress={onPress}>
+    <Pressable style={styles.container} onPress={onPress}>
       <View style={styles.row}>
         <Text style={[styles.id, { color: colors.text.base }]}>
           {station_id}
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   idSkeleton: {
     height: 28,
     width: 28,
-    borderRadius: borderRadius["md"],
+    borderRadius: borderRadius.md,
   },
   name: {
     ...typography.footnote,

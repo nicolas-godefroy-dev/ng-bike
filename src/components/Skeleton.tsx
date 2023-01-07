@@ -15,7 +15,7 @@ export const Skeleton = ({ style }: SkeletonProps) => {
       style={[
         styles.container,
         { backgroundColor: colors.surface[100] },
-        shadows["none"],
+        shadows.none,
         style,
       ]}
     />
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
   container: {
     height: 12,
     width: 12,
-    borderRadius: borderRadius["base"],
+    borderRadius: borderRadius.base,
   },
 })

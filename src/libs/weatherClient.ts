@@ -8,7 +8,7 @@ import { Coordinate } from "./distance"
  */
 const OPEN_WEATHER_BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 const OPEN_WEATHER_API_KEY =
-  Constants?.manifest?.extra?.OPEN_WEATHER_API_KEY || ""
+  Constants.manifest?.extra?.OPEN_WEATHER_API_KEY || ""
 
 export type Atmosphere =
   | "Mist"

@@ -20,17 +20,15 @@ export const AppLoading = ({
 }: AppLoadingProps) => {
   // Run the animation when the resources and the app logo are loaded
   useEffect(() => {
-    if (!loading) {
-      setTimeout(() => {
-        if (!loading) {
-          // Instruct SplashScreen not to hide yet, we want to do this manually
-          SplashScreen.hideAsync().catch(() => {
-            /* reloading the app might trigger some race conditions, ignore them */
-          })
-        }
-      }, delay)
-    }
-  }, [loading])
+    if (loading) return
+
+    setTimeout(() => {
+      // Instruct SplashScreen not to hide yet, we want to do this manually
+      SplashScreen.hideAsync().catch(() => {
+        /* reloading the app might trigger some race conditions, ignore them */
+      })
+    }, delay)
+  }, [delay, loading])
 
   return <View style={styles.container}>{!loading && children}</View>
 }

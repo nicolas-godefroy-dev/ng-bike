@@ -56,7 +56,7 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
 
   // Catch the user location
   const onUserLocationChange: MapViewProps["onUserLocationChange"] = event => {
-    if (!event?.nativeEvent?.coordinate) return
+    if (!event.nativeEvent.coordinate) return
 
     setUserLocation({
       latitude: event.nativeEvent.coordinate.latitude,
@@ -105,7 +105,7 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
   // Request user location
   useEffect(() => {
     requestPermission()
-  }, [])
+  }, [requestPermission])
 
   // Focus the user location when the user location permission change
   useEffect(() => {
@@ -127,7 +127,7 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     }
 
     focusUserPosition()
-  }, [status, mapRef.current])
+  }, [status, setUserLocation])
 
   return (
     <>

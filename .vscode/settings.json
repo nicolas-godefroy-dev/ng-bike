@@ -28,5 +28,6 @@
     "source.organizeImports": true,
     "source.fixAll.eslint": true
   },
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "cSpell.words": ["Haptics", "Pressable", "typecheck", "unfollow"]
 }

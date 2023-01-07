@@ -34,7 +34,7 @@ export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
       style={[
         styles.container,
         { backgroundColor: colors.surface.base },
-        shadows["md"],
+        shadows.md,
         style,
       ]}>
       <WeatherIcon weather={data?.weather} size={16} color={colors.text.base} />
@@ -48,7 +48,7 @@ export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
 const styles = StyleSheet.create({
   container: {
     height: WEATHER_INDICATOR_HEIGHT,
-    borderRadius: borderRadius["md"],
+    borderRadius: borderRadius.md,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -57,6 +57,6 @@ const styles = StyleSheet.create({
   },
   text: {
     paddingLeft: spacing["1"],
-    ...typography["body"],
+    ...typography.body,
   },
 })

@@ -26,9 +26,9 @@ export const MyPositionButton = ({
         styles.container,
         {
           backgroundColor: colors.surface.base,
-          borderRadius: borderRadius["md"],
+          borderRadius: borderRadius.md,
         },
-        shadows["md"],
+        shadows.md,
         style,
       ]}
       onPress={onPress}>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   container: {
     height: 42,
     aspectRatio: 1,
-    borderRadius: borderRadius["md"],
+    borderRadius: borderRadius.md,
     alignItems: "center",
     justifyContent: "center",
   },

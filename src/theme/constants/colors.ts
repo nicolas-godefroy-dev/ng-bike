@@ -37,7 +37,7 @@ const base = {
 export const colors = {
   light: {
     surface: {
-      base: base.base["white"],
+      base: base.base.white,
       50: base.neutral["50"],
       100: base.neutral["100"],
       200: base.neutral["200"],

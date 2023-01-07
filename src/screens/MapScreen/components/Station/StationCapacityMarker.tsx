@@ -18,7 +18,7 @@ export const StationCapacityMarker = (
         style={[
           styles.content,
           { backgroundColor: colors.surface.base },
-          shadows["md"],
+          shadows.md,
         ]}>
         <StationCapacity {...stationCapacityProps} />
       </View>
@@ -32,7 +32,7 @@ export const StationCapacityMarker = (
 const styles = StyleSheet.create({
   triangle: {
     marginTop: -6,
-    borderRadius: borderRadius["sm"],
+    borderRadius: borderRadius.sm,
     height: spacing[2.5],
     width: spacing[2.5],
     transform: [{ rotateZ: "45deg" }],

@@ -43,7 +43,7 @@ export const BottomSheet = ({
   }))
   const { colors } = useTheme()
   const bottomSheetRef = useRef<RNBottomSheet>(null)
-  const data = isTooFar || isTooFar ? [] : stations
+  const data = isError || isTooFar ? [] : stations
   const snapPoints = isError || isTooFar ? ["25%"] : ["25%", "64%"]
 
   const keyExtractor = (item: Station) => item.station_id
@@ -109,7 +109,7 @@ export const BottomSheet = ({
 
 const styles = StyleSheet.create({
   background: {
-    borderRadius: borderRadius["md"],
+    borderRadius: borderRadius.md,
   },
   handle: {
     height: spacing[4],

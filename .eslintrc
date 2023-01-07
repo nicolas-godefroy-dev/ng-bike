@@ -1,7 +1,20 @@
 {
   "root": true,
-  "extends": ["universe/native", "universe/node"],
-  "plugins": ["unused-imports", "react-native"],
+  "extends": [
+    "universe/native",
+    "universe/node",
+    "plugin:react-hooks/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "plugins": [
+    "unused-imports",
+    "react-native",
+    "jsx-expressions",
+    "@tanstack/query"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
     "import/no-cycle": "error",
     "import/order": [
@@ -53,8 +66,36 @@
       }
     ],
     "no-console": "warn",
+    "no-else-return": "warn",
+    "no-nested-ternary": "warn",
+    "no-irregular-whitespace": ["error", { "skipComments": true }],
     "unused-imports/no-unused-imports": "warn",
     "react/jsx-key": ["error", { "checkFragmentShorthand": true }],
-    "react-native/no-unused-styles": 2
-  }
+    "react-native/no-unused-styles": 2,
+    "react-native/no-raw-text": 2,
+    "react-native/no-single-element-style-arrays": 2
+  },
+  "overrides": [
+    {
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "files": ["**/*.*(ts|tsx)"],
+      "rules": {
+        "jsx-expressions/strict-logical-expressions": "error",
+        "@typescript-eslint/no-unnecessary-condition": "warn",
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/dot-notation": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+          }
+        ],
+        "@typescript-eslint/no-non-null-assertion": "warn"
+      }
+    }
+  ]
 }
