@@ -29,7 +29,7 @@
     "@expo-google-fonts/open-sans": "0.2.2",
     "@gorhom/bottom-sheet": "4.4.5",
     "@react-native-community/netinfo": "9.3.5",
-    "@react-navigation/native": "6.0.14",
+    "@react-navigation/native": "6.1.1",
     "@react-navigation/native-stack": "6.7.0",
     "babel-plugin-inline-dotenv": "1.7.0",
     "expo": "^47.0.0",

@@ -2900,19 +2900,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/core@npm:^6.4.1":
-  version: 6.4.1
-  resolution: "@react-navigation/core@npm:6.4.1"
+"@react-navigation/core@npm:^6.4.5":
+  version: 6.4.5
+  resolution: "@react-navigation/core@npm:6.4.5"
   dependencies:
-    "@react-navigation/routers": ^6.1.3
+    "@react-navigation/routers": ^6.1.6
     escape-string-regexp: ^4.0.0
     nanoid: ^3.1.23
-    query-string: ^7.0.0
+    query-string: ^7.1.3
     react-is: ^16.13.0
     use-latest-callback: ^0.1.5
   peerDependencies:
     react: "*"
-  checksum: 655c17d30bdcd356be3d3063426c254d74fe23f8c4134e68cca798d31fbcb96f6048923ae315ac13e80dc3d873b768d278f98d5e79530c4a2302666dc4d0d6cf
+  checksum: 90d0153aff2ab85e4b97cda1bb93626f4e8e0a2d248e67276c6953df52504efbc65672fbdbdbf335d31a941c551360db1eb77de94b58836fced13bf048ed0912
   languageName: node
   linkType: hard
 
@@ -2944,27 +2944,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native@npm:6.0.14":
-  version: 6.0.14
-  resolution: "@react-navigation/native@npm:6.0.14"
+"@react-navigation/native@npm:6.1.1":
+  version: 6.1.1
+  resolution: "@react-navigation/native@npm:6.1.1"
   dependencies:
-    "@react-navigation/core": ^6.4.1
+    "@react-navigation/core": ^6.4.5
     escape-string-regexp: ^4.0.0
     fast-deep-equal: ^3.1.3
     nanoid: ^3.1.23
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: ccdc8d32c99fb0dbba57167c12c88db5e100a0b774dee74ecf9a70cf3cbd9378b056cb81c6c873d35a4085338a433c9297b4dce7e020c285ef9898c91d88441b
+  checksum: 31befabaf2aeb1d47d7635cfd0611474ad1a648cf39bb7a76c8cd9073b3a4af7a2cd0f3aaf11f7b17becd94e04e4a971ff55dec48cede7603f70abb463761798
   languageName: node
   linkType: hard
 
-"@react-navigation/routers@npm:^6.1.3":
-  version: 6.1.3
-  resolution: "@react-navigation/routers@npm:6.1.3"
+"@react-navigation/routers@npm:^6.1.6":
+  version: 6.1.6
+  resolution: "@react-navigation/routers@npm:6.1.6"
   dependencies:
     nanoid: ^3.1.23
-  checksum: edcdc429cd65de42d7ee8684c148e25998c778e3c06844eae02c35a531c2a52c3be3e3664d1a1058346526af7c2a0b4aceb80b8dbdcf9b4d87e331eaac1e7977
+  checksum: 3e765b66cf3e94b9194cfffe8ba6fa51e6652e8f9d8fed713ac76f6ad9e2bd5af5590d83e546efb71455bd6bf2ab1faefcf7f1b0c24b15324c4fe1b8246f8dab
   languageName: node
   linkType: hard
 
@@ -5580,10 +5580,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decode-uri-component@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "decode-uri-component@npm:0.2.0"
-  checksum: f3749344ab9305ffcfe4bfe300e2dbb61fc6359e2b736812100a3b1b6db0a5668cba31a05e4b45d4d63dbf1a18dfa354cd3ca5bb3ededddabb8cd293f4404f94
+"decode-uri-component@npm:^0.2.0, decode-uri-component@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "decode-uri-component@npm:0.2.2"
+  checksum: 95476a7d28f267292ce745eac3524a9079058bbb35767b76e3ee87d42e34cd0275d2eb19d9d08c3e167f97556e8a2872747f5e65cbebcac8b0c98d83e285f139
   languageName: node
   linkType: hard
 
@@ -6688,7 +6688,7 @@ __metadata:
     "@expo-google-fonts/open-sans": 0.2.2
     "@gorhom/bottom-sheet": 4.4.5
     "@react-native-community/netinfo": 9.3.5
-    "@react-navigation/native": 6.0.14
+    "@react-navigation/native": 6.1.1
     "@react-navigation/native-stack": 6.7.0
     "@types/babel__core": 7.1.20
     "@types/eslint": 8.4.10
@@ -11914,15 +11914,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"query-string@npm:^7.0.0":
-  version: 7.1.1
-  resolution: "query-string@npm:7.1.1"
+"query-string@npm:^7.1.3":
+  version: 7.1.3
+  resolution: "query-string@npm:7.1.3"
   dependencies:
-    decode-uri-component: ^0.2.0
+    decode-uri-component: ^0.2.2
     filter-obj: ^1.1.0
     split-on-first: ^1.0.0
     strict-uri-encode: ^2.0.0
-  checksum: b227d1f588ae93f9f0ad078c6b811295fa151dc5a160a03bb2bac5fa0e6919cb1daa570aad1d288e77c8e89fde5362ba505b1014e6e793da9b1e885b59a690a6
+  checksum: 91af02dcd9cc9227a052841d5c2eecb80a0d6489d05625df506a097ef1c59037cfb5e907f39b84643cbfd535c955abec3e553d0130a7b510120c37d06e0f4346
   languageName: node
   linkType: hard
 
