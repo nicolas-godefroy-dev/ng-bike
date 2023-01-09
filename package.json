@@ -20,7 +20,10 @@
     "lint-staged": "lint-staged --allow-empty",
     "prepare": "husky install",
     "check-dependencies": "yarn dedupe --check",
-    "start:app": "yarn workspace @expo-bike-sharing/app start"
+    "start:app": "yarn workspace @expo-bike-sharing/app start",
+    "start:api": "yarn workspace @expo-bike-sharing/api start",
+    "dev:app": "yarn workspace @expo-bike-sharing/app dev",
+    "dev:api": "yarn workspace @expo-bike-sharing/api dev"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -52,7 +55,7 @@
     "nx": "15.4.5",
     "prettier": "2.8.2",
     "ts-node": "10.9.1",
-    "typescript": "^4.6.3"
+    "typescript": "4.9.4"
   },
   "engines": {
     "node": ">=16.15.0"

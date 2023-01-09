@@ -1,0 +1,19 @@
+serve:
+  endpoint: /api/graphql
+
+sources:
+  - name: GBFS
+    handler:
+      jsonSchema:
+        endpoint: "https://transport.data.gouv.fr/gbfs/rouen"
+        operations:
+          - type: Query
+            field: stationStatus
+            path: /station_status.json
+            method: GET
+            responseSchema: ./src/schemas/gbfs/v1.1/station_information.json
+          - type: Query
+            field: stationInformation
+            path: /station_information.json
+            method: GET
+            responseSchema: ./src/schemas/gbfs/v1.1/station_information.json

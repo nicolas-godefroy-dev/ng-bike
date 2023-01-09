@@ -3,16 +3,6 @@
   "compilerOptions": {
     "strict": true,
     "noUncheckedIndexedAccess": true,
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["apps/app/src/components/*"],
-      "@screens/*": ["apps/app/src/screens/*"],
-      "@navigation/*": ["apps/app/src/navigation/*"],
-      "@constants/*": ["apps/app/src/constants/*"],
-      "@assets/*": ["apps/app/src/assets/*"],
-      "@hooks/*": ["apps/app/src/hooks/*"],
-      "@libs/*": ["apps/app/src/libs/*"],
-      "@theme": ["apps/app/src/theme"]
-    }
+    "baseUrl": "."
   }
 }

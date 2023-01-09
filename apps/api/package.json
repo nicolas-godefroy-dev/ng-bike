@@ -1,0 +1,42 @@
+{
+  "name": "@expo-bike-sharing/api",
+  "version": "0.1.0",
+  "author": "nicolas-godefroy-dev",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "dev": "mesh dev",
+    "prebuild": "mesh build",
+    "build": "yarn prebuild && next build",
+    "start": "next start",
+    "test": "jest --passWithNoTests",
+    "typecheck": "yarn prebuild && tsc",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix . && yar run prettier:fix",
+    "prettier:fix": "npx prettier --write ."
+  },
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.82.6",
+    "@graphql-mesh/graphql": "^0.33.5",
+    "@graphql-mesh/json-schema": "^0.37.4",
+    "@graphql-mesh/openapi": "^0.35.5",
+    "@graphql-mesh/transform-filter-schema": "^0.15.5",
+    "@graphql-mesh/transform-naming-convention": "^0.13.4",
+    "@graphql-mesh/transform-prefix": "^0.12.4",
+    "@graphql-mesh/transform-rename": "^0.14.4",
+    "@graphql-mesh/transform-type-merging": "^0.5.3",
+    "@graphql-mesh/types": "^0.89.2",
+    "graphql": "^16.6.0",
+    "jest": "^26.6.3",
+    "next": "13.1.1",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "~18.0.24",
+    "@types/react-dom": "~18.0.8",
+    "typescript": "4.9.4"
+  }
+}
