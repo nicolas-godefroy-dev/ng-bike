@@ -20,10 +20,12 @@
     "lint-staged": "lint-staged --allow-empty",
     "prepare": "husky install",
     "check-dependencies": "yarn dedupe --check",
-    "start:app": "yarn workspace @expo-bike-sharing/app start",
+    "dev:api": "yarn workspace @expo-bike-sharing/api dev",
     "start:api": "yarn workspace @expo-bike-sharing/api start",
     "dev:app": "yarn workspace @expo-bike-sharing/app dev",
-    "dev:api": "yarn workspace @expo-bike-sharing/api dev"
+    "start:app": "yarn workspace @expo-bike-sharing/app start",
+    "start:marketing": "yarn workspace @expo-bike-sharing/marketing start",
+    "dev:marketing": "yarn workspace @expo-bike-sharing/marketing dev"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
