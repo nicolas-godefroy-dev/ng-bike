@@ -5,14 +5,14 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@screens/*": ["src/screens/*"],
-      "@navigation/*": ["src/navigation/*"],
-      "@constants/*": ["src/constants/*"],
-      "@assets/*": ["src/assets/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@libs/*": ["src/libs/*"],
-      "@theme": ["src/theme"]
+      "@components/*": ["apps/app/src/components/*"],
+      "@screens/*": ["apps/app/src/screens/*"],
+      "@navigation/*": ["apps/app/src/navigation/*"],
+      "@constants/*": ["apps/app/src/constants/*"],
+      "@assets/*": ["apps/app/src/assets/*"],
+      "@hooks/*": ["apps/app/src/hooks/*"],
+      "@libs/*": ["apps/app/src/libs/*"],
+      "@theme": ["apps/app/src/theme"]
     }
   }
 }
