@@ -2923,11 +2923,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/core@npm:^6.4.5":
-  version: 6.4.5
-  resolution: "@react-navigation/core@npm:6.4.5"
+"@react-navigation/core@npm:^6.4.8":
+  version: 6.4.8
+  resolution: "@react-navigation/core@npm:6.4.8"
   dependencies:
-    "@react-navigation/routers": ^6.1.6
+    "@react-navigation/routers": ^6.1.8
     escape-string-regexp: ^4.0.0
     nanoid: ^3.1.23
     query-string: ^7.1.3
@@ -2935,7 +2935,7 @@ __metadata:
     use-latest-callback: ^0.1.5
   peerDependencies:
     react: "*"
-  checksum: 90d0153aff2ab85e4b97cda1bb93626f4e8e0a2d248e67276c6953df52504efbc65672fbdbdbf335d31a941c551360db1eb77de94b58836fced13bf048ed0912
+  checksum: d4ae55f4827622cf02389344ea154fbae6e0da26165e9c8644ba4b54c50fb2bf930856b080f5fc5c57af46809909b19903f414f3df071d75113e54c9dc6d2ed0
   languageName: node
   linkType: hard
 
@@ -2967,27 +2967,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native@npm:6.1.1":
-  version: 6.1.1
-  resolution: "@react-navigation/native@npm:6.1.1"
+"@react-navigation/native@npm:6.1.6":
+  version: 6.1.6
+  resolution: "@react-navigation/native@npm:6.1.6"
   dependencies:
-    "@react-navigation/core": ^6.4.5
+    "@react-navigation/core": ^6.4.8
     escape-string-regexp: ^4.0.0
     fast-deep-equal: ^3.1.3
     nanoid: ^3.1.23
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 31befabaf2aeb1d47d7635cfd0611474ad1a648cf39bb7a76c8cd9073b3a4af7a2cd0f3aaf11f7b17becd94e04e4a971ff55dec48cede7603f70abb463761798
+  checksum: 7d54fe80a39d163819fbf646d2c9c907f4ac967446527d81debf450aebeabaaad2428d7004c725015ed535c57cc99f2f8a1ca96b383c87bdcaaff9fcb567549a
   languageName: node
   linkType: hard
 
-"@react-navigation/routers@npm:^6.1.6":
-  version: 6.1.6
-  resolution: "@react-navigation/routers@npm:6.1.6"
+"@react-navigation/routers@npm:^6.1.8":
+  version: 6.1.8
+  resolution: "@react-navigation/routers@npm:6.1.8"
   dependencies:
     nanoid: ^3.1.23
-  checksum: 3e765b66cf3e94b9194cfffe8ba6fa51e6652e8f9d8fed713ac76f6ad9e2bd5af5590d83e546efb71455bd6bf2ab1faefcf7f1b0c24b15324c4fe1b8246f8dab
+  checksum: f703ab9015e514e218a71a5cded79b1f2d2b7bb3d508e252aaa4b75cc1537b539177b1a66b4278322ce866320535fc1ebda7ea7f2f740abe6eac31f3b40e2c70
   languageName: node
   linkType: hard
 
@@ -6835,7 +6835,7 @@ __metadata:
     "@expo-google-fonts/open-sans": 0.2.2
     "@gorhom/bottom-sheet": 4.4.5
     "@react-native-community/netinfo": 9.3.5
-    "@react-navigation/native": 6.1.1
+    "@react-navigation/native": 6.1.6
     "@react-navigation/native-stack": 6.7.0
     "@tanstack/eslint-plugin-query": 4.21.0
     "@types/babel__core": 7.1.20
