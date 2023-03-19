@@ -3181,10 +3181,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/eslint-plugin-query@npm:4.26.2":
-  version: 4.26.2
-  resolution: "@tanstack/eslint-plugin-query@npm:4.26.2"
-  checksum: b04d5dfaf939b79f3c1c915a3429d1e961850d882d42bc20851a7096fe3eb51d04446bf9137423506ea96dabf2dee3753cde07f3e3f74fb8986540932d667096
+"@tanstack/eslint-plugin-query@npm:4.27.0":
+  version: 4.27.0
+  resolution: "@tanstack/eslint-plugin-query@npm:4.27.0"
+  checksum: 2a66f152f3e768a400a54c2d5453e00c9578070e0ee80117c9fd183cf8d93bff6f27730003f125ee119a94e05ab87eabaeb4361611133150ada42dda89d610dd
   languageName: node
   linkType: hard
 
@@ -6818,7 +6818,7 @@ __metadata:
     "@react-native-community/netinfo": 9.3.7
     "@react-navigation/native": 6.1.6
     "@react-navigation/native-stack": 6.9.12
-    "@tanstack/eslint-plugin-query": 4.26.2
+    "@tanstack/eslint-plugin-query": 4.27.0
     "@types/babel__core": 7.20.0
     "@types/eslint": 8.21.2
     "@types/jest": 29.4.0
