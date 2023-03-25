@@ -3437,11 +3437,11 @@ __metadata:
   linkType: hard
 
 "@types/react-native@npm:~0.71.3":
-  version: 0.71.3
-  resolution: "@types/react-native@npm:0.71.3"
+  version: 0.71.5
+  resolution: "@types/react-native@npm:0.71.5"
   dependencies:
     "@types/react": "*"
-  checksum: 5ee02f9c780c630e145c1887c80d1739d59e01d45ff9e862b475538376ddd17fc605a1245fea04813593c1c0153b5f4a41247283036adcdfbf4779555f956d93
+  checksum: a9d88591154aeb94ee42ed88f194fed77148592e35d2bb807d9ad7aa04216ec068f5bc541e6c320c8cbac775a4f0c863bc1bd5c1c884a8f1d599494783f61d63
   languageName: node
   linkType: hard
 
