@@ -1,6 +1,6 @@
+import { focusManager } from "@tanstack/react-query"
 import { useEffect } from "react"
 import { AppState, AppStateStatus, Platform } from "react-native"
-import { focusManager } from "react-query"
 
 const onAppStateChange = (status: AppStateStatus) => {
   if (Platform.OS !== "web") {

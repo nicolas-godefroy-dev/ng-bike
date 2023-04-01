@@ -1,13 +1,13 @@
+import { useQuery } from "@tanstack/react-query"
 import React from "react"
 import { StyleProp, StyleSheet, Text, ViewStyle } from "react-native"
 import Animated from "react-native-reanimated"
-import { useQuery } from "react-query"
 
 import { getWeather } from "@libs/weatherClient"
 import { borderRadius, spacing, typography, useTheme } from "@theme"
 
-import { useMapScreenStore } from "../../hooks/useMapScreenStore"
 import { WeatherIcon } from "./WeatherIcon"
+import { useMapScreenStore } from "../../hooks/useMapScreenStore"
 
 export const WEATHER_INDICATOR_HEIGHT = 34
 
@@ -19,13 +19,11 @@ export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
   const userLocation = useMapScreenStore(state => state.userLocation)
 
   const { colors, shadows } = useTheme()
-  const { isError, isLoading, data } = useQuery(
-    "weather",
-    () => getWeather(userLocation),
-    {
-      refetchInterval: 1000 * 60 * 30, // Refetch at 30 minutes interval
-    },
-  )
+  const { isError, isLoading, data } = useQuery({
+    queryKey: ["weather", userLocation],
+    queryFn: () => getWeather(userLocation),
+    refetchInterval: 1000 * 60 * 30,
+  })
 
   if (isError || isLoading) return null
 
@@ -37,9 +35,9 @@ export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
         shadows.md,
         style,
       ]}>
-      <WeatherIcon weather={data?.weather} size={16} color={colors.text.base} />
+      <WeatherIcon weather={data.weather} size={16} color={colors.text.base} />
       <Text style={[styles.text, { color: colors.text.base }]}>
-        {data?.temp.toFixed(0)}°
+        {data.temp.toFixed(0)}°
       </Text>
     </Animated.View>
   )
