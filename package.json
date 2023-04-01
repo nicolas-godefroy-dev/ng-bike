@@ -60,7 +60,7 @@
     "react-native-svg-transformer": "1.0.0",
     "react-native-web": "~0.18.12",
     "react-query": "3.39.3",
-    "zustand": "4.3.6"
+    "zustand": "4.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
