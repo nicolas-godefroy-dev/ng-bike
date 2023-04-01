@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query"
 import { BlurView } from "expo-blur"
 import * as Haptics from "expo-haptics"
 import * as Location from "expo-location"
@@ -5,12 +6,11 @@ import React, { useEffect, useRef } from "react"
 import { Platform, StyleSheet } from "react-native"
 import MapView, { EdgePadding, MapViewProps, Marker } from "react-native-maps"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
-import { useQuery } from "react-query"
 
 import { WINDOW_HEIGHT, WINDOW_WIDTH } from "@constants/layout"
 import { ROUEN_REGION } from "@constants/map"
 import { distance } from "@libs/distance"
-import { getStations, sortStationsByDistance, Station } from "@libs/gbfsClient"
+import { Station, getStations, sortStationsByDistance } from "@libs/gbfsClient"
 import { RootStackScreenProps } from "@navigation/types"
 import { spacing, useTheme } from "@theme"
 
@@ -46,8 +46,10 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     isError,
     data: stations,
     isLoading,
-  } = useQuery("stations", getStations, {
-    refetchInterval: 1000 * 60, // Refetch at 10 seconds interval
+  } = useQuery({
+    queryKey: ["stations"],
+    queryFn: getStations,
+    refetchInterval: 1000 * 60,
     enabled: !isTooFar,
   })
 
