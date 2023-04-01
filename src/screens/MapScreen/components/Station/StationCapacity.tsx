@@ -1,8 +1,8 @@
 import React from "react"
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
+import { StyleProp, Text, View, ViewStyle } from "react-native"
 
 import { Skeleton } from "@components/Skeleton"
-import { spacing, Theme, typography, useTheme } from "@theme"
+import { tw } from "@theme"
 
 import BikeIllustration from "@assets/images/bike.svg"
 import DockIllustration from "@assets/images/dock.svg"
@@ -16,69 +16,28 @@ export type StationCapacitySkeletonProps = {
   style?: StyleProp<ViewStyle>
 }
 
-const getStatusColor = (capacity: number, colors: Theme["colors"]) => {
+const getStatusColor = (capacity: number) => {
   const hasLowCapacity = capacity <= 2
+  const { color } = hasLowCapacity ? tw`text-error` : tw`text-success`
 
-  return hasLowCapacity ? colors.text.danger : colors.text.success
+  if (typeof color !== "string") throw new Error("invalid color")
+  return color
 }
 
-export const StationCapacity = ({ bikes, docks }: StationCapacityProps) => {
-  const { colors } = useTheme()
-
-  return (
-    <View style={styles.container}>
-      <BikeIllustration
-        width={26}
-        height={18}
-        color={getStatusColor(bikes, colors)}
-      />
-      <Text
-        style={[
-          styles.textBase,
-          { color: colors.text.base, marginRight: spacing[2] },
-        ]}>
-        {bikes}
-      </Text>
-      <DockIllustration
-        width={4}
-        height={18}
-        color={getStatusColor(docks, colors)}
-      />
-      <Text style={[styles.textBase, { color: colors.text.base }]}>
-        {docks}
-      </Text>
-    </View>
-  )
-}
+export const StationCapacity = ({ bikes, docks }: StationCapacityProps) => (
+  <View style={tw`flex-row items-center justify-center py-2`}>
+    <BikeIllustration width={26} height={18} color={getStatusColor(bikes)} />
+    <Text style={tw`ml-1 mr-2 text-callout text-neutral`}>{bikes}</Text>
+    <DockIllustration width={4} height={18} color={getStatusColor(docks)} />
+    <Text style={tw`ml-1 text-callout text-neutral`}>{docks}</Text>
+  </View>
+)
 
 export const StationCapacitySkeleton = ({
   style,
 }: StationCapacitySkeletonProps) => (
-  <View style={[styles.container, style]}>
-    <Skeleton style={styles.bikesSkeleton} />
-    <Skeleton style={styles.docksSkeleton} />
+  <View style={[tw`flex-row items-center justify-center py-2`, style]}>
+    <Skeleton style={tw`ml-1 h-[21px] w-[36px]`} />
+    <Skeleton style={tw`ml-2 h-[21px] w-[36px]`} />
   </View>
 )
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: spacing[2],
-  },
-  textBase: {
-    ...typography.callout,
-    marginLeft: spacing[1],
-  },
-  docksSkeleton: {
-    marginLeft: spacing[2],
-    height: 21,
-    width: 36,
-  },
-  bikesSkeleton: {
-    marginLeft: spacing[1],
-    height: 21,
-    width: 36,
-  },
-})

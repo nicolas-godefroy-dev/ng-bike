@@ -12,8 +12,9 @@ import Sun from "@assets/icons/sun.svg"
 
 export type WeatherIconProps = {
   weather?: Weather["weather"]
-  size: number
-  color: string
+  width?: number
+  height?: number
+  color?: string
 }
 
 const getWeatherIcon = (weather?: Weather["weather"]): React.FC<SvgProps> => {
@@ -33,8 +34,13 @@ const getWeatherIcon = (weather?: Weather["weather"]): React.FC<SvgProps> => {
   }
 }
 
-export const WeatherIcon = ({ weather, size, color }: WeatherIconProps) => {
+export const WeatherIcon = ({
+  weather,
+  width,
+  height,
+  color,
+}: WeatherIconProps) => {
   const Icon = getWeatherIcon(weather)
 
-  return <Icon width={size} height={size} color={color} />
+  return <Icon width={width} height={height} color={color} />
 }

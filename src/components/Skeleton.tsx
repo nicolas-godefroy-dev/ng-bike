@@ -1,31 +1,17 @@
 import React from "react"
-import { StyleProp, StyleSheet, View, ViewStyle } from "react-native"
+import { StyleProp, View, ViewStyle } from "react-native"
 
-import { borderRadius, useTheme } from "@theme"
+import { tw } from "@theme"
 
 export type SkeletonProps = {
   style?: StyleProp<ViewStyle>
 }
 
-export const Skeleton = ({ style }: SkeletonProps) => {
-  const { colors, shadows } = useTheme()
-
-  return (
-    <View
-      style={[
-        styles.container,
-        { backgroundColor: colors.surface[100] },
-        shadows.none,
-        style,
-      ]}
-    />
-  )
-}
-
-const styles = StyleSheet.create({
-  container: {
-    height: 12,
-    width: 12,
-    borderRadius: borderRadius.base,
-  },
-})
+export const Skeleton = ({ style }: SkeletonProps) => (
+  <View
+    style={[
+      tw`w-3 h-3 rounded shadow-none bg-neutral-200 dark:bg-neutral-600`,
+      style,
+    ]}
+  />
+)

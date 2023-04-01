@@ -3,6 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],

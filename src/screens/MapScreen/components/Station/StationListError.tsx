@@ -1,7 +1,7 @@
 import React from "react"
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native"
+import { StyleProp, Text, View, ViewStyle } from "react-native"
 
-import { spacing, typography, useTheme } from "@theme"
+import { tw } from "@theme"
 
 import PinIcon from "@assets/icons/pin.svg"
 import WifiOffIcon from "@assets/icons/wifi-off.svg"
@@ -16,31 +16,16 @@ export const StationListError = ({
   style,
   error = "network",
 }: StationListErrorProps) => {
-  const { colors } = useTheme()
   const Icon = error === "network" ? WifiOffIcon : PinIcon
-
   const text =
     error === "network" ? "The network is unreachable" : "Rouen is too far away"
 
   return (
-    <View style={[styles.container, style]}>
-      <Icon width={spacing[12]} height={spacing[12]} color={colors.text.base} />
-      <Text style={[styles.text, { color: colors.text.base }]}>{text}</Text>
+    <View style={[tw`items-center justify-center flex-1 px-5 py-6`, style]}>
+      <Icon {...tw`w-12 h-12 text-neutral`} />
+      <Text style={tw`items-center mt-2 text-caption1 text-neutral`}>
+        {text}
+      </Text>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: spacing["5"],
-    paddingVertical: spacing["6"],
-    flex: 1,
-  },
-  text: {
-    ...typography.caption1,
-    alignItems: "center",
-    marginTop: spacing["2"],
-  },
-})

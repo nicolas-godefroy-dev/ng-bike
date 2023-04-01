@@ -3,7 +3,6 @@ import {
   Pressable,
   PressableProps,
   StyleProp,
-  StyleSheet,
   Text,
   View,
   ViewStyle,
@@ -11,7 +10,7 @@ import {
 
 import { Skeleton } from "@components/Skeleton"
 import { Station } from "@libs/gbfsClient"
-import { borderRadius, spacing, typography, useTheme } from "@theme"
+import { tw } from "@theme"
 
 import { StationCapacity, StationCapacitySkeleton } from "./StationCapacity"
 
@@ -31,72 +30,34 @@ export const StationListItem = ({
   station_id,
   name,
   onPress,
-}: StationCapacityMarkerProps) => {
-  const { colors } = useTheme()
-
-  return (
-    <Pressable style={styles.container} onPress={onPress}>
-      <View style={styles.row}>
-        <Text style={[styles.id, { color: colors.text.base }]}>
-          {station_id}
-        </Text>
-        <Text
-          style={[styles.name, { color: colors.text.base }]}
-          numberOfLines={1}>
-          {name}
-        </Text>
-      </View>
-      <StationCapacity
-        bikes={num_bikes_available}
-        docks={num_docks_available}
-      />
-    </Pressable>
-  )
-}
+}: StationCapacityMarkerProps) => (
+  <Pressable
+    style={tw`h-[58px] items-center justify-between flex-row px-4 py-2.5`}
+    onPress={onPress}>
+    <View style={tw`flex-row items-center flex-1 pr-12`}>
+      <Text style={tw`text-title1 text-neutral`}>{station_id}</Text>
+      <Text
+        style={tw`ml-2 capitalize text-footnote text-neutral`}
+        numberOfLines={1}>
+        {name}
+      </Text>
+    </View>
+    <StationCapacity bikes={num_bikes_available} docks={num_docks_available} />
+  </Pressable>
+)
 
 export const StationListItemSkeleton = ({
   style,
 }: StationListItemSkeletonProps) => (
-  <View style={[styles.container, style]}>
-    <View style={styles.row}>
-      <Skeleton style={styles.idSkeleton} />
-      <Skeleton style={styles.nameSkeleton} />
+  <View
+    style={[
+      tw`h-[58px] items-center justify-between flex-row px-4 py-2.5`,
+      style,
+    ]}>
+    <View style={tw`flex-row items-center flex-1 pr-12`}>
+      <Skeleton style={tw`rounded-md h-7 w-7`} />
+      <Skeleton style={tw`w-1/2 h-3 ml-12`} />
     </View>
     <StationCapacitySkeleton />
   </View>
 )
-
-const styles = StyleSheet.create({
-  container: {
-    height: STATION_LIST_ITEM_HEIGHT,
-    alignItems: "center",
-    justifyContent: "space-between",
-    flexDirection: "row",
-    paddingHorizontal: spacing[4],
-    paddingVertical: spacing[2.5],
-  },
-  row: {
-    alignItems: "center",
-    flexDirection: "row",
-    flex: 1,
-    paddingRight: spacing[12],
-  },
-  id: {
-    ...typography.title1,
-  },
-  idSkeleton: {
-    height: 28,
-    width: 28,
-    borderRadius: borderRadius.md,
-  },
-  name: {
-    ...typography.footnote,
-    marginLeft: spacing[2],
-    textTransform: "capitalize",
-  },
-  nameSkeleton: {
-    marginLeft: spacing[2],
-    height: 13,
-    width: "45%",
-  },
-})

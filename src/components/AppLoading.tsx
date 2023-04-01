@@ -1,6 +1,8 @@
 import * as SplashScreen from "expo-splash-screen"
 import React, { useEffect } from "react"
-import { StyleSheet, View } from "react-native"
+import { View } from "react-native"
+
+import { tw } from "@theme"
 
 export type AppLoadingProps = {
   loading: boolean
@@ -30,11 +32,5 @@ export const AppLoading = ({
     }, delay)
   }, [delay, loading])
 
-  return <View style={styles.container}>{!loading && children}</View>
+  return <View style={tw`flex-1`}>{!loading && children}</View>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})

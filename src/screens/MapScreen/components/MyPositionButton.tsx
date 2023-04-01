@@ -1,48 +1,32 @@
 import React from "react"
-import { Pressable, StyleProp, StyleSheet, ViewStyle } from "react-native"
+import { Pressable, StyleProp, ViewStyle } from "react-native"
 
-import { borderRadius, spacing, useTheme } from "@theme"
+import { tw } from "@theme"
 
 import NavigationFilledIcon from "@assets/icons/navigation-filled.svg"
 import NavigationIcon from "@assets/icons/navigation.svg"
 
 export type MyPositionButtonProps = {
-  style?: StyleProp<ViewStyle>
   onPress: () => void
   active: boolean
+  style?: StyleProp<ViewStyle>
 }
 
 export const MyPositionButton = ({
-  style,
   onPress,
   active,
+  style,
 }: MyPositionButtonProps) => {
-  const { colors, shadows } = useTheme()
   const Icon = active ? NavigationFilledIcon : NavigationIcon
 
   return (
     <Pressable
       style={[
-        styles.container,
-        {
-          backgroundColor: colors.surface.base,
-          borderRadius: borderRadius.md,
-        },
-        shadows.md,
+        tw`items-center justify-center h-12 rounded-md shadow-md aspect-square surface-base`,
         style,
       ]}
       onPress={onPress}>
-      <Icon width={spacing[5]} height={spacing[5]} color={colors.text.base} />
+      <Icon {...tw`w-5 h-5 text-neutral`} />
     </Pressable>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    height: 42,
-    aspectRatio: 1,
-    borderRadius: borderRadius.md,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-})

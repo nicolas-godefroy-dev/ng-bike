@@ -1,5 +1,7 @@
 import React from "react"
-import { StyleProp, StyleSheet, View, ViewStyle } from "react-native"
+import { StyleProp, View, ViewStyle } from "react-native"
+
+import { tw } from "@theme"
 
 import { StationListItemSkeleton } from "./StationListItem"
 
@@ -8,18 +10,10 @@ export type StationListLoadingProps = {
 }
 
 export const StationListLoading = ({ style }: StationListLoadingProps) => (
-  <View style={[styles.container, style]}>
+  <View style={[tw`items-center justify-between flex-1`, style]}>
     <StationListItemSkeleton />
     <StationListItemSkeleton />
     <StationListItemSkeleton />
     <StationListItemSkeleton />
   </View>
 )
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    justifyContent: "space-between",
-    flex: 1,
-  },
-})

@@ -1,10 +1,10 @@
+import { Feather } from "@expo/vector-icons"
 import {
   OpenSans_400Regular,
   OpenSans_500Medium,
   OpenSans_600SemiBold,
   OpenSans_700Bold,
 } from "@expo-google-fonts/open-sans"
-import { Feather } from "@expo/vector-icons"
 import * as Font from "expo-font"
 import { useEffect, useState } from "react"
 
@@ -13,7 +13,7 @@ export const useCachedResources = () => {
 
   // Load any resources or data that we need prior to rendering the app
   useEffect(() => {
-    async function loadResourcesAndDataAsync() {
+    const loadResourcesAndDataAsync = async () => {
       try {
         // Load fonts
         await Font.loadAsync({

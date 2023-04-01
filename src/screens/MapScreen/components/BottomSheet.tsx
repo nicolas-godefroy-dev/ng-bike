@@ -8,7 +8,7 @@ import { useAnimatedStyle, useSharedValue } from "react-native-reanimated"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 import { Station } from "@libs/gbfsClient"
-import { borderRadius, spacing, useTheme } from "@theme"
+import { tw } from "@theme"
 
 import { StationListError } from "./Station/StationListError"
 import {
@@ -39,9 +39,8 @@ export const BottomSheet = ({
   const insets = useSafeAreaInsets()
   const animatedPosition = useSharedValue(0)
   const animatedStyle = useAnimatedStyle(() => ({
-    top: animatedPosition.value - spacing["3"] - WEATHER_INDICATOR_HEIGHT,
+    top: animatedPosition.value - 12 - WEATHER_INDICATOR_HEIGHT,
   }))
-  const { colors } = useTheme()
   const bottomSheetRef = useRef<RNBottomSheet>(null)
   const data = isError || isTooFar ? [] : stations
   const snapPoints = isError || isTooFar ? ["25%"] : ["25%", "64%"]
@@ -79,20 +78,14 @@ export const BottomSheet = ({
 
   return (
     <>
-      <WeatherIndicator style={[styles.weatherIndicator, animatedStyle]} />
+      <WeatherIndicator style={[tw`absolute right-5`, animatedStyle]} />
       <RNBottomSheet
         ref={bottomSheetRef}
         animatedPosition={animatedPosition}
         index={0}
-        handleStyle={[styles.handle]}
-        backgroundStyle={[
-          styles.background,
-          { backgroundColor: colors.surface.base },
-        ]}
-        handleIndicatorStyle={[
-          styles.handleIndicator,
-          { backgroundColor: colors.surface[300] },
-        ]}
+        handleStyle={tw`h-4`}
+        backgroundStyle={tw`rounded-md surface-base`}
+        handleIndicatorStyle={[styles.handleIndicator, tw`surface-300`]}
         snapPoints={snapPoints}>
         <BottomSheetFlatList
           data={data}
@@ -108,19 +101,9 @@ export const BottomSheet = ({
 }
 
 const styles = StyleSheet.create({
-  background: {
-    borderRadius: borderRadius.md,
-  },
-  handle: {
-    height: spacing[4],
-  },
   handleIndicator: {
     width: 36,
     height: 5,
     top: -4,
-  },
-  weatherIndicator: {
-    position: "absolute",
-    right: spacing["5"],
   },
 })

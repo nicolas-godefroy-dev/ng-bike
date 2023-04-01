@@ -3,8 +3,8 @@ import { BlurView } from "expo-blur"
 import * as Haptics from "expo-haptics"
 import * as Location from "expo-location"
 import React, { useEffect, useRef } from "react"
-import { Platform, StyleSheet } from "react-native"
-import MapView, { EdgePadding, MapViewProps, Marker } from "react-native-maps"
+import { Platform, useColorScheme } from "react-native"
+import MapView, { MapViewProps, Marker } from "react-native-maps"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 import { WINDOW_HEIGHT, WINDOW_WIDTH } from "@constants/layout"
@@ -12,7 +12,7 @@ import { ROUEN_REGION } from "@constants/map"
 import { distance } from "@libs/distance"
 import { Station, getStations, sortStationsByDistance } from "@libs/gbfsClient"
 import { RootStackScreenProps } from "@navigation/types"
-import { spacing, useTheme } from "@theme"
+import { googleMap, tw } from "@theme"
 
 import { BottomSheet } from "./components/BottomSheet"
 import { MyPositionButton } from "./components/MyPositionButton"
@@ -28,14 +28,14 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     followUserLocation,
     unfollowUserLocation,
   } = useMapScreenStore()
-  const { mapStyle } = useTheme()
+  const colorScheme = useColorScheme()
   const insets = useSafeAreaInsets()
 
   const platformGap = Platform.OS === "android" ? 6 : 0
   const bottomSheetHeight =
-    WINDOW_HEIGHT * 0.25 - insets.bottom - spacing["8"] + platformGap
-  const mapPadding: EdgePadding = {
-    top: insets.top + spacing["5"],
+    WINDOW_HEIGHT * 0.25 - insets.bottom - 32 + platformGap
+  const mapPadding = {
+    top: insets.top + 20,
     right: insets.right,
     bottom: bottomSheetHeight,
     left: insets.left,
@@ -136,10 +136,9 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
       <BlurView
         intensity={26}
         style={[
-          styles.blurView,
+          tw`absolute top-0 left-0 z-10 w-full`,
           {
             height: insets.top,
-            zIndex: 10,
           },
         ]}
       />
@@ -148,8 +147,11 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
         onUserLocationChange={onUserLocationChange}
         onPanDrag={onPanDrag}
         initialRegion={ROUEN_REGION}
-        style={styles.map}
-        customMapStyle={mapStyle}
+        style={{
+          width: WINDOW_WIDTH,
+          height: WINDOW_HEIGHT,
+        }}
+        customMapStyle={colorScheme === "dark" ? googleMap.dark : undefined}
         showsUserLocation
         minZoomLevel={13}
         showsBuildings={false}
@@ -173,7 +175,7 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
       </MapView>
       <MyPositionButton
         active={isFollowingUser}
-        style={[styles.myPositionButton, { top: insets.top + spacing[5] }]}
+        style={[tw`absolute right-5`, { top: mapPadding.top }]}
         onPress={handlePressMyLocation}
       />
       <BottomSheet
@@ -186,20 +188,3 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     </>
   )
 }
-
-const styles = StyleSheet.create({
-  blurView: {
-    width: "100%",
-    position: "absolute",
-    top: 0,
-    left: 0,
-  },
-  myPositionButton: {
-    position: "absolute",
-    right: spacing[5],
-  },
-  map: {
-    width: WINDOW_WIDTH,
-    height: WINDOW_HEIGHT,
-  },
-})
