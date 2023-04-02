@@ -3,7 +3,7 @@ import {
   default as RNBottomSheet,
 } from "@gorhom/bottom-sheet"
 import React, { useRef } from "react"
-import { FlatListProps, ListRenderItemInfo, StyleSheet } from "react-native"
+import { FlatListProps, ListRenderItemInfo } from "react-native"
 import { useAnimatedStyle, useSharedValue } from "react-native-reanimated"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
@@ -11,10 +11,7 @@ import { Station } from "@libs/gbfsClient"
 import { tw } from "@theme"
 
 import { StationListError } from "./Station/StationListError"
-import {
-  STATION_LIST_ITEM_HEIGHT,
-  StationListItem,
-} from "./Station/StationListItem"
+import { StationListItem } from "./Station/StationListItem"
 import { StationListLoading } from "./Station/StationListLoading"
 import {
   WEATHER_INDICATOR_HEIGHT,
@@ -59,12 +56,6 @@ export const BottomSheet = ({
     />
   )
 
-  const getItemLayout = (_data: any, index: number) => ({
-    length: STATION_LIST_ITEM_HEIGHT,
-    offset: STATION_LIST_ITEM_HEIGHT * index,
-    index,
-  })
-
   const ListEmptyComponent: FlatListProps<Station>["ListEmptyComponent"] =
     () => {
       if (isLoading) {
@@ -85,25 +76,23 @@ export const BottomSheet = ({
         index={0}
         handleStyle={tw`h-4`}
         backgroundStyle={tw`rounded-md surface-base`}
-        handleIndicatorStyle={[styles.handleIndicator, tw`surface-300`]}
+        handleIndicatorStyle={[
+          {
+            width: 36,
+            height: 5,
+            top: -4,
+          },
+          tw`surface-300`,
+        ]}
         snapPoints={snapPoints}>
         <BottomSheetFlatList
           data={data}
           ListEmptyComponent={ListEmptyComponent}
           keyExtractor={keyExtractor}
           renderItem={renderItem}
-          getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: insets.bottom }}
         />
       </RNBottomSheet>
     </>
   )
 }
-
-const styles = StyleSheet.create({
-  handleIndicator: {
-    width: 36,
-    height: 5,
-    top: -4,
-  },
-})
