@@ -7,7 +7,7 @@ import { getWeather } from "@libs/weatherClient"
 import { tw } from "@theme"
 
 import { WeatherIcon } from "./WeatherIcon"
-import { useMapScreenStore } from "../../hooks/useMapScreenStore"
+import { useLocationStore } from "../../../../hooks/useLocationStore"
 
 export const WEATHER_INDICATOR_HEIGHT = 34
 
@@ -16,7 +16,7 @@ export type WeatherIndicatorProps = {
 }
 
 export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
-  const userLocation = useMapScreenStore(state => state.userLocation)
+  const userLocation = useLocationStore(state => state.userLocation)
   const { isError, isLoading, data } = useQuery({
     queryKey: ["weather", userLocation],
     queryFn: () => getWeather(userLocation),

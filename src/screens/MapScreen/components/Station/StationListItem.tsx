@@ -27,7 +27,6 @@ export const STATION_LIST_ITEM_HEIGHT = 58
 export const StationListItem = ({
   num_bikes_available,
   num_docks_available,
-  station_id,
   name,
   onPress,
 }: StationCapacityMarkerProps) => (
@@ -35,10 +34,7 @@ export const StationListItem = ({
     style={tw`h-[58px] items-center justify-between flex-row px-4 py-2.5`}
     onPress={onPress}>
     <View style={tw`flex-row items-center flex-1 pr-12`}>
-      <Text style={tw`text-title1 text-neutral`}>{station_id}</Text>
-      <Text
-        style={tw`ml-2 capitalize text-footnote text-neutral`}
-        numberOfLines={1}>
+      <Text style={tw`capitalize text-footnote text-neutral`} numberOfLines={1}>
         {name}
       </Text>
     </View>

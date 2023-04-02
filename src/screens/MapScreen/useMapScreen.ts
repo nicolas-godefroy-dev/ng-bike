@@ -1,16 +1,18 @@
 import { useQuery } from "@tanstack/react-query"
 import * as Haptics from "expo-haptics"
 import * as Location from "expo-location"
-import { useEffect, useRef } from "react"
-import MapView, { MapViewProps } from "react-native-maps"
+import { useCallback, useEffect, useRef } from "react"
+import MapView, {
+  PanDragEvent,
+  UserLocationChangeEvent,
+} from "react-native-maps"
 
-import { ROUEN_REGION } from "@constants/map"
-import { distance } from "@libs/distance"
 import { Station, getStations, sortStationsByDistance } from "@libs/gbfsClient"
 
-import { useMapScreenStore } from "./useMapScreenStore"
+import { useLocationStore } from "../../hooks/useLocationStore"
 
 export const useMapScreen = () => {
+  const [status] = Location.useForegroundPermissions({ request: true })
   const mapRef = useRef<MapView>(null)
   const {
     userLocation,
@@ -18,9 +20,7 @@ export const useMapScreen = () => {
     setUserLocation,
     followUserLocation,
     unfollowUserLocation,
-  } = useMapScreenStore()
-
-  const isTooFar = distance(userLocation, ROUEN_REGION) > 30000 // 30 KM
+  } = useLocationStore()
   const {
     isError,
     data: stations,
@@ -29,43 +29,50 @@ export const useMapScreen = () => {
     queryKey: ["stations"],
     queryFn: getStations,
     refetchInterval: 1000 * 60,
-    enabled: !isTooFar,
-  })
-
-  const sortedStations = sortStationsByDistance(stations || [], userLocation)
-  const [status] = Location.useForegroundPermissions({
-    request: true,
+    select: data => {
+      return sortStationsByDistance(data, userLocation)
+    },
+    initialData: [],
   })
 
   // Catch the user location
-  const onUserLocationChange: MapViewProps["onUserLocationChange"] = event => {
-    if (!event.nativeEvent.coordinate) return
+  const onUserLocationChange = useCallback(
+    (event: UserLocationChangeEvent) => {
+      if (!event.nativeEvent.coordinate) return
 
-    setUserLocation({
-      latitude: event.nativeEvent.coordinate.latitude,
-      longitude: event.nativeEvent.coordinate.longitude,
-    })
-  }
+      setUserLocation({
+        latitude: event.nativeEvent.coordinate.latitude,
+        longitude: event.nativeEvent.coordinate.longitude,
+      })
+    },
+    [setUserLocation],
+  )
 
-  // Disable follow the user location
-  const onPanDrag: MapViewProps["onPanDrag"] = _event => unfollowUserLocation()
+  // Disable follow the user location on pan drag
+  const onPanDrag = useCallback(
+    (_event: PanDragEvent) => unfollowUserLocation(),
+    [unfollowUserLocation],
+  )
 
   // Center the map on the pressed station
-  const onPressStation = (station: Station) => {
-    if (!mapRef.current) return
+  const onPressStation = useCallback(
+    (station: Station) => {
+      if (!mapRef.current) return
 
-    unfollowUserLocation()
-    mapRef.current.animateCamera({
-      center: {
-        latitude: station.lat,
-        longitude: station.lon,
-      },
-      zoom: 17,
-      altitude: 1000,
-    })
-  }
+      unfollowUserLocation()
+      mapRef.current.animateCamera({
+        center: {
+          latitude: station.lat,
+          longitude: station.lon,
+        },
+        zoom: 17,
+        altitude: 1000,
+      })
+    },
+    [unfollowUserLocation],
+  )
 
-  const handlePressMyLocation = () => {
+  const handlePressMyLocation = useCallback(() => {
     if (!mapRef.current) return
 
     // Center the map on the user location
@@ -79,7 +86,7 @@ export const useMapScreen = () => {
 
     followUserLocation()
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
-  }
+  }, [followUserLocation, userLocation])
 
   // Focus the user location when the user location permission change
   useEffect(() => {
@@ -108,11 +115,10 @@ export const useMapScreen = () => {
     onUserLocationChange,
     onPanDrag,
     isFollowingUser,
-    sortedStations,
+    stations,
     handlePressMyLocation,
     isLoading,
     isError,
-    isTooFar,
     onPressStation,
   }
 }

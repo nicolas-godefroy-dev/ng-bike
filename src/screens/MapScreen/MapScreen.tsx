@@ -1,5 +1,5 @@
 import { BlurView } from "expo-blur"
-import React from "react"
+import React, { useMemo } from "react"
 import { Platform, useColorScheme } from "react-native"
 import MapView, { Marker } from "react-native-maps"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
@@ -12,7 +12,7 @@ import { googleMap, tw } from "@theme"
 import { BottomSheet } from "./components/BottomSheet"
 import { MyPositionButton } from "./components/MyPositionButton"
 import { StationCapacityMarker } from "./components/Station/StationCapacityMarker"
-import { useMapScreen } from "./hooks/useMapScreen"
+import { useMapScreen } from "./useMapScreen"
 
 export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
   const {
@@ -20,25 +20,27 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
     onUserLocationChange,
     onPanDrag,
     isFollowingUser,
-    sortedStations,
+    stations,
     handlePressMyLocation,
     isLoading,
     isError,
-    isTooFar,
     onPressStation,
   } = useMapScreen()
   const colorScheme = useColorScheme()
   const insets = useSafeAreaInsets()
 
-  const platformGap = Platform.OS === "android" ? 6 : 0
-  const bottomSheetHeight =
-    WINDOW_HEIGHT * 0.25 - insets.bottom - 32 + platformGap
-  const mapPadding = {
-    top: insets.top + 20,
-    right: insets.right,
-    bottom: bottomSheetHeight,
-    left: insets.left,
-  }
+  const mapPadding = useMemo(() => {
+    const platformGap = Platform.OS === "android" ? 6 : 0
+    const bottomSheetHeight =
+      WINDOW_HEIGHT * 0.25 - insets.bottom - 32 + platformGap
+
+    return {
+      top: insets.top + 20,
+      right: insets.right,
+      bottom: bottomSheetHeight,
+      left: insets.left,
+    }
+  }, [insets.bottom, insets.left, insets.right, insets.top])
 
   return (
     <>
@@ -68,7 +70,7 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
         showsCompass={false}
         mapPadding={mapPadding}
         followsUserLocation={isFollowingUser}>
-        {sortedStations.map(station => (
+        {stations.map(station => (
           <Marker
             key={station.station_id}
             coordinate={{
@@ -88,10 +90,9 @@ export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
         onPress={handlePressMyLocation}
       />
       <BottomSheet
-        stations={sortedStations}
+        stations={stations}
         isLoading={isLoading}
         isError={isError}
-        isTooFar={isTooFar}
         onPressStation={onPressStation}
       />
     </>

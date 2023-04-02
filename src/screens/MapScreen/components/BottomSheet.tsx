@@ -2,7 +2,7 @@ import {
   BottomSheetFlatList,
   default as RNBottomSheet,
 } from "@gorhom/bottom-sheet"
-import React, { useRef } from "react"
+import React, { useCallback, useRef } from "react"
 import { FlatListProps, ListRenderItemInfo } from "react-native"
 import { useAnimatedStyle, useSharedValue } from "react-native-reanimated"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
@@ -22,14 +22,12 @@ export type BottomSheetProps = {
   stations?: Station[]
   isLoading?: boolean
   isError?: boolean
-  isTooFar?: boolean
   onPressStation: (station: Station) => void
 }
 
 export const BottomSheet = ({
   stations = [],
   isError,
-  isTooFar,
   isLoading,
   onPressStation,
 }: BottomSheetProps) => {
@@ -39,33 +37,37 @@ export const BottomSheet = ({
     top: animatedPosition.value - 12 - WEATHER_INDICATOR_HEIGHT,
   }))
   const bottomSheetRef = useRef<RNBottomSheet>(null)
-  const data = isError || isTooFar ? [] : stations
-  const snapPoints = isError || isTooFar ? ["25%"] : ["25%", "64%"]
+  const snapPoints = isError ? ["25%"] : ["25%", "64%"]
 
   const keyExtractor = (item: Station) => item.station_id
 
-  const renderItem = ({ item: station }: ListRenderItemInfo<Station>) => (
-    <StationListItem
-      {...station}
-      onPress={() => {
-        if (!bottomSheetRef.current) return
+  const renderItem = useCallback(
+    ({ item: station }: ListRenderItemInfo<Station>) => (
+      <StationListItem
+        {...station}
+        onPress={() => {
+          if (!bottomSheetRef.current) return
 
-        onPressStation(station)
-        bottomSheetRef.current.snapToIndex(0)
-      }}
-    />
+          onPressStation(station)
+          bottomSheetRef.current.snapToIndex(0)
+        }}
+      />
+    ),
+    [onPressStation],
   )
 
   const ListEmptyComponent: FlatListProps<Station>["ListEmptyComponent"] =
-    () => {
+    useCallback(() => {
       if (isLoading) {
         return <StationListLoading />
-      } else if (isError || isTooFar) {
-        return <StationListError error={isTooFar ? "distance" : "network"} />
+      }
+
+      if (isError) {
+        return <StationListError />
       }
 
       return null
-    }
+    }, [isError, isLoading])
 
   return (
     <>
@@ -86,7 +88,7 @@ export const BottomSheet = ({
         ]}
         snapPoints={snapPoints}>
         <BottomSheetFlatList
-          data={data}
+          data={stations}
           ListEmptyComponent={ListEmptyComponent}
           keyExtractor={keyExtractor}
           renderItem={renderItem}

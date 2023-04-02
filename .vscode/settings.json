@@ -11,7 +11,8 @@
     "tanstack",
     "twrnc",
     "typecheck",
-    "unfollow"
+    "unfollow",
+    "zustand"
   ],
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
