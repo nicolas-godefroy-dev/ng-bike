@@ -78,7 +78,7 @@
     "@types/react-test-renderer": "18.0.0",
     "@typescript-eslint/eslint-plugin": "5.57.0",
     "@typescript-eslint/parser": "5.57.0",
-    "@typescript-eslint/utils": "5.57.0",
+    "@typescript-eslint/utils": "5.57.1",
     "babel-plugin-inline-dotenv": "1.7.0",
     "babel-plugin-module-resolver": "5.0.0",
     "eslint": "8.37.0",
