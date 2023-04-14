@@ -63,8 +63,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
-    "@commitlint/cli": "17.6.0",
-    "@commitlint/config-conventional": "17.6.0",
+    "@commitlint/cli": "17.6.1",
+    "@commitlint/config-conventional": "17.6.1",
     "@tanstack/eslint-plugin-query": "4.29.0",
     "@types/babel__core": "7.20.0",
     "@types/eslint": "8.37.0",
