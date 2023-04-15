@@ -18,7 +18,7 @@ SplashScreen.preventAutoHideAsync().catch(() => {
 export const AppLoading = ({
   children,
   loading,
-  delay = 800,
+  delay = 150,
 }: AppLoadingProps) => {
   // Run the animation when the resources and the app logo are loaded
   useEffect(() => {
