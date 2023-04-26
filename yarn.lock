@@ -7135,8 +7135,8 @@ __metadata:
   linkType: hard
 
 "expo@npm:^48.0.9":
-  version: 48.0.12
-  resolution: "expo@npm:48.0.12"
+  version: 48.0.13
+  resolution: "expo@npm:48.0.13"
   dependencies:
     "@babel/runtime": ^7.20.0
     "@expo/cli": 0.7.0
@@ -7162,7 +7162,7 @@ __metadata:
     uuid: ^3.4.0
   bin:
     expo: bin/cli.js
-  checksum: 013b29aaf741143bd1afaad867af2a1acee94ceb7e226bd1f0c40bf108b7ee41ff20617fa81c65a6680fd3dbf68a66fbddb0ead60d3bb13e825066e092cfc0c1
+  checksum: 098db24ffc2a13ce73fb2a4c4e3ee74966c4105932de316d0c2ce74e3f759aa393cf3c7675e0f2f43461eb1c5bce15604c8eb5193e7f0b53d8683446cb222f1e
   languageName: node
   linkType: hard
 
