@@ -1811,9 +1811,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/cli@npm:0.7.0":
-  version: 0.7.0
-  resolution: "@expo/cli@npm:0.7.0"
+"@expo/cli@npm:0.7.1":
+  version: 0.7.1
+  resolution: "@expo/cli@npm:0.7.1"
   dependencies:
     "@babel/runtime": ^7.20.0
     "@expo/code-signing-certificates": 0.0.5
@@ -1826,7 +1826,7 @@ __metadata:
     "@expo/osascript": ^2.0.31
     "@expo/package-manager": ~1.0.0
     "@expo/plist": ^0.0.20
-    "@expo/prebuild-config": 6.0.0
+    "@expo/prebuild-config": 6.0.1
     "@expo/rudder-sdk-node": 1.1.1
     "@expo/spawn-async": 1.5.0
     "@expo/xcpretty": ^4.2.1
@@ -1878,7 +1878,7 @@ __metadata:
     ws: ^8.12.1
   bin:
     expo-internal: build/bin/cli
-  checksum: 08f217608ec425266913140a040ed94b9b0bced11f218bea63b692486d8173a5cbb0da9fab2ecb2e43c585c9e2270188bc8d661a1b8f06a4ccbcdee683126b43
+  checksum: 5b84f3ad6c57fa9c64a0edd99558ada7fca8556d6137213df141b90cd4c93b3605dafce1a72cb11f0448857c220c7be63cde295a2cb13d99ba1f122ea362da05
   languageName: node
   linkType: hard
 
@@ -2090,9 +2090,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/prebuild-config@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@expo/prebuild-config@npm:6.0.0"
+"@expo/prebuild-config@npm:6.0.1":
+  version: 6.0.1
+  resolution: "@expo/prebuild-config@npm:6.0.1"
   dependencies:
     "@expo/config": ~8.0.0
     "@expo/config-plugins": ~6.0.0
@@ -2106,7 +2106,7 @@ __metadata:
     xml2js: 0.4.23
   peerDependencies:
     expo-modules-autolinking: ">=0.8.1"
-  checksum: 56be876959ce4d71734e26cd71f743fc06f1563548d8a41a9378c05ca075c073bfebbd89170188ea4ff2a1677eb2bae330f8f803b060796e4fd8cfc3a312302d
+  checksum: 81ea222fe64ba18e958535c9ee36682ffc533daf1567910311fae19f4a6ded4712b1c0db997658e34911868d66bf911a6af02c5a7d8a8a942ef3b98b34c2986a
   languageName: node
   linkType: hard
 
@@ -7084,14 +7084,14 @@ __metadata:
   linkType: hard
 
 "expo-splash-screen@npm:~0.18.1":
-  version: 0.18.1
-  resolution: "expo-splash-screen@npm:0.18.1"
+  version: 0.18.2
+  resolution: "expo-splash-screen@npm:0.18.2"
   dependencies:
     "@expo/configure-splash-screen": ^0.6.0
-    "@expo/prebuild-config": 6.0.0
+    "@expo/prebuild-config": 6.0.1
   peerDependencies:
     expo: "*"
-  checksum: 39a43bd3f779432721e845f171c51b0a64d713029ec14202e65a84434b09b9184dd6b173d13331321766854cf400186b3ae4aa8736d6fda40f380aae756d6673
+  checksum: 2c62d2989bf8945efb41056eb93b711cec260d24eed96a58789c961ab86fa3552466d221f1d3e2d926134136aa95337cdba94035d328a28c92793c31de95e718
   languageName: node
   linkType: hard
 
@@ -7142,11 +7142,11 @@ __metadata:
   linkType: hard
 
 "expo@npm:^48.0.9":
-  version: 48.0.13
-  resolution: "expo@npm:48.0.13"
+  version: 48.0.15
+  resolution: "expo@npm:48.0.15"
   dependencies:
     "@babel/runtime": ^7.20.0
-    "@expo/cli": 0.7.0
+    "@expo/cli": 0.7.1
     "@expo/config": 8.0.2
     "@expo/config-plugins": 6.0.1
     "@expo/vector-icons": ^13.0.0
@@ -7169,7 +7169,7 @@ __metadata:
     uuid: ^3.4.0
   bin:
     expo: bin/cli.js
-  checksum: 098db24ffc2a13ce73fb2a4c4e3ee74966c4105932de316d0c2ce74e3f759aa393cf3c7675e0f2f43461eb1c5bce15604c8eb5193e7f0b53d8683446cb222f1e
+  checksum: afd0b5b13af37608bba0746ade8868cbd924bca7c8a017fe266ae466059938baa9c556ab3917d15e9f2cbe65e80b0517058bf78524311c4b9aea8dc51b0aa85e
   languageName: node
   linkType: hard
 
