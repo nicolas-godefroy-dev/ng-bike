@@ -2918,6 +2918,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native/virtualized-lists@npm:^0.72.4":
+  version: 0.72.4
+  resolution: "@react-native/virtualized-lists@npm:0.72.4"
+  dependencies:
+    invariant: ^2.2.4
+    nullthrows: ^1.1.1
+  peerDependencies:
+    react-native: "*"
+    react-test-renderer: 18.2.0
+  checksum: d050781d93d95f76a84915fea78fbc8c56e1e6d79e34fd23584ce63257df47e039231423740b9e5fbd8b3d8584fc1588d20eab837b6d791561af9c4d1afa0d04
+  languageName: node
+  linkType: hard
+
 "@react-navigation/core@npm:^6.4.8":
   version: 6.4.8
   resolution: "@react-navigation/core@npm:6.4.8"
@@ -3465,12 +3478,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native@npm:~0.71.4":
-  version: 0.71.6
-  resolution: "@types/react-native@npm:0.71.6"
+"@types/react-native@npm:~0.72.0":
+  version: 0.72.0
+  resolution: "@types/react-native@npm:0.72.0"
   dependencies:
+    "@react-native/virtualized-lists": ^0.72.4
     "@types/react": "*"
-  checksum: 067325c549e7181c73cdf8da1cb7bdef226124d91c3f72fcc2fb8b3c98a2d184f74a16ba627e3192253103bd651e8238d0e722b93f762b3f1a3f5b96773ec7a5
+  checksum: e0e5a6154fc6f442c9a9939eeea6976a156cbb668b8b7b8f71b36ca3666bda389c117b0428cd202be015b7cf204b7621d4764d4a50ab05eca88a49764ec99406
   languageName: node
   linkType: hard
 
@@ -6897,7 +6911,7 @@ __metadata:
     "@types/prettier": 2.7.2
     "@types/react": ~18.0.31
     "@types/react-dom": ~18.0.11
-    "@types/react-native": ~0.71.4
+    "@types/react-native": ~0.72.0
     "@types/react-test-renderer": 18.0.0
     "@typescript-eslint/eslint-plugin": 5.59.5
     "@typescript-eslint/parser": 5.59.5
