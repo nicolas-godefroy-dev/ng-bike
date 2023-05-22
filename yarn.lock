@@ -14450,13 +14450,13 @@ __metadata:
   linkType: hard
 
 "twrnc@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "twrnc@npm:3.6.0"
+  version: 3.6.1
+  resolution: "twrnc@npm:3.6.1"
   dependencies:
     tailwindcss: ">=2.0.0"
   peerDependencies:
     react-native: ">=0.63.0"
-  checksum: cd2847b81be2d9db8b59d596b3f64d5be7b6c37e17ffc3e746f9415e929c7622e6fe1b948de68a781eaefdcd951c82e8aace7807ef31165d965ef22dc269cfca
+  checksum: 8d873790be15f0b9c43e4d0a403395f4aa0fdb0743e3a6b63553baa6694548033d60e748f3d82765c70be50003bf7a4f087266b5f4a768a2219e762795ebcabf
   languageName: node
   linkType: hard
 
