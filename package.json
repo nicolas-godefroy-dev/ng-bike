@@ -71,7 +71,7 @@
     "@types/jest": "29.5.2",
     "@types/lodash": "4.14.195",
     "@types/node": "18.16.16",
-    "@types/prettier": "2.7.2",
+    "@types/prettier": "2.7.3",
     "@types/react": "~18.0.31",
     "@types/react-dom": "~18.0.11",
     "@types/react-native": "~0.72.0",
