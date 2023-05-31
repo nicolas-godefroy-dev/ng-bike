@@ -1811,9 +1811,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/cli@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@expo/cli@npm:0.7.2"
+"@expo/cli@npm:0.7.3":
+  version: 0.7.3
+  resolution: "@expo/cli@npm:0.7.3"
   dependencies:
     "@babel/runtime": ^7.20.0
     "@expo/code-signing-certificates": 0.0.5
@@ -1878,7 +1878,7 @@ __metadata:
     ws: ^8.12.1
   bin:
     expo-internal: build/bin/cli
-  checksum: bb67163e60e0a99c3f089495f549fda984ef4b33222dc8c62dc8c51b5dff12b51ccb1f38e12664b6cf47dfe323f80422b0878c958ddc9b5ef395a8a6286d3227
+  checksum: f1b03efbec0dc534ccf96bfee5c63f2f16e039730a6e07ea25f74222fef70bb169f57b0fb25c5fb2640a04c3f755cdeca280cbe1058d6723d46af01cd180a00b
   languageName: node
   linkType: hard
 
@@ -7162,11 +7162,11 @@ __metadata:
   linkType: hard
 
 "expo@npm:^48.0.9":
-  version: 48.0.18
-  resolution: "expo@npm:48.0.18"
+  version: 48.0.19
+  resolution: "expo@npm:48.0.19"
   dependencies:
     "@babel/runtime": ^7.20.0
-    "@expo/cli": 0.7.2
+    "@expo/cli": 0.7.3
     "@expo/config": 8.0.2
     "@expo/config-plugins": 6.0.2
     "@expo/vector-icons": ^13.0.0
@@ -7189,7 +7189,7 @@ __metadata:
     uuid: ^3.4.0
   bin:
     expo: bin/cli.js
-  checksum: 0506bccb60bc09901e75375d35ea14ea79da0719798fe556f622c43d8ef43d8561e00f814bc7005e3e0913f3f87988bcbad895c502b12f1afbb0d2bcb3f7cde0
+  checksum: a5d79e6e3b82081c4d2b5a30109010b91639f8808479579fd829e00e35aa1943417c27d6d5b650f9998aab636f298d68cfa6d989d247aa380a6aa00fe26fa40b
   languageName: node
   linkType: hard
 
