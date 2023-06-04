@@ -2178,9 +2178,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gorhom/bottom-sheet@npm:4.4.6":
-  version: 4.4.6
-  resolution: "@gorhom/bottom-sheet@npm:4.4.6"
+"@gorhom/bottom-sheet@npm:4.4.7":
+  version: 4.4.7
+  resolution: "@gorhom/bottom-sheet@npm:4.4.7"
   dependencies:
     "@gorhom/portal": 1.0.14
     invariant: ^2.2.4
@@ -2196,7 +2196,7 @@ __metadata:
       optional: true
     "@types/react-native":
       optional: true
-  checksum: 4f2b87f79349f6c5a3c9a34bb87e485559b7cde9727520f3d296123c680845394f0c930f9e752c64408efce738be87d97d5ffdf72e4a6784a3c8fc98f48b503b
+  checksum: ae330e7712fa58d78dc91e089e29f07b23c0c581e8a152b806c39dd831d64a7979e274f188868b086ebbb6f435ce8575fc32f2a1df6b8cf2d522a13b7182374c
   languageName: node
   linkType: hard
 
@@ -6896,7 +6896,7 @@ __metadata:
     "@commitlint/cli": 17.6.5
     "@commitlint/config-conventional": 17.6.5
     "@expo-google-fonts/open-sans": 0.2.3
-    "@gorhom/bottom-sheet": 4.4.6
+    "@gorhom/bottom-sheet": 4.4.7
     "@react-native-community/netinfo": 9.3.10
     "@react-navigation/native": 6.1.6
     "@react-navigation/native-stack": 6.9.12
