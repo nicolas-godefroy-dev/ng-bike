@@ -67,7 +67,7 @@
     "@commitlint/config-conventional": "17.6.5",
     "@tanstack/eslint-plugin-query": "4.29.9",
     "@types/babel__core": "7.20.1",
-    "@types/eslint": "8.40.0",
+    "@types/eslint": "8.40.1",
     "@types/jest": "29.5.2",
     "@types/lodash": "4.14.195",
     "@types/node": "18.16.16",
