@@ -44,6 +44,7 @@ export const MapScreen = () => {
   return (
     <>
       <BlurView
+        testID="blurred-status-bar"
         intensity={26}
         style={[
           tw`absolute top-0 left-0 z-10 w-full`,
@@ -68,9 +69,11 @@ export const MapScreen = () => {
         showsMyLocationButton={false}
         showsCompass={false}
         mapPadding={mapPadding}
-        followsUserLocation={isFollowingUser}>
+        followsUserLocation={isFollowingUser}
+        testID="map">
         {stations.map(station => (
           <Marker
+            testID={`marker-station-${station.station_id}`}
             key={station.station_id}
             coordinate={{
               latitude: station.lat,
@@ -84,6 +87,7 @@ export const MapScreen = () => {
         ))}
       </MapView>
       <MyPositionButton
+        testID="my-position"
         active={isFollowingUser}
         style={[tw`absolute right-5`, { top: mapPadding.top }]}
         onPress={handlePressMyLocation}

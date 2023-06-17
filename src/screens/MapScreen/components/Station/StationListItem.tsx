@@ -15,6 +15,7 @@ import { tw } from "@theme"
 import { StationCapacity, StationCapacitySkeleton } from "./StationCapacity"
 
 export type StationCapacityMarkerProps = Station & {
+  testID?: PressableProps["testID"]
   onPress: PressableProps["onPress"]
 }
 
@@ -29,10 +30,12 @@ export const StationListItem = ({
   num_docks_available,
   name,
   onPress,
+  testID,
 }: StationCapacityMarkerProps) => (
   <Pressable
+    onPress={onPress}
     style={tw`h-[58px] items-center justify-between flex-row px-4 py-2.5`}
-    onPress={onPress}>
+    testID={testID}>
     <View style={tw`flex-row items-center flex-1 pr-12`}>
       <Text style={tw`capitalize text-footnote text-neutral`} numberOfLines={1}>
         {name}

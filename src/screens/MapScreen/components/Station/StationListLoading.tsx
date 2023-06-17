@@ -10,7 +10,9 @@ export type StationListLoadingProps = {
 }
 
 export const StationListLoading = ({ style }: StationListLoadingProps) => (
-  <View style={[tw`items-center justify-between flex-1`, style]}>
+  <View
+    style={[tw`items-center justify-between flex-1`, style]}
+    testID="station-list-loading">
     <StationListItemSkeleton />
     <StationListItemSkeleton />
     <StationListItemSkeleton />

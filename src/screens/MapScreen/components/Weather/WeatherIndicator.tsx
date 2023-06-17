@@ -30,7 +30,8 @@ export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
       style={[
         tw`h-[34px] rounded-md flex-row items-center justify-center px-2 py-1.5 surface-base shadow-md`,
         style,
-      ]}>
+      ]}
+      testID="weather-indicator">
       <WeatherIcon weather={data.weather} {...tw`w-4 h-4 text-neutral`} />
       <Text style={tw`pl-1 text-body text-neutral`}>
         {data.temp.toFixed(0)}°

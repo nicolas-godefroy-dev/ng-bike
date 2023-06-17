@@ -1,0 +1,9 @@
+appId: com.nicolas-godefroy-dev.bike-sharing
+---
+- launchApp:
+    appId: com.nicolas-godefroy-dev.bike-sharing
+- assertVisible:
+    id: "map"
+- assertVisible:
+    id: "my-position"
+- assertVisible: "Bottom Sheet handle"

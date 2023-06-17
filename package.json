@@ -12,6 +12,7 @@
     "ios": "npx expo run:ios",
     "eject": "npx expo eject",
     "test": "jest",
+    "e2e": "maestro test ./**/*.e2e.yaml",
     "updateSnapshots": "jest -u --coverage=false",
     "typecheck": "tsc",
     "lint": "npx eslint .",

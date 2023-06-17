@@ -51,6 +51,7 @@ export const BottomSheet = ({
           onPressStation(station)
           bottomSheetRef.current.snapToIndex(0)
         }}
+        testID={`bottom-sheet-station-${station.station_id}`}
       />
     ),
     [onPressStation],
