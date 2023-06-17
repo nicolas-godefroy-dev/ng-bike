@@ -1,4 +1,4 @@
-import * as SplashScreen from "expo-splash-screen"
+import { SplashScreen } from "expo-router"
 import React, { useEffect } from "react"
 import { View } from "react-native"
 
@@ -11,9 +11,7 @@ export type AppLoadingProps = {
 }
 
 // Instruct SplashScreen not to hide yet, we want to do this manually
-SplashScreen.preventAutoHideAsync().catch(() => {
-  /* reloading the app might trigger some race conditions, ignore them */
-})
+SplashScreen.preventAutoHideAsync()
 
 export const AppLoading = ({
   children,
@@ -26,9 +24,7 @@ export const AppLoading = ({
 
     setTimeout(() => {
       // Instruct SplashScreen not to hide yet, we want to do this manually
-      SplashScreen.hideAsync().catch(() => {
-        /* reloading the app might trigger some race conditions, ignore them */
-      })
+      SplashScreen.hideAsync()
     }, delay)
   }, [delay, loading])
 

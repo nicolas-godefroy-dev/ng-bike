@@ -6,7 +6,6 @@ import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 import { WINDOW_HEIGHT, WINDOW_WIDTH } from "@constants/layout"
 import { ROUEN_REGION } from "@constants/map"
-import { RootStackScreenProps } from "@navigation/types"
 import { googleMap, tw } from "@theme"
 
 import { BottomSheet } from "./components/BottomSheet"
@@ -14,7 +13,7 @@ import { MyPositionButton } from "./components/MyPositionButton"
 import { StationCapacityMarker } from "./components/Station/StationCapacityMarker"
 import { useMapScreen } from "./useMapScreen"
 
-export const MapScreen = (_props: RootStackScreenProps<"Map">) => {
+export const MapScreen = () => {
   const {
     mapRef,
     onUserLocationChange,
