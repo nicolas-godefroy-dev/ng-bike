@@ -7075,7 +7075,7 @@ __metadata:
     eslint-plugin-unused-imports: 2.0.0
     expo: ^48.0.9
     expo-asset: ~8.9.1
-    expo-blur: ~12.2.2
+    expo-blur: ~12.3.0
     expo-constants: ~14.2.1
     expo-font: ~11.1.1
     expo-haptics: ~12.2.1
@@ -7112,12 +7112,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"expo-blur@npm:~12.2.2":
-  version: 12.2.2
-  resolution: "expo-blur@npm:12.2.2"
+"expo-blur@npm:~12.3.0":
+  version: 12.3.2
+  resolution: "expo-blur@npm:12.3.2"
   peerDependencies:
     expo: "*"
-  checksum: d6c18737ca4afff93bcccc2681be0e02fea8ed75ed7b8752f9c7c88eb49127a868b610985d5b979b0ed654af06d04bf496b11f68638a2b34a334bdf00891316a
+  checksum: 23ccc82b250b7317a1553ee3c3343711a93d565228fa94a1e59cf761fda43ddfd3969774ba5ebecc19ce1d39bb42f84434c3b8716fdcef05fd7e9cd57a2183b5
   languageName: node
   linkType: hard
 
