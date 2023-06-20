@@ -1,0 +1,31 @@
+{
+  "name": "@ng-bike/metro-config",
+  "version": "1.0.0",
+  "author": "nicolas-godefroy-dev",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "main": "metro.config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolas-godefroy-dev/ng-bike",
+    "directory": "packages/scripts/metro-config"
+  },
+  "scripts": {
+    "test": "echo 'Not Implemented'",
+    "typecheck": "echo 'Not Implemented'",
+    "lint": "echo 'Not Implemented'"
+  },
+  "dependencies": {
+    "@expo/metro-config": "0.7.1",
+    "metro": "0.76.0",
+    "metro-resolver": "0.76.0",
+    "react": "18.2.0",
+    "react-native": "0.71.8",
+    "react-native-svg": "13.4.0",
+    "react-native-svg-transformer": "1.0.0"
+  },
+  "engines": {
+    "node": ">=18.16.0"
+  }
+}

@@ -4,7 +4,7 @@
   "timezone": "Europe/Paris",
   "labels": ["dependencies"],
   "lockFileMaintenance": {
-    "enabled": false
+    "enabled": true
   },
   "vulnerabilityAlerts": {
     "labels": ["security"],
@@ -74,11 +74,6 @@
     {
       "groupName": "jest",
       "matchPackageNames": ["@types/jest", "jest", "jest-expo"],
-      "automerge": true
-    },
-    {
-      "groupName": "expo",
-      "matchPackagePrefixes": ["expo"],
       "automerge": true
     },
     {

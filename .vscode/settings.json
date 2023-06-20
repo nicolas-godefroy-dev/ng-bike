@@ -5,13 +5,22 @@
   },
   "eslint.packageManager": "yarn",
   "cSpell.words": [
+    "commitlint",
+    "gbfs",
+    "godefroy",
+    "gorhom",
     "Haptics",
+    "netinfo",
+    "openapi",
     "Pressable",
     "subheadline",
+    "tailwindcss",
     "tanstack",
+    "twnrc",
     "twrnc",
     "typecheck",
     "unfollow",
+    "whatwg",
     "zustand"
   ],
   "tailwindCSS.experimental.classRegex": [

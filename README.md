@@ -1,7 +1,5 @@
 A Bike Sharing app made in Expo (iOS, Android), React Native. 🚴🚴🏾‍♀️🚴🏽‍♂️
 
-You can reuse this project by plugin any [GBFS](https://github.com/NABSA/gbfs) API. eg: [list of GBFS API](https://github.com/NABSA/gbfs/blob/master/systems.csv)
-
 <p float="left">
   <img src="./docs/app-light.jpg?raw=true" width="240" />
   <img src="./docs/app-dark.jpg?raw=true" width="240" />

@@ -1,0 +1,45 @@
+sources:
+  - name: Gbfs
+    handler:
+      jsonSchema:
+        endpoint: 'https://transport.data.gouv.fr/gbfs/rouen'
+        operations:
+          - type: Query
+            field: stationStatus
+            path: /station_status.json
+            method: GET
+            responseSample: ./src/services/gbfs/samples/station_status.response.json
+          - type: Query
+            field: stationInformation
+            path: /station_information.json
+            method: GET
+            responseSample: ./src/services/gbfs/samples/station_information.response.json
+    transforms:
+      - namingConvention:
+          mode: wrap
+          typeNames: pascalCase
+          enumValues: pascalCase
+          fieldNames: camelCase
+          fieldArgumentNames: camelCase
+  - name: OpenWeather
+    handler:
+      jsonSchema:
+        endpoint: https://api.openweathermap.org/data/2.5
+        queryParams:
+          appid: 'here'
+          mode: 'json'
+          unit: 'metric'
+        operations:
+          - type: Query
+            field: weather
+            path: /weather
+            method: GET
+            responseSample: ./src/services/openWeather/samples/weather.response.json
+            argTypeMap:
+              lat:
+                type: string
+              lon:
+                type: string
+            queryParamArgMap:
+              lat: lat
+              lon: lon

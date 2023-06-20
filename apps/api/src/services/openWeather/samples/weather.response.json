@@ -1,0 +1,31 @@
+{
+  "base": "stations",
+  "clouds": { "all": 100 },
+  "cod": 200,
+  "coord": { "lat": 49.44, "lon": 1.1 },
+  "dt": 1687063624,
+  "id": 2982652,
+  "main": {
+    "feels_like": 18.8,
+    "humidity": 85,
+    "pressure": 1009,
+    "temp": 18.66,
+    "temp_max": 19.59,
+    "temp_min": 17.83
+  },
+  "name": "Rouen",
+  "rain": { "1h": 1.63 },
+  "sys": {
+    "country": "FR",
+    "id": 2003589,
+    "sunrise": 1687060121,
+    "sunset": 1687118678,
+    "type": 2
+  },
+  "timezone": 7200,
+  "visibility": 10000,
+  "weather": [
+    { "description": "moderate rain", "icon": "10d", "id": 501, "main": "Rain" }
+  ],
+  "wind": { "deg": 160, "speed": 3.09 }
+}

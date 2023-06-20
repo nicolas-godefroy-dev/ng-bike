@@ -1,0 +1,7 @@
+{
+  "extends": "@ng-bike/ts-config-react-native",
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}

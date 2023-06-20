@@ -1,34 +1,55 @@
-name: "Quality Assurance 🔍"
+name: 'Quality Assurance 🔍'
 
 on:
   push:
 
 jobs:
   quality-assurance:
+    strategy:
+      matrix:
+        package:
+          [
+            'apps/app',
+            'packages/twrnc',
+            'packages/utils',
+            'packages/scripts/babel-config-react-native',
+            'packages/scripts/eslint-config-react-native',
+            'packages/scripts/jest-config-react-native',
+            'packages/scripts/metro-config',
+            'packages/scripts/ts-config-react-native',
+            'packages/scripts/ts-config-node',
+          ]
     permissions:
       checks: write
       pull-requests: write
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout ⚙️
         uses: actions/checkout@v3
-      - name: Setup Node.js
+      - name: Setup Node.js ⚙️
         uses: actions/setup-node@v3
         with:
-          node-version: 16.15.x
-      - name: Setup Yarn
+          node-version: 18.x.x
+      - name: Setup Yarn ⚙️
         uses: actions/cache@v3.3.1
         with:
           path: node_modules
           key: yarn-cache-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
           restore-keys: yarn-cache-
-      - run: yarn install --immutable
-      - run: yarn check-dependencies
-      - run: yarn typecheck
-      - name: Jest coverage report 🧪
+      - name: Install deps ⚙️
+        run: yarn install --immutable
+      - name: Check deps 📦
+        run: yarn deps:check
+      - name: Typecheck ✍️
+        run: yarn typecheck
+        working-directory: ${{ matrix.package }}
+      - name: Test coverage 🧪
         with:
           package-manager: yarn
           test-script: yarn test
+          working-directory: ${{ matrix.package }}
         uses: ArtiomTr/jest-coverage-report-action@v2
-      - run: yarn lint
+      - name: Lint 💅
+        run: yarn lint
+        working-directory: ${{ matrix.package }}

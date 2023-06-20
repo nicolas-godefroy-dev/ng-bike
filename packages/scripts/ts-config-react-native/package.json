@@ -1,0 +1,26 @@
+{
+  "name": "@ng-bike/ts-config-react-native",
+  "version": "1.0.0",
+  "author": "nicolas-godefroy-dev",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "main": "tsconfig.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolas-godefroy-dev/ng-bike",
+    "directory": "packages/scripts/ts-config-react-native"
+  },
+  "scripts": {
+    "test": "echo 'Not Implemented'",
+    "typecheck": "echo 'Not Implemented'",
+    "lint": "echo 'Not Implemented'"
+  },
+  "dependencies": {
+    "@tsconfig/react-native": "3.0.2",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "node": ">=18.16.0"
+  }
+}
