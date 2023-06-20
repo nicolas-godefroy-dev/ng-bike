@@ -1,4 +1,4 @@
-name: 'Quality Assurance 🔍'
+name: '👌 Quality assurance'
 
 on:
   push:
@@ -25,31 +25,31 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout ⚙️
+      - name: ⚙️ Checkout
         uses: actions/checkout@v3
-      - name: Setup Node.js ⚙️
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.x.x
-      - name: Setup Yarn ⚙️
+      - name: ⚙️ Setup Yarn
         uses: actions/cache@v3.3.1
         with:
           path: node_modules
           key: yarn-cache-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
           restore-keys: yarn-cache-
-      - name: Install deps ⚙️
+      - name: ⚙️ Install deps
         run: yarn install --immutable
-      - name: Check deps 📦
+      - name: 📦 Check deps
         run: yarn deps:check
-      - name: Typecheck ✍️
+      - name: ✍️ Check static types
         run: yarn typecheck
         working-directory: ${{ matrix.package }}
-      - name: Test coverage 🧪
+      - name: 💯 Check test coverage
         with:
           package-manager: yarn
           test-script: yarn test
           working-directory: ${{ matrix.package }}
         uses: ArtiomTr/jest-coverage-report-action@v2
-      - name: Lint 💅
+      - name: 💅 Check linting
         run: yarn lint
         working-directory: ${{ matrix.package }}

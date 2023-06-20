@@ -12,13 +12,16 @@
     "directory": "packages/scripts/ts-config-node"
   },
   "scripts": {
-    "test": "echo 'Not Implemented'",
+    "test": "jest --passWithNoTests",
     "typecheck": "echo 'Not Implemented'",
     "lint": "echo 'Not Implemented'"
   },
   "dependencies": {
     "@tsconfig/node18": "2.0.1",
     "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
   },
   "engines": {
     "node": ">=18.16.0"

@@ -12,7 +12,7 @@
     "directory": "packages/scripts/eslint-config-react-native"
   },
   "scripts": {
-    "test": "echo 'Not Implemented'",
+    "test": "jest --passWithNoTests",
     "typecheck": "echo 'Not Implemented'",
     "lint": "echo 'Not Implemented'"
   },
@@ -35,6 +35,9 @@
     "eslint-plugin-unused-imports": "2.0.0",
     "prettier": "2.8.8",
     "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
   },
   "engines": {
     "node": ">=18.16.0"

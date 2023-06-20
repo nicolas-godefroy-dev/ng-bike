@@ -12,7 +12,7 @@
     "directory": "packages/scripts/metro-config"
   },
   "scripts": {
-    "test": "echo 'Not Implemented'",
+    "test": "jest --passWithNoTests",
     "typecheck": "echo 'Not Implemented'",
     "lint": "echo 'Not Implemented'"
   },
@@ -24,6 +24,9 @@
     "react-native": "0.71.8",
     "react-native-svg": "13.4.0",
     "react-native-svg-transformer": "1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
   },
   "engines": {
     "node": ">=18.16.0"

@@ -1,3 +1,6 @@
+require:
+  - dotenv/config
+
 sources:
   - name: Gbfs
     handler:
@@ -26,7 +29,7 @@ sources:
       jsonSchema:
         endpoint: https://api.openweathermap.org/data/2.5
         queryParams:
-          appid: 'here'
+          appid: '{env.OPEN_WEATHER_API_KEY}'
           mode: 'json'
           unit: 'metric'
         operations:
@@ -43,3 +46,19 @@ sources:
             queryParamArgMap:
               lat: lat
               lon: lon
+    transforms:
+      - rename:
+          mode: wrap
+          renames:
+            - from:
+                type: query_weather_rain
+                field: _1h
+              to:
+                type: query_weather_rain
+                field: nextHour
+      - namingConvention:
+          mode: wrap
+          typeNames: pascalCase
+          enumValues: pascalCase
+          fieldNames: camelCase
+          fieldArgumentNames: camelCase

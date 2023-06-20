@@ -12,7 +12,7 @@
     "directory": "packages/scripts/jest-config-react-native"
   },
   "scripts": {
-    "test": "echo 'Not Implemented'",
+    "test": "jest --passWithNoTests",
     "typecheck": "echo 'Not Implemented'",
     "lint": "echo 'Not Implemented'"
   },

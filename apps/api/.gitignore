@@ -1,1 +1,11 @@
+node_modules/
+.env
+
+# Graphql mesh
 .mesh
+
+# macOS
+.DS_Store
+
+# Tests
+coverage
