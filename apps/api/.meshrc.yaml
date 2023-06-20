@@ -2,21 +2,34 @@ require:
   - dotenv/config
 
 sources:
+  # GBFS api
+  # @see https://transport.data.gouv.fr/gbfs/rouen
+  # @see https://github.com/MobilityData/gbfs-json-schema/tree/master/v1.1
   - name: Gbfs
     handler:
       jsonSchema:
         endpoint: 'https://transport.data.gouv.fr/gbfs/rouen'
         operations:
           - type: Query
+            field: gbfs
+            path: /gbfs.json
+            method: GET
+            responseSchema: ./src/services/gbfs/gbfs.json
+          - type: Query
+            field: systemInformation
+            path: /system_information.json
+            method: GET
+            responseSchema: ./src/services/gbfs/system_information.json
+          - type: Query
             field: stationStatus
             path: /station_status.json
             method: GET
-            responseSample: ./src/services/gbfs/samples/station_status.response.json
+            responseSchema: ./src/services/gbfs/station_status.json
           - type: Query
             field: stationInformation
             path: /station_information.json
             method: GET
-            responseSample: ./src/services/gbfs/samples/station_information.response.json
+            responseSchema: ./src/services/gbfs/station_information.json
     transforms:
       - namingConvention:
           mode: wrap
@@ -24,6 +37,8 @@ sources:
           enumValues: pascalCase
           fieldNames: camelCase
           fieldArgumentNames: camelCase
+  # OpenWeather api
+  # @see https://openweathermap.org/api
   - name: OpenWeather
     handler:
       jsonSchema:
@@ -37,7 +52,7 @@ sources:
             field: weather
             path: /weather
             method: GET
-            responseSample: ./src/services/openWeather/samples/weather.response.json
+            responseSample: ./src/services/openWeather/weather.response.json
             argTypeMap:
               lat:
                 type: string
