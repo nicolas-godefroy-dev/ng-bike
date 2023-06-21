@@ -8,7 +8,7 @@
   "scripts": {
     "start": "mesh start",
     "dev": "mesh dev",
-    "prebuild": "mesh build",
+    "build": "mesh build",
     "test": "jest --passWithNoTests",
     "typecheck": "echo 'Not Implemented'",
     "lint": "echo 'Not Implemented'"

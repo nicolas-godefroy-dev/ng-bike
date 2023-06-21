@@ -1,4 +1,5 @@
 require:
+  # Get the env variables
   - dotenv/config
 
 sources:
