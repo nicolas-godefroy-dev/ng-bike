@@ -1,3 +1,3 @@
-const config = require('@ng-bike/jest-config-react-native');
+const { makeConfig } = require('@ng-bike/jest-config-react-native');
 
-module.exports = config;
+module.exports = makeConfig();

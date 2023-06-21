@@ -6,12 +6,14 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "start": "mesh start",
-    "dev": "mesh dev",
-    "build": "mesh build",
+    "start": "next start",
+    "dev": "yarn prebuild && next dev",
+    "build": "yarn prebuild && next build",
+    "prebuild": "mesh build",
     "test": "jest --passWithNoTests",
-    "typecheck": "echo 'Not Implemented'",
-    "lint": "echo 'Not Implemented'"
+    "typecheck": "tsc",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix . && yar run prettier:fix"
   },
   "dependencies": {
     "@graphql-mesh/cli": "^0.83.4",
@@ -27,13 +29,16 @@
     "@graphql-mesh/types": "0.94.0",
     "@whatwg-node/fetch": "0.9.6",
     "dotenv": "16.3.1",
-    "graphql": "16.6.0"
+    "graphql": "16.6.0",
+    "next": "13.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
+    "@ng-bike/eslint-config-next": "*",
+    "@ng-bike/jest-config-next": "*",
+    "@ng-bike/ts-config-next": "*",
     "@types/node": "18.16.18",
     "jest": "^29.4.3",
-    "ts-node": "10.9.1",
     "typescript": "^4.9.4"
   }
 }

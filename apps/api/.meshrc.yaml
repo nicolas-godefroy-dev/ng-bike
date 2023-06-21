@@ -1,3 +1,8 @@
+# Serve the api gateway with next.js
+# @see https://the-guild.dev/graphql/mesh/docs/getting-started/deploy-mesh-gateway#deploy-mesh-on-vercel-with-nextjs-api-routes
+serve:
+  endpoint: /api/graphql
+
 require:
   # Get the env variables
   - dotenv/config

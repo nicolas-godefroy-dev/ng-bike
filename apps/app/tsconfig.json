@@ -1,6 +1,16 @@
 {
   "extends": "@ng-bike/ts-config-react-native",
   "include": ["."],
+  "exclude": [
+    "node_modules",
+    ".expo",
+    "coverage",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "dist",
+    "build"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

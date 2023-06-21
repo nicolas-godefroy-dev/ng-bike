@@ -1,5 +1,5 @@
 {
-  "name": "@ng-bike/ts-config-node",
+  "name": "@ng-bike/ts-config-next",
   "version": "1.0.0",
   "author": "nicolas-godefroy-dev",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nicolas-godefroy-dev/ng-bike",
-    "directory": "packages/scripts/ts-config-node"
+    "directory": "packages/scripts/ts-config-next"
   },
   "scripts": {
     "test": "jest --passWithNoTests",
@@ -17,7 +17,7 @@
     "lint": "echo 'Not Implemented'"
   },
   "dependencies": {
-    "@tsconfig/node18": "2.0.1",
+    "@tsconfig/next": "1.0.5",
     "typescript": "^4.9.4"
   },
   "devDependencies": {

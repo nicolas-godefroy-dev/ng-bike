@@ -5,8 +5,8 @@ coverage
 node_modules
 
 # Build
-.expo
+.next
+.mesh
 dist
 build
-ios
-android
+out
