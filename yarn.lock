@@ -3905,11 +3905,15 @@ __metadata:
     "@ng-bike/jest-config-next": "*"
     "@ng-bike/ts-config-next": "*"
     "@types/node": 18.16.18
+    "@types/react": ~18.0.31
+    "@types/react-dom": ~18.0.11
     "@whatwg-node/fetch": 0.9.6
     dotenv: 16.3.1
     graphql: 16.6.0
     jest: ^29.4.3
     next: 13.4.6
+    react: 18.2.0
+    react-dom: 18.2.0
     typescript: ^4.9.4
   languageName: unknown
   linkType: soft
