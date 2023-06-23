@@ -72,15 +72,15 @@ export const MapScreen = () => {
         testID="map">
         {stations.map((station) => (
           <Marker
-            testID={`marker-station-${station.station_id}`}
-            key={station.station_id}
+            testID={`marker-station-${station.stationId}`}
+            key={station.stationId}
             coordinate={{
               latitude: station.lat,
               longitude: station.lon,
             }}>
             <StationCapacityMarker
-              bikes={station.num_bikes_available}
-              docks={station.num_docks_available}
+              bikes={station.numBikesAvailable}
+              docks={station.numDocksAvailable}
             />
           </Marker>
         ))}

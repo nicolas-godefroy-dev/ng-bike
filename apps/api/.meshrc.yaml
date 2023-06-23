@@ -52,7 +52,7 @@ sources:
         queryParams:
           appid: '{env.OPEN_WEATHER_API_KEY}'
           mode: 'json'
-          unit: 'metric'
+          units: 'metric'
         operations:
           - type: Query
             field: weather

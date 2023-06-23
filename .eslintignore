@@ -10,6 +10,9 @@ dist
 build
 ios
 android
+.next
+.mesh
+out
 
 # Generated files
 *.gen.*

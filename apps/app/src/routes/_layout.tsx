@@ -1,5 +1,4 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { QueryClientProvider } from '@tanstack/react-query';
 import { Slot } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
@@ -11,7 +10,7 @@ import { useDeviceContext } from 'twrnc';
 import { AppLoading } from '@components/AppLoading';
 import { useCachedResources } from '@hooks/useCachedResources';
 import { useRefetchOnAppFocus } from '@hooks/useRefetchOnAppFocus';
-import queryClient from '@libs/queryClient';
+import { ClientProvider } from '@libs/ngBike';
 import { tw } from '@ng-bike/twrnc';
 
 export default function App() {
@@ -21,7 +20,7 @@ export default function App() {
   const colorScheme = useColorScheme();
 
   return (
-    <QueryClientProvider client={queryClient}>
+    <ClientProvider>
       <GestureHandlerRootView style={tw`flex-1 surface-base`}>
         <SafeAreaProvider>
           <StatusBar />
@@ -32,6 +31,6 @@ export default function App() {
           </ThemeProvider>
         </SafeAreaProvider>
       </GestureHandlerRootView>
-    </QueryClientProvider>
+    </ClientProvider>
   );
 }

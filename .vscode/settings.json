@@ -5,6 +5,7 @@
   },
   "eslint.packageManager": "yarn",
   "cSpell.words": [
+    "codegen",
     "commitlint",
     "gbfs",
     "godefroy",

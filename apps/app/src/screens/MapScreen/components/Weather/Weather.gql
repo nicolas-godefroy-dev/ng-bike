@@ -1,0 +1,10 @@
+query Weather($lat: String!, $lon: String!) {
+  weather(lat: $lat, lon: $lon) {
+    main {
+      temp
+    }
+    weather {
+      main
+    }
+  }
+}

@@ -4,7 +4,7 @@ import { FlatListProps, ListRenderItemInfo } from 'react-native';
 import { useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Station } from '@libs/gbfsClient';
+import { Station } from '@libs/ngBike';
 import { tw } from '@ng-bike/twrnc';
 
 import { StationListError } from './Station/StationListError';
@@ -33,7 +33,7 @@ export const BottomSheet = ({
   const bottomSheetRef = useRef<RNBottomSheet>(null);
   const snapPoints = isError ? ['25%'] : ['25%', '64%'];
 
-  const keyExtractor = (item: Station) => item.station_id;
+  const keyExtractor = (item: Station) => item.stationId;
 
   const renderItem = useCallback(
     ({ item: station }: ListRenderItemInfo<Station>) => (
@@ -45,7 +45,7 @@ export const BottomSheet = ({
           onPressStation(station);
           bottomSheetRef.current.snapToIndex(0);
         }}
-        testID={`bottom-sheet-station-${station.station_id}`}
+        testID={`bottom-sheet-station-${station.stationId}`}
       />
     ),
     [onPressStation]

@@ -10,6 +10,9 @@ npm-debug.*
 *.orig.*
 .env
 
+# Generated files
+*.gen.*
+
 # Expo build artefacts
 ios
 android

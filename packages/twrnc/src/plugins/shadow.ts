@@ -1,6 +1,5 @@
+import { Platform } from 'react-native';
 import { plugin } from 'twrnc';
-
-const { Platform } = require('react-native');
 
 const base = {
   sm: {

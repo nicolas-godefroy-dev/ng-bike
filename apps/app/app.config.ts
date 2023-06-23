@@ -1,9 +1,6 @@
-import dotenv from 'dotenv';
 import type { ExpoConfig } from 'expo/config';
 
 const config = (): ExpoConfig => {
-  dotenv.config();
-
   // eslint-disable-next-line @typescript-eslint/no-shadow
   const config: ExpoConfig = {
     name: 'Expo Bike Sharing',
@@ -57,12 +54,6 @@ const config = (): ExpoConfig => {
         },
       ],
     ],
-  };
-
-  // Pass env variables to expo-constants
-  config.extra = {
-    ...config.extra,
-    OPEN_WEATHER_API_KEY: process.env.OPEN_WEATHER_API_KEY,
   };
 
   return config;

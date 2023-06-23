@@ -1,10 +1,10 @@
-import { useQuery } from '@tanstack/react-query';
 import * as Haptics from 'expo-haptics';
 import * as Location from 'expo-location';
 import { useCallback, useEffect, useRef } from 'react';
 import MapView, { PanDragEvent, UserLocationChangeEvent } from 'react-native-maps';
 
-import { Station, getStations, sortStationsByDistance } from '@libs/gbfsClient';
+import { useStations } from '@hooks/useStations/useStations';
+import { Station } from '@libs/ngBike';
 
 import { useLocationStore } from '../../hooks/useLocationStore';
 
@@ -18,19 +18,7 @@ export const useMapScreen = () => {
     followUserLocation,
     unfollowUserLocation,
   } = useLocationStore();
-  const {
-    isError,
-    data: stations,
-    isLoading,
-  } = useQuery({
-    queryKey: ['stations'],
-    queryFn: getStations,
-    refetchInterval: 1000 * 60,
-    select: (data) => {
-      return sortStationsByDistance(data, userLocation);
-    },
-    initialData: [],
-  });
+  const { isError, stations, isLoading } = useStations();
 
   // Catch the user location
   const onUserLocationChange = useCallback(

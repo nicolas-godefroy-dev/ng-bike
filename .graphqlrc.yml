@@ -1,0 +1,5 @@
+projects:
+  app:
+    schema:
+      - https://ng-bike-api.vercel.app/api/graphql
+    documents: 'apps/**/*.gql'

@@ -1,0 +1,24 @@
+query Stations {
+  stationInformation {
+    data {
+      stations {
+        capacity
+        address
+        lat
+        lon
+        name
+        shortName
+        stationId
+      }
+    }
+  }
+  stationStatus {
+    data {
+      stations {
+        numBikesAvailable
+        numDocksAvailable
+        stationId
+      }
+    }
+  }
+}

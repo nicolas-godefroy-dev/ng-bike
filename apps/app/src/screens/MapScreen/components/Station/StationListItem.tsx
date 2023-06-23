@@ -2,7 +2,7 @@ import React from 'react';
 import { Pressable, PressableProps, StyleProp, Text, View, ViewStyle } from 'react-native';
 
 import { Skeleton } from '@components/Skeleton';
-import { Station } from '@libs/gbfsClient';
+import { Station } from '@libs/ngBike';
 import { tw } from '@ng-bike/twrnc';
 
 import { StationCapacity, StationCapacitySkeleton } from './StationCapacity';
@@ -19,10 +19,8 @@ export type StationListItemSkeletonProps = {
 export const STATION_LIST_ITEM_HEIGHT = 58;
 
 export const StationListItem = ({
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  num_bikes_available,
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  num_docks_available,
+  numBikesAvailable,
+  numDocksAvailable,
   name,
   onPress,
   testID,
@@ -36,15 +34,14 @@ export const StationListItem = ({
         {name}
       </Text>
     </View>
-    <StationCapacity bikes={num_bikes_available} docks={num_docks_available} />
+    <StationCapacity bikes={numBikesAvailable} docks={numDocksAvailable} />
   </Pressable>
 );
 
 export const StationListItemSkeleton = ({ style }: StationListItemSkeletonProps) => (
   <View style={[tw`h-[58px] items-center justify-between flex-row px-4 py-2.5`, style]}>
     <View style={tw`flex-row items-center flex-1 pr-12`}>
-      <Skeleton style={tw`rounded-md h-7 w-7`} />
-      <Skeleton style={tw`w-1/2 h-3 ml-12`} />
+      <Skeleton style={tw`w-1/2 h-3 mr-12`} />
     </View>
     <StationCapacitySkeleton />
   </View>
