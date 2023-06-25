@@ -5,6 +5,7 @@ const config = (): ExpoConfig => {
   const config: ExpoConfig = {
     name: 'Expo Bike Sharing',
     slug: 'expo-bike-sharing',
+    owner: 'nicolas-godefroy-dev',
     description: 'Bike sharing at Rouen',
     version: '1.0.0',
     orientation: 'portrait',
