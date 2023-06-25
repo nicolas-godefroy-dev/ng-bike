@@ -10,14 +10,17 @@ jobs:
         package:
           [
             'apps/app',
+            'apps/api',
             'packages/twrnc',
             'packages/utils',
             'packages/scripts/babel-config-react-native',
+            'packages/scripts/eslint-config-next',
             'packages/scripts/eslint-config-react-native',
+            'packages/scripts/jest-config-next',
             'packages/scripts/jest-config-react-native',
             'packages/scripts/metro-config',
+            'packages/scripts/ts-config-next',
             'packages/scripts/ts-config-react-native',
-            'packages/scripts/ts-config-node',
           ]
     permissions:
       checks: write
