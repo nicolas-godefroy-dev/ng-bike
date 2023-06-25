@@ -10,9 +10,9 @@
     "dev": "yarn prebuild && next dev",
     "build": "yarn prebuild && next build",
     "prebuild": "mesh build",
-    "test": "jest --passWithNoTests",
-    "typecheck": "tsc",
-    "lint": "npx eslint .",
+    "test": "yarn prebuild && jest --passWithNoTests",
+    "typecheck": "yarn prebuild && tsc",
+    "lint": "yarn prebuild && npx eslint .",
     "lint:fix": "npx eslint --fix . && yar run prettier:fix"
   },
   "dependencies": {
