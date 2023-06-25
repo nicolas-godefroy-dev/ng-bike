@@ -18,7 +18,7 @@ export type StationCapacitySkeletonProps = {
 
 const getStatusColor = (capacity: number) => {
   const hasLowCapacity = capacity <= 2;
-  const { color } = hasLowCapacity ? tw`text-error` : tw`text-success`;
+  const { color } = hasLowCapacity ? tw`text-danger` : tw`text-success`;
 
   if (typeof color !== 'string') throw new Error('invalid color');
   return color;
