@@ -1,4 +1,4 @@
-export type Station = {
+export type ValidStation = {
   capacity: number;
   address: string | null;
   lat: number;
@@ -8,4 +8,8 @@ export type Station = {
   stationId: string;
   numBikesAvailable: number;
   numDocksAvailable: number;
+};
+
+export type Station = ValidStation & {
+  distance: number;
 };

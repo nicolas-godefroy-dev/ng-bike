@@ -4,6 +4,7 @@ import { Pressable, PressableProps, StyleProp, Text, View, ViewStyle } from 'rea
 import { Skeleton } from '@components/Skeleton';
 import { Station } from '@libs/ngBike';
 import { tw } from '@ng-bike/twrnc';
+import { formatDistance } from '@ng-bike/utils';
 
 import { StationCapacity, StationCapacitySkeleton } from './StationCapacity';
 
@@ -22,6 +23,7 @@ export const StationListItem = ({
   numBikesAvailable,
   numDocksAvailable,
   name,
+  distance,
   onPress,
   testID,
 }: StationCapacityMarkerProps) => (
@@ -29,9 +31,12 @@ export const StationListItem = ({
     onPress={onPress}
     style={tw`h-[58px] items-center justify-between flex-row px-4 py-2.5`}
     testID={testID}>
-    <View style={tw`flex-row items-center flex-1 pr-12`}>
-      <Text style={tw`capitalize text-footnote text-neutral`} numberOfLines={1}>
+    <View style={tw`justify-center flex-1 pr-12`}>
+      <Text style={tw`capitalize text-headline text-neutral`} numberOfLines={1}>
         {name}
+      </Text>
+      <Text style={tw`mt-1 text-footnote text-neutral`} numberOfLines={1}>
+        {formatDistance(distance)}
       </Text>
     </View>
     <StationCapacity bikes={numBikesAvailable} docks={numDocksAvailable} />

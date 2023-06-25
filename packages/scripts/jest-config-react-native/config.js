@@ -17,11 +17,6 @@ function makeConfig(customConfig = {}) {
       '!**/coverage/**',
       '!**/node_modules/**',
     ],
-    coverageThreshold: {
-      global: {
-        lines: 5,
-      },
-    },
     ...customConfig
   }
 

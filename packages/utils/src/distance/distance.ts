@@ -1,7 +1,4 @@
-export type Coordinate = {
-  latitude: number;
-  longitude: number;
-};
+import { Coordinate } from '../types';
 
 /**
  * Converts numeric degrees to radians

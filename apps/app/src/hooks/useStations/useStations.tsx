@@ -3,7 +3,14 @@ import merge from 'lodash/merge';
 import values from 'lodash/values';
 
 import { useLocationStore } from '@hooks/useLocationStore';
-import { sortStationsByDistance, useStationsQuery, Station, sanitizeStation } from '@libs/ngBike';
+import {
+  sortStationsByDistance,
+  useStationsQuery,
+  Station,
+  sanitizeStationName,
+  addStationDistance,
+  ValidStation,
+} from '@libs/ngBike';
 
 export const useStations = () => {
   const { userLocation } = useLocationStore();
@@ -16,10 +23,12 @@ export const useStations = () => {
           keyBy(res.stationStatus?.data.stations, 'stationId')
         )
       )
-        .filter((station): station is Station => !!station)
-        .map((station) => sanitizeStation(station));
+        .filter((station): station is ValidStation => !!station)
+        .map(sanitizeStationName)
+        .map((station) => addStationDistance(station, userLocation))
+        .sort(sortStationsByDistance);
 
-      return sortStationsByDistance(stations, userLocation);
+      return stations;
     },
   });
 

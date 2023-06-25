@@ -1,2 +1,3 @@
-export type { Coordinate } from './distance/distance';
+export type { Coordinate } from './types';
 export { distance } from './distance/distance';
+export { formatDistance } from './formatDistance/formatDistance';
