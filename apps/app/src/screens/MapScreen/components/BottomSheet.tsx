@@ -65,7 +65,7 @@ export const BottomSheet = ({
 
   return (
     <>
-      <WeatherIndicator style={[tw`absolute right-5`, animatedStyle]} />
+      <WeatherIndicator style={[tw`absolute right-3`, animatedStyle]} />
       <RNBottomSheet
         ref={bottomSheetRef}
         animatedPosition={animatedPosition}

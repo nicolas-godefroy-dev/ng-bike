@@ -44,7 +44,7 @@ export const MapScreen = () => {
     <>
       <BlurView
         testID="blurred-status-bar"
-        intensity={26}
+        intensity={12}
         style={[
           tw`absolute top-0 left-0 z-10 w-full`,
           {
@@ -88,7 +88,7 @@ export const MapScreen = () => {
       <MyPositionButton
         testID="my-position"
         active={isFollowingUser}
-        style={[tw`absolute right-5`, { top: mapPadding.top }]}
+        style={[tw`absolute right-3`, { top: mapPadding.top }]}
         onPress={handlePressMyLocation}
       />
       <BottomSheet

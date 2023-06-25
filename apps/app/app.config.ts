@@ -14,11 +14,11 @@ const config = (): ExpoConfig => {
     privacy: 'unlisted',
     platforms: ['ios', 'android'],
     githubUrl: 'https://github.com/nicolas-godefroy-dev/expo-bike-sharing',
-    primaryColor: '#164734',
+    primaryColor: '#0fa968',
     splash: {
       image: './src/assets/images/splash.png',
       resizeMode: 'contain',
-      backgroundColor: '#164734',
+      backgroundColor: '#0fa968',
     },
     updates: {
       fallbackToCacheTimeout: 0,

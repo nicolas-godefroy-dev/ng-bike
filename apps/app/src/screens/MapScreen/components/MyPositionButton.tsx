@@ -21,7 +21,7 @@ export const MyPositionButton = ({ onPress, active, style, testID }: MyPositionB
       onPress={onPress}
       testID={testID}
       style={[
-        tw`items-center justify-center h-12 rounded-md shadow-md aspect-square surface-base`,
+        tw`items-center justify-center rounded-md shadow-md w-11 h-11 aspect-square surface-base`,
         style,
       ]}>
       <Icon {...tw`w-5 h-5 text-neutral`} />

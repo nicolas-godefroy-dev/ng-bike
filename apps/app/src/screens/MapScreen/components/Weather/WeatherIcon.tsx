@@ -1,7 +1,6 @@
 import React from 'react';
 import { SvgProps } from 'react-native-svg';
 
-import CloudDrizzleIcon from '@assets/icons/cloud-drizzle.svg';
 import CloudLightningIcon from '@assets/icons/cloud-lightning.svg';
 import CloudRainIcon from '@assets/icons/cloud-rain.svg';
 import CloudSnowIcon from '@assets/icons/cloud-snow.svg';
@@ -22,7 +21,6 @@ const getWeatherIcon = (weather?: string): React.FC<SvgProps> => {
     case 'Thunderstorm':
       return CloudLightningIcon;
     case 'Drizzle':
-      return CloudDrizzleIcon;
     case 'Rain':
       return CloudRainIcon;
     case 'Snow':

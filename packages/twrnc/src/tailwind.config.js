@@ -1,4 +1,4 @@
-const colors = require('./colors.json');
+const colors = require('./colors.js');
 
 // Only used for vscode tailwind autocompletion
 module.exports = {

@@ -7,12 +7,12 @@ import { color } from '@ng-bike/twrnc';
 const DarkTheme: Theme = {
   dark: true,
   colors: {
-    primary: color('primary-50'),
+    primary: color('primary-500'),
     background: color('neutral-900'),
     card: color('neutral-900'),
     text: color('neutral-100'),
     border: color('neutral-700'),
-    notification: color('danger-300'),
+    notification: color('error-500'),
   },
 };
 
@@ -24,7 +24,7 @@ const LightTheme: Theme = {
     card: color('white'),
     text: color('neutral-900'),
     border: color('neutral-200'),
-    notification: color('danger-900'),
+    notification: color('error-500'),
   },
 };
 
