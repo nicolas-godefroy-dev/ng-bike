@@ -1,4 +1,5 @@
-const theme = require('@ng-bike/tailwind-config');
+const config = require('@ng-bike/tailwind-config');
 
 // Only used for vscode tailwind autocompletion
-module.exports = theme
+/** @type {import('tailwindcss').Config} */
+module.exports = config

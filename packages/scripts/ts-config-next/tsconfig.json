@@ -6,12 +6,6 @@
     "strict": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "forceConsistentCasingInFileNames": true
   }
 }

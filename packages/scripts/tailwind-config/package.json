@@ -23,7 +23,7 @@
     "@ng-bike/eslint-config-next": "*",
     "@ng-bike/ts-config-next": "*",
     "jest": "^29.4.3",
-    "typescript": "^4.9.4"
+    "typescript": "^5.1.3"
   },
   "engines": {
     "node": ">=18.16.0"

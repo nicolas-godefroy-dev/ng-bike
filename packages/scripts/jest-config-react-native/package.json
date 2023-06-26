@@ -28,7 +28,7 @@
   "devDependencies": {
     "@ng-bike/eslint-config-react-native": "*",
     "@ng-bike/ts-config-react-native": "*",
-    "typescript": "^4.9.4"
+    "typescript": "^5.1.3"
   },
   "engines": {
     "node": ">=18.16.0"

@@ -4,4 +4,4 @@ node_modules
 
 # Tests
 coverage
-tsconfig.tsbuildinfo
+*.tsbuildinfo

@@ -1,5 +1,5 @@
 {
   "extends": "@ng-bike/ts-config-next",
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", ".mesh", "coverage", "dist", "build"]
+  "exclude": ["node_modules", "coverage", "dist", "build"]
 }

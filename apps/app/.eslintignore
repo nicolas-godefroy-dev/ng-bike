@@ -1,6 +1,6 @@
 # Tests
 coverage
-tsconfig.tsbuildinfo
+*.tsbuildinfo
 
 # Node
 node_modules

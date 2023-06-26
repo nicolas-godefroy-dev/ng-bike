@@ -5,9 +5,9 @@ import { surface } from './plugins/surface';
 import { text } from './plugins/text';
 import { typography } from './plugins/typography';
 
-const theme = require('@ng-bike/tailwind-config');
+const config = require('@ng-bike/tailwind-config');
 
 export const tw = create({
-  ...theme,
+  ...config,
   plugins: [typography, shadow, surface, text],
 });
