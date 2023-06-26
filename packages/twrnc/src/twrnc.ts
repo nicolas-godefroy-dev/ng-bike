@@ -4,7 +4,8 @@ import { shadow } from './plugins/shadow';
 import { surface } from './plugins/surface';
 import { text } from './plugins/text';
 import { typography } from './plugins/typography';
-import theme from './tailwind.config';
+
+const theme = require('@ng-bike/tailwind-config');
 
 export const tw = create({
   ...theme,

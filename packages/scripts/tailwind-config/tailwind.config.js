@@ -1,6 +1,8 @@
 const colors = require('./colors.js');
 
-// Only used for vscode tailwind autocompletion
+/**
+ * @type {import('tailwindcss/tailwind-config').TailwindConfig}
+ */
 module.exports = {
   theme: {
     colors,

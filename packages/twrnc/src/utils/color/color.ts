@@ -1,4 +1,4 @@
-import { tw } from '../../twrnc.config';
+import { tw } from '../../twrnc';
 
 /**
  * Overwrite the default color function to throw an error if the color is not found in the theme

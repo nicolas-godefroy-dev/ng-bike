@@ -15,6 +15,7 @@ out
 
 # Tests
 coverage
+tsconfig.tsbuildinfo
 
 # local env files
 .env

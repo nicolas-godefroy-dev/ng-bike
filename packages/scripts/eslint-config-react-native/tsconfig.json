@@ -1,0 +1,5 @@
+{
+  "extends": "@ng-bike/ts-config-react-native",
+  "include": [".", ".eslintrc.js"],
+  "exclude": ["node_modules", "coverage"]
+}

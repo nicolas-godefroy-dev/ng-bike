@@ -1,14 +1,12 @@
 module.exports = {
   extends: [
-    'universe/native',
-    '@react-native',
+    'next/core-web-vitals',
     'prettier',
     'plugin:react-hooks/recommended',
     'plugin:@tanstack/eslint-plugin-query/recommended',
   ],
   plugins: [
     'unused-imports',
-    'react-native',
     'jsx-expressions',
     '@tanstack/query',
   ],
@@ -93,9 +91,6 @@ module.exports = {
       },
       rules: {
         'react/jsx-key': ['error', { checkFragmentShorthand: true }],
-        'react-native/no-unused-styles': 2,
-        'react-native/no-raw-text': 2,
-        'react-native/no-single-element-style-arrays': 2,
         'jsx-expressions/strict-logical-expressions': 'error',
         '@typescript-eslint/no-unnecessary-condition': 'warn',
         '@typescript-eslint/await-thenable': 'error',
@@ -141,7 +136,7 @@ module.exports = {
           'error',
           {
             selector: 'TSEnumDeclaration',
-            message: `Prefer union types (e.g. type Foo = 'bar' | 'baz') to TypeScript enums`,
+            message: "Prefer union types (e.g. type Foo = 'bar' | 'baz') to TypeScript enums",
           },
         ],
         'block-scoped-var': 'error',

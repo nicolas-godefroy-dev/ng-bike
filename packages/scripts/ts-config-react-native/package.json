@@ -14,13 +14,14 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "typecheck": "echo 'Not Implemented'",
-    "lint": "echo 'Not Implemented'"
+    "lint": "npx eslint ."
   },
   "dependencies": {
     "@tsconfig/react-native": "3.0.2",
     "typescript": "^4.9.4"
   },
   "devDependencies": {
+    "@ng-bike/eslint-config-react-native": "*",
     "jest": "^29.4.3"
   },
   "engines": {

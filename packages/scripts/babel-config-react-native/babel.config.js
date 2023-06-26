@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 module.exports = {
   presets: ['babel-preset-expo'],
@@ -7,4 +7,4 @@ module.exports = {
     'inline-dotenv',
     require.resolve('expo-router/babel'),
   ],
-}
+};

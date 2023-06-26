@@ -13,8 +13,8 @@
   },
   "scripts": {
     "test": "jest --passWithNoTests",
-    "typecheck": "echo 'Not Implemented'",
-    "lint": "echo 'Not Implemented'"
+    "typecheck": "tsc",
+    "lint": "npx eslint ."
   },
   "dependencies": {
     "@types/jest": "29.5.2",
@@ -24,6 +24,11 @@
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-test-renderer": "18.2.0"
+  },
+  "devDependencies": {
+    "@ng-bike/eslint-config-react-native": "*",
+    "@ng-bike/ts-config-react-native": "*",
+    "typescript": "^4.9.4"
   },
   "engines": {
     "node": ">=18.16.0"

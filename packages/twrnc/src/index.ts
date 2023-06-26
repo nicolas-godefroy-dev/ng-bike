@@ -1,2 +1,2 @@
-export { tw } from './twrnc.config';
+export { tw } from './twrnc';
 export { color } from './utils/color/color';
