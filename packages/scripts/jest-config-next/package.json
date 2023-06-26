@@ -30,7 +30,7 @@
   "devDependencies": {
     "@ng-bike/eslint-config-next": "*",
     "@ng-bike/ts-config-next": "*",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.0"
   },
   "engines": {
     "node": ">=18.16.0"
