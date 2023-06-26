@@ -22,8 +22,8 @@
     "*.{md,json}": "npx prettier --write"
   },
   "dependencies": {
-    "@commitlint/cli": "17.6.5",
-    "@commitlint/config-conventional": "17.6.5",
+    "@commitlint/cli": "17.6.6",
+    "@commitlint/config-conventional": "17.6.6",
     "@ng-bike/tailwind-config": "*",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
