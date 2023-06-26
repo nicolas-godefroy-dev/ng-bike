@@ -1,5 +1,17 @@
 {
   "extends": "@ng-bike/ts-config-next",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "coverage", "dist", "build"]
+  "include": [
+    "next-env.d.ts",
+    "prismicio-types.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", "coverage", "dist", "build"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }

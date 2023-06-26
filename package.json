@@ -10,7 +10,7 @@
     "packages/scripts/*"
   ],
   "scripts": {
-    "deps:check": "yarn dedupe --check",
+    "deps:check": "syncpack list-mismatches && yarn dedupe --check",
     "test": "yarn workspaces foreach -v run test",
     "typecheck": "yarn workspaces foreach -v run typecheck",
     "lint": "yarn workspaces foreach -v run lint"
@@ -27,6 +27,7 @@
     "@ng-bike/tailwind-config": "*",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
+    "syncpack": "10.6.1",
     "typescript": "^5.1.3"
   },
   "resolutions": {
