@@ -4637,7 +4637,7 @@ __metadata:
     "@types/react-dom": ~18.0.11
     expo: ^48.0.19
     expo-asset: ~8.10.0
-    expo-blur: ~12.3.0
+    expo-blur: ~12.4.0
     expo-constants: ~14.2.1
     expo-font: ~11.1.1
     expo-haptics: ~12.2.1
@@ -12558,12 +12558,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-blur@npm:~12.3.0":
-  version: 12.3.2
-  resolution: "expo-blur@npm:12.3.2"
+"expo-blur@npm:~12.4.0":
+  version: 12.4.1
+  resolution: "expo-blur@npm:12.4.1"
   peerDependencies:
     expo: "*"
-  checksum: 23ccc82b250b7317a1553ee3c3343711a93d565228fa94a1e59cf761fda43ddfd3969774ba5ebecc19ce1d39bb42f84434c3b8716fdcef05fd7e9cd57a2183b5
+  checksum: d6253bd40db623e8ce5f2737132c85c0d43980a9b693f0ad241bbf4b00041247bbf602d87c6fc8a7e700d25659eacffb596639de8cc991bef1585b43d3b19897
   languageName: node
   linkType: hard
 
