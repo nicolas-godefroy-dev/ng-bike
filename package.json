@@ -26,7 +26,7 @@
     "@commitlint/config-conventional": "17.6.6",
     "@ng-bike/tailwind-config": "*",
     "husky": "8.0.3",
-    "lint-staged": "13.2.2",
+    "lint-staged": "13.2.3",
     "syncpack": "10.6.1",
     "typescript": "^5.1.3"
   },
