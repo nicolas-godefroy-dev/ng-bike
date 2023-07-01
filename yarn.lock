@@ -4794,7 +4794,7 @@ __metadata:
     jest: ^29.4.3
     lodash: 4.17.21
     metro: 0.76.7
-    metro-resolver: 0.76.0
+    metro-resolver: 0.76.7
     react: 18.2.0
     react-dom: 18.2.0
     react-native: 0.71.8
@@ -4962,7 +4962,7 @@ __metadata:
     "@ng-bike/ts-config-react-native": "*"
     jest: ^29.4.3
     metro: 0.76.7
-    metro-resolver: 0.76.0
+    metro-resolver: 0.76.7
     react: 18.2.0
     react-native: 0.71.8
     react-native-svg: 13.4.0
@@ -18902,10 +18902,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"metro-resolver@npm:0.76.0":
-  version: 0.76.0
-  resolution: "metro-resolver@npm:0.76.0"
-  checksum: 3e26368ceca153024be622a195f5674b6457f201b9e3bd94faca5ef2098897df3fa8db8afc7ffd30958b7ab3b69cf8e0b1b58b2cc3fc1190e6dbb17d9622474d
+"metro-resolver@npm:0.76.7":
+  version: 0.76.7
+  resolution: "metro-resolver@npm:0.76.7"
+  checksum: 6aba5d3db247e3fd9f394dd069196cb75066035c407fa39967ae6721fdfd6eaaf04c49b604e7d3de36f336cf2ac016cce1150ebbc51344bfa87c615bf9515122
   languageName: node
   linkType: hard
 

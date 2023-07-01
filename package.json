@@ -36,7 +36,7 @@
     "react-dom": "18.2.0",
     "react-native": "0.71.8",
     "metro": "0.76.7",
-    "metro-resolver": "0.76.0",
+    "metro-resolver": "0.76.7",
     "@expo/config-plugins": "~6.0.0"
   },
   "engines": {
