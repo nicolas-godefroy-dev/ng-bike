@@ -39,7 +39,7 @@
     "@ng-bike/eslint-config-next": "*",
     "@ng-bike/jest-config-next": "*",
     "@ng-bike/ts-config-next": "*",
-    "@types/node": "18.16.18",
+    "@types/node": "18.16.19",
     "@types/react": "~18.0.31",
     "@types/react-dom": "~18.0.11",
     "jest": "^29.4.3",

@@ -70,7 +70,7 @@
     "@ng-bike/metro-config": "*",
     "@ng-bike/ts-config-react-native": "*",
     "@types/lodash": "4.14.195",
-    "@types/node": "18.16.18",
+    "@types/node": "18.16.19",
     "@types/react": "~18.0.31",
     "@types/react-dom": "~18.0.11",
     "jest": "^29.4.3",
