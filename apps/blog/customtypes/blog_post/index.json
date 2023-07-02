@@ -21,7 +21,11 @@
           "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,rtl,o-list-item"
         }
       },
-      "slices": { "type": "Slices", "fieldset": "Slice Zone", "config": { "choices": {} } }
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": { "choices": { "text_block": { "type": "SharedSlice" } } }
+      }
     },
     "SEO & Metadata": {
       "meta_description": {

@@ -89,7 +89,7 @@ interface BlogPostDocumentData {
  * Slice for *blog post → Slice Zone*
  *
  */
-type BlogPostDocumentDataSlicesSlice = never;
+type BlogPostDocumentDataSlicesSlice = TextBlockSlice;
 /**
  * blog post document from Prismic
  *
@@ -105,6 +105,49 @@ export type BlogPostDocument<Lang extends string = string> = prismic.PrismicDocu
   Lang
 >;
 export type AllDocumentTypes = BlogPostDocument;
+/**
+ * Primary content in TextBlock → Primary
+ *
+ */
+interface TextBlockSliceDefaultPrimary {
+  /**
+   * content field in *TextBlock → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.primary.content
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  content: prismic.RichTextField;
+}
+/**
+ * Default variation for TextBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextBlockSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<TextBlockSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *TextBlock*
+ *
+ */
+type TextBlockSliceVariation = TextBlockSliceDefault;
+/**
+ * TextBlock Shared Slice
+ *
+ * - **API ID**: `text_block`
+ * - **Description**: `TextBlock`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextBlockSlice = prismic.SharedSlice<'text_block', TextBlockSliceVariation>;
 declare module '@prismicio/client' {
   interface CreateClient {
     (
@@ -118,6 +161,10 @@ declare module '@prismicio/client' {
       BlogPostDocumentDataSlicesSlice,
       BlogPostDocument,
       AllDocumentTypes,
+      TextBlockSliceDefaultPrimary,
+      TextBlockSliceDefault,
+      TextBlockSliceVariation,
+      TextBlockSlice,
     };
   }
 }
