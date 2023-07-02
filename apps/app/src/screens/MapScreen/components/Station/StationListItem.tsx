@@ -1,10 +1,10 @@
+import { tw } from '@ng-bike/twrnc';
+import { formatDistance } from '@ng-bike/utils';
 import React from 'react';
 import { Pressable, PressableProps, StyleProp, Text, View, ViewStyle } from 'react-native';
 
-import { Skeleton } from '@components/Skeleton';
-import { Station } from '@libs/ngBike';
-import { tw } from '@ng-bike/twrnc';
-import { formatDistance } from '@ng-bike/utils';
+import { Skeleton } from '@/components/Skeleton';
+import { Station } from '@/libs/ngBike';
 
 import { StationCapacity, StationCapacitySkeleton } from './StationCapacity';
 

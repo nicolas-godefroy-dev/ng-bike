@@ -14,7 +14,8 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "typecheck": "tsc",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix ."
   },
   "dependencies": {
     "@react-native/eslint-config": "0.72.2",

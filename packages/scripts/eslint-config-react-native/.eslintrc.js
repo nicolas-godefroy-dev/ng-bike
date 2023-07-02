@@ -23,40 +23,12 @@ module.exports = {
             patternOptions: { matchBase: true },
           },
           {
-            group: 'internal',
+            group: 'external',
             pattern: '@ng-bike/**',
           },
           {
             group: 'internal',
-            pattern: '@components/**',
-          },
-          {
-            group: 'internal',
-            pattern: '@screens/**',
-          },
-          {
-            group: 'internal',
-            pattern: '@routes/**',
-          },
-          {
-            group: 'internal',
-            pattern: '@constants/**',
-          },
-          {
-            group: 'internal',
-            pattern: '@assets/**',
-          },
-          {
-            group: 'internal',
-            pattern: '@hooks/**',
-          },
-          {
-            group: 'internal',
-            pattern: '@libs/**',
-          },
-          {
-            group: 'internal',
-            pattern: '@services/**',
+            pattern: '@/**',
           },
         ],
         pathGroupsExcludedImportTypes: [],

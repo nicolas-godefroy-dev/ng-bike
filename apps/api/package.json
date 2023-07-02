@@ -7,13 +7,13 @@
   "sideEffects": false,
   "scripts": {
     "start": "next start",
-    "dev": "yarn prebuild && next dev",
+    "dev": "yarn prebuild && next dev --turbo",
     "build": "yarn prebuild && next build",
     "prebuild": "mesh build",
     "test": "yarn prebuild && jest --passWithNoTests",
     "typecheck": "yarn prebuild && tsc",
     "lint": "yarn prebuild && npx eslint .",
-    "lint:fix": "npx eslint --fix . && yar run prettier:fix"
+    "lint:fix": "npx eslint --fix ."
   },
   "dependencies": {
     "@graphql-mesh/cli": "^0.83.4",

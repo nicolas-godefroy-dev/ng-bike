@@ -1,11 +1,11 @@
+import { tw } from '@ng-bike/twrnc';
 import React from 'react';
 import { StyleProp, Text, View, ViewStyle } from 'react-native';
 
-import { Skeleton } from '@components/Skeleton';
-import { tw } from '@ng-bike/twrnc';
+import { Skeleton } from '@/components/Skeleton';
 
-import BikeIllustration from '@assets/images/bike.svg';
-import DockIllustration from '@assets/images/dock.svg';
+import BikeIllustration from '@/assets/images/bike.svg';
+import DockIllustration from '@/assets/images/dock.svg';
 
 export type StationCapacityProps = {
   bikes: number;

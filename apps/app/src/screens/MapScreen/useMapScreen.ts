@@ -3,8 +3,8 @@ import * as Location from 'expo-location';
 import { useCallback, useEffect, useRef } from 'react';
 import MapView, { PanDragEvent, UserLocationChangeEvent } from 'react-native-maps';
 
-import { useStations } from '@hooks/useStations/useStations';
-import { Station } from '@libs/ngBike';
+import { useStations } from '@/hooks/useStations/useStations';
+import { Station } from '@/libs/ngBike';
 
 import { useLocationStore } from '../../hooks/useLocationStore';
 

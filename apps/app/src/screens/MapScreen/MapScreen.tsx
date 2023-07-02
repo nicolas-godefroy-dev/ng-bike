@@ -1,12 +1,12 @@
+import { tw } from '@ng-bike/twrnc';
 import { BlurView } from 'expo-blur';
 import React, { useMemo } from 'react';
 import { Platform, useColorScheme } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { WINDOW_HEIGHT, WINDOW_WIDTH } from '@constants/layout';
-import { GOOGLE_MAP_STYLE, ROUEN_REGION } from '@constants/map';
-import { tw } from '@ng-bike/twrnc';
+import { WINDOW_HEIGHT, WINDOW_WIDTH } from '@/constants/layout';
+import { GOOGLE_MAP_STYLE, ROUEN_REGION } from '@/constants/map';
 
 import { BottomSheet } from './components/BottomSheet';
 import { MyPositionButton } from './components/MyPositionButton';

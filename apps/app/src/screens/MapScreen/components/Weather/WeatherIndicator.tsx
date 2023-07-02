@@ -1,10 +1,10 @@
+import { tw } from '@ng-bike/twrnc';
 import React from 'react';
 import { StyleProp, Text, ViewStyle } from 'react-native';
 import Animated from 'react-native-reanimated';
 
-import { useLocationStore } from '@hooks/useLocationStore';
-import { useWeatherQuery } from '@libs/ngBike';
-import { tw } from '@ng-bike/twrnc';
+import { useLocationStore } from '@/hooks/useLocationStore';
+import { useWeatherQuery } from '@/libs/ngBike';
 
 import { WeatherIcon } from './WeatherIcon';
 

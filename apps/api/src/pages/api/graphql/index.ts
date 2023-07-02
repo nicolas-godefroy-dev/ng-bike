@@ -1,4 +1,4 @@
-import { createBuiltMeshHTTPHandler } from '../../../../.mesh'
+import { createBuiltMeshHTTPHandler } from '@mesh'
 
 /**
  * Serve the api gateway with next.js

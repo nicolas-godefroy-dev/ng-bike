@@ -1,11 +1,10 @@
+import { tw } from '@ng-bike/twrnc';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
-import { tw } from '@ng-bike/twrnc';
-
-import FeedIcon from '@assets/icons/feed.svg';
-import HomeIcon from '@assets/icons/home.svg';
-import UserIcon from '@assets/icons/user.svg';
+import FeedIcon from '@/assets/icons/feed.svg';
+import HomeIcon from '@/assets/icons/home.svg';
+import UserIcon from '@/assets/icons/user.svg';
 
 type TabBarIconProps = {
   focused: boolean;

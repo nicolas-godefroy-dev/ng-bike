@@ -14,7 +14,8 @@
   "scripts": {
     "test": "jest",
     "typecheck": "tsc",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix ."
   },
   "devDependencies": {
     "@ng-bike/babel-config-react-native": "*",

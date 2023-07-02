@@ -1,7 +1,6 @@
+import { tw } from '@ng-bike/twrnc';
 import React from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
-
-import { tw } from '@ng-bike/twrnc';
 
 import { StationListItemSkeleton } from './StationListItem';
 

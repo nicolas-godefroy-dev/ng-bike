@@ -1,8 +1,8 @@
+import { Coordinate } from '@ng-bike/utils';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import { ROUEN_REGION } from '@constants/map';
-import { Coordinate } from '@ng-bike/utils';
+import { ROUEN_REGION } from '@/constants/map';
 
 export type LocationStore = {
   userLocation: Coordinate;

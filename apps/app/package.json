@@ -14,7 +14,7 @@
     "e2e": "maestro test ./**/*.e2e.yaml",
     "typecheck": "yarn prebuild && tsc",
     "lint": "yarn prebuild && npx eslint .",
-    "lint:fix": "npx eslint --fix . && yar run prettier:fix",
+    "lint:fix": "npx eslint --fix .",
     "prebuild": "graphql-codegen"
   },
   "dependencies": {

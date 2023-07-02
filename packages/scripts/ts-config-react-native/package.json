@@ -14,7 +14,8 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "typecheck": "echo 'Not Implemented'",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix ."
   },
   "dependencies": {
     "@tsconfig/react-native": "3.0.2",

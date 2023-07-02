@@ -14,7 +14,8 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "typecheck": "tsc",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix ."
   },
   "dependencies": {
     "@types/jest": "29.5.2",

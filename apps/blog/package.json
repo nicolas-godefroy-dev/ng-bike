@@ -6,14 +6,14 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "slicemachine": "start-slicemachine",
     "test": "jest --passWithNoTests",
     "typecheck": "tsc",
     "lint": "npx eslint .",
-    "lint:fix": "npx eslint --fix . && yar run prettier:fix"
+    "lint:fix": "npx eslint --fix ."
   },
   "dependencies": {
     "@prismicio/client": "^7.1.0",

@@ -1,11 +1,11 @@
 import React from 'react';
 import { SvgProps } from 'react-native-svg';
 
-import CloudLightningIcon from '@assets/icons/cloud-lightning.svg';
-import CloudRainIcon from '@assets/icons/cloud-rain.svg';
-import CloudSnowIcon from '@assets/icons/cloud-snow.svg';
-import Cloud from '@assets/icons/cloud.svg';
-import Sun from '@assets/icons/sun.svg';
+import CloudLightningIcon from '@/assets/icons/cloud-lightning.svg';
+import CloudRainIcon from '@/assets/icons/cloud-rain.svg';
+import CloudSnowIcon from '@/assets/icons/cloud-snow.svg';
+import Cloud from '@/assets/icons/cloud.svg';
+import Sun from '@/assets/icons/sun.svg';
 
 export type WeatherIconProps = {
   weather?: string;

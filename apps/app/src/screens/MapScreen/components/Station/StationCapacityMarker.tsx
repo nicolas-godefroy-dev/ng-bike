@@ -1,7 +1,6 @@
+import { tw } from '@ng-bike/twrnc';
 import React from 'react';
 import { View } from 'react-native';
-
-import { tw } from '@ng-bike/twrnc';
 
 import { StationCapacity, StationCapacityProps } from './StationCapacity';
 

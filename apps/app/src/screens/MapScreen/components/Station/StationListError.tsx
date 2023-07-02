@@ -1,9 +1,8 @@
+import { tw } from '@ng-bike/twrnc';
 import React from 'react';
 import { StyleProp, Text, View, ViewStyle } from 'react-native';
 
-import { tw } from '@ng-bike/twrnc';
-
-import WifiOffIcon from '@assets/icons/wifi-off.svg';
+import WifiOffIcon from '@/assets/icons/wifi-off.svg';
 
 export type StationListErrorProps = {
   style?: StyleProp<ViewStyle>;

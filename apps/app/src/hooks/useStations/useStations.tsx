@@ -2,7 +2,7 @@ import keyBy from 'lodash/keyBy';
 import merge from 'lodash/merge';
 import values from 'lodash/values';
 
-import { useLocationStore } from '@hooks/useLocationStore';
+import { useLocationStore } from '@/hooks/useLocationStore';
 import {
   sortStationsByDistance,
   useStationsQuery,
@@ -10,7 +10,7 @@ import {
   sanitizeStationName,
   addStationDistance,
   ValidStation,
-} from '@libs/ngBike';
+} from '@/libs/ngBike';
 
 export const useStations = () => {
   const { userLocation } = useLocationStore();

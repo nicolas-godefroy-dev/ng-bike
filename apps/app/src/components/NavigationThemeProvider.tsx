@@ -1,8 +1,7 @@
+import { color } from '@ng-bike/twrnc';
 import { Theme, ThemeProvider } from '@react-navigation/native';
 import React from 'react';
 import { useColorScheme } from 'react-native';
-
-import { color } from '@ng-bike/twrnc';
 
 const DarkTheme: Theme = {
   dark: true,

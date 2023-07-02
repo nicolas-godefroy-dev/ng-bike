@@ -1,10 +1,9 @@
+import { tw } from '@ng-bike/twrnc';
 import React from 'react';
 import { Pressable, PressableProps, StyleProp, ViewStyle } from 'react-native';
 
-import { tw } from '@ng-bike/twrnc';
-
-import NavigationFilledIcon from '@assets/icons/navigation-filled.svg';
-import NavigationIcon from '@assets/icons/navigation.svg';
+import NavigationFilledIcon from '@/assets/icons/navigation-filled.svg';
+import NavigationIcon from '@/assets/icons/navigation.svg';
 
 export type MyPositionButtonProps = {
   onPress: () => void;

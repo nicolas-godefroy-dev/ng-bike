@@ -1,7 +1,6 @@
+import { tw } from '@ng-bike/twrnc';
 import React from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
-
-import { tw } from '@ng-bike/twrnc';
 
 export type SkeletonProps = {
   style?: StyleProp<ViewStyle>;

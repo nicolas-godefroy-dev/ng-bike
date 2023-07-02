@@ -1,8 +1,7 @@
+import { tw } from '@ng-bike/twrnc';
 import { SplashScreen } from 'expo-router';
 import React, { useEffect } from 'react';
 import { View } from 'react-native';
-
-import { tw } from '@ng-bike/twrnc';
 
 export type AppLoadingProps = {
   loading: boolean;

@@ -16,14 +16,7 @@ module.exports = function (api) {
     {
       root: ['./'],
       alias: {
-        '@components': './src/components',
-        '@screens': './src/screens',
-        '@routes': './src/routes',
-        '@constants': './src/constants',
-        '@assets': './src/assets',
-        '@hooks': './src/hooks',
-        '@libs': './src/libs',
-        '@services': './src/services',
+        '@': './src',
       },
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },

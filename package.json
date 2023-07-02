@@ -13,7 +13,11 @@
     "deps:check": "syncpack list-mismatches && yarn dedupe --check",
     "test": "yarn workspaces foreach -v run test",
     "typecheck": "yarn workspaces foreach -v run typecheck",
-    "lint": "yarn workspaces foreach -v run lint"
+    "lint": "yarn workspaces foreach -v run lint",
+    "lint:fix": "yarn workspaces foreach -v run lint:fix",
+    "app:dev": "yarn workspace @ng-bike/app run start",
+    "api:dev": "yarn workspace @ng-bike/blog run dev",
+    "blog:dev": "yarn workspace @ng-bike/blog run dev"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
