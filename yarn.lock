@@ -4785,7 +4785,7 @@ __metadata:
     expo-linking: ~4.0.1
     expo-location: ~15.1.1
     expo-router: ^1.5.3
-    expo-splash-screen: ~0.18.1
+    expo-splash-screen: ~0.18.2
     expo-status-bar: ~1.4.4
     expo-updates: ~0.16.3
     graphql: 16.7.1
@@ -13698,7 +13698,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-splash-screen@npm:~0.18.1":
+"expo-splash-screen@npm:~0.18.2":
   version: 0.18.2
   resolution: "expo-splash-screen@npm:0.18.2"
   dependencies:

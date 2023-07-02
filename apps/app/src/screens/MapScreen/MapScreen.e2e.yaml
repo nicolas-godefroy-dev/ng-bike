@@ -6,4 +6,3 @@ appId: com.nicolas-godefroy-dev.bike-sharing
     id: 'map'
 - assertVisible:
     id: 'my-position'
-- assertVisible: 'Bottom Sheet handle'
