@@ -4767,7 +4767,7 @@ __metadata:
     "@ng-bike/ts-config-react-native": "*"
     "@ng-bike/twrnc": "*"
     "@ng-bike/utils": "*"
-    "@react-native-community/netinfo": 9.4.1
+    "@react-native-community/netinfo": 9.3.7
     "@react-navigation/native": 6.1.7
     "@react-navigation/native-stack": 6.9.13
     "@tanstack/react-query": 4.29.19
@@ -4776,8 +4776,8 @@ __metadata:
     "@types/react": ~18.0.31
     "@types/react-dom": ~18.0.11
     expo: ^48.0.19
-    expo-asset: ~8.10.0
-    expo-blur: ~12.4.0
+    expo-asset: ~8.9.1
+    expo-blur: ~12.2.2
     expo-constants: ~14.2.1
     expo-font: ~11.1.1
     expo-haptics: ~12.2.1
@@ -4800,9 +4800,9 @@ __metadata:
     react-native: 0.71.8
     react-native-gesture-handler: ~2.9.0
     react-native-maps: 1.3.2
-    react-native-reanimated: ~2.17.0
+    react-native-reanimated: ~2.14.4
     react-native-safe-area-context: 4.5.0
-    react-native-screens: ~3.22.0
+    react-native-screens: ~3.20.0
     react-native-svg: 13.4.0
     react-native-svg-transformer: 1.0.0
     react-native-web: ~0.18.12
@@ -4825,7 +4825,7 @@ __metadata:
     jest: ^29.4.3
     react: 18.2.0
     react-native: 0.71.8
-    react-native-reanimated: ~2.17.0
+    react-native-reanimated: ~2.14.4
     typescript: ^5.1.3
   languageName: unknown
   linkType: soft
@@ -6758,12 +6758,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/netinfo@npm:9.4.1":
-  version: 9.4.1
-  resolution: "@react-native-community/netinfo@npm:9.4.1"
+"@react-native-community/netinfo@npm:9.3.7":
+  version: 9.3.7
+  resolution: "@react-native-community/netinfo@npm:9.3.7"
   peerDependencies:
     react-native: ">=0.59"
-  checksum: cf6471a50a5282f858797cda7531c61ac3d94de2e1c379b14a11f6b049f582606dae55a041dd900c56b01faf69eb5cfef9b4e84b0ea7f02de52804aa5a6e22df
+  checksum: 556e47312be4b3d74c4c8fa7ab0b526a9d8395745c4d94d813cd8f08284d2a16ba274d8a8fdc38d5a273c913ebbc356bc15e65a8c8ab4506f7612a08e43da83d
   languageName: node
   linkType: hard
 
@@ -13418,21 +13418,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-asset@npm:~8.10.0":
-  version: 8.10.1
-  resolution: "expo-asset@npm:8.10.1"
-  dependencies:
-    blueimp-md5: ^2.10.0
-    expo-constants: ~14.4.2
-    expo-file-system: ~15.4.0
-    invariant: ^2.2.4
-    md5-file: ^3.2.3
-    path-browserify: ^1.0.0
-    url-parse: ^1.5.9
-  checksum: 02607b67b8b53e47825ded6ca52eee47ae957cdc4b1501cdc0373bbd50ccfef605ba8a05a07ee88225622c7dc6054dfe1b64f03b21f09aaea7e1b4bf132d3ad7
-  languageName: node
-  linkType: hard
-
 "expo-asset@npm:~8.9.1":
   version: 8.9.2
   resolution: "expo-asset@npm:8.9.2"
@@ -13448,12 +13433,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-blur@npm:~12.4.0":
-  version: 12.4.1
-  resolution: "expo-blur@npm:12.4.1"
+"expo-blur@npm:~12.2.2":
+  version: 12.2.2
+  resolution: "expo-blur@npm:12.2.2"
   peerDependencies:
     expo: "*"
-  checksum: d6253bd40db623e8ce5f2737132c85c0d43980a9b693f0ad241bbf4b00041247bbf602d87c6fc8a7e700d25659eacffb596639de8cc991bef1585b43d3b19897
+  checksum: d6c18737ca4afff93bcccc2681be0e02fea8ed75ed7b8752f9c7c88eb49127a868b610985d5b979b0ed654af06d04bf496b11f68638a2b34a334bdf00891316a
   languageName: node
   linkType: hard
 
@@ -13478,18 +13463,6 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 647fda433b302780eae453a6dc58ea6da4aed42753729b04fd3ecaca277cc1979a67cfeaea2c6a60b82ca5d79f139b08b94576986264a1f13b0ef1bfc2911d01
-  languageName: node
-  linkType: hard
-
-"expo-constants@npm:~14.4.2":
-  version: 14.4.2
-  resolution: "expo-constants@npm:14.4.2"
-  dependencies:
-    "@expo/config": ~8.1.0
-    uuid: ^3.3.2
-  peerDependencies:
-    expo: "*"
-  checksum: 393158c537af73a00ca612e31389d889dfa7adcf07fb1028879ff8bfd65b2f2d0b8c81c8f148fa0c43f1b1656504bb35e5a25235446418b3d99bdb3681e84d74
   languageName: node
   linkType: hard
 
@@ -13519,17 +13492,6 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: a485e1c9978f2c301213a7f6b9c1654f7cf25004a46a658fe3046a33c855cb5114523c57ca12820efd699740563dc21457f982515385e737b8fb2bf08af700c1
-  languageName: node
-  linkType: hard
-
-"expo-file-system@npm:~15.4.0":
-  version: 15.4.1
-  resolution: "expo-file-system@npm:15.4.1"
-  dependencies:
-    uuid: ^3.4.0
-  peerDependencies:
-    expo: "*"
-  checksum: 8705377d99046517316ebd5fc1a3e28d849ee87be9a4a90436558cdc791b1146954f9ad7e597cd733394602a43214655c621e48d0748e6d89214497bac43009b
   languageName: node
   linkType: hard
 
@@ -22117,12 +22079,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:~2.17.0":
-  version: 2.17.0
-  resolution: "react-native-reanimated@npm:2.17.0"
+"react-native-reanimated@npm:~2.14.4":
+  version: 2.14.4
+  resolution: "react-native-reanimated@npm:2.14.4"
   dependencies:
     "@babel/plugin-transform-object-assign": ^7.16.7
     "@babel/preset-typescript": ^7.16.7
+    convert-source-map: ^1.7.0
     invariant: ^2.2.4
     lodash.isequal: ^4.5.0
     setimmediate: ^1.0.5
@@ -22131,7 +22094,7 @@ __metadata:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: bab274c5a9c0195e9b7b107f021580c06c37057340f325b3a8dfbb1e4ae2986eff87adb0b19760b4a32c96581d9e689aa73c379daca0b9faa88a32e23cf73a39
+  checksum: ec24225a145a8636065b464660256bed99ba5f50c7f6c74899838f5563e59a342ea217c285a06be8bdd5549e2faaf1ebdac6986011a767ba814a4cf469ed9bdb
   languageName: node
   linkType: hard
 
@@ -22145,16 +22108,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-screens@npm:~3.22.0":
-  version: 3.22.0
-  resolution: "react-native-screens@npm:3.22.0"
+"react-native-screens@npm:~3.20.0":
+  version: 3.20.0
+  resolution: "react-native-screens@npm:3.20.0"
   dependencies:
     react-freeze: ^1.0.0
     warn-once: ^0.1.0
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 18014990785abade1223aeb6468c7f5917f9ef5bc7144fac4ba25b1778cb9faac413cbecd565fed6b7c40474a9387ba29d672af1539a175ca87a235900128b7f
+  checksum: 94ab21378ee82765d329ccb8c92f5ca7cb15df916496fac7ce9a03c45e22579715000dae9c16f0a7d734a8fc1c2d0569fd82ecb71119a0b56046b5ea7533e7c2
   languageName: node
   linkType: hard
 
