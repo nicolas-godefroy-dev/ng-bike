@@ -19,27 +19,16 @@ interface BlogPostDocumentData {
    */
   title: prismic.KeyTextField;
   /**
-   * image field in *blog post*
+   * excerpt field in *blog post*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.image
+   * - **API ID Path**: blog_post.excerpt
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  image: prismic.ImageField<never>;
-  /**
-   * content field in *blog post*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.content
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  content: prismic.RichTextField;
+  excerpt: prismic.KeyTextField;
   /**
    * Slice Zone field in *blog post*
    *
@@ -89,7 +78,7 @@ interface BlogPostDocumentData {
  * Slice for *blog post → Slice Zone*
  *
  */
-type BlogPostDocumentDataSlicesSlice = TextBlockSlice;
+type BlogPostDocumentDataSlicesSlice = HeroSlice | ImageSlice | RichTextSlice;
 /**
  * blog post document from Prismic
  *
@@ -104,50 +93,309 @@ export type BlogPostDocument<Lang extends string = string> = prismic.PrismicDocu
   'blog_post',
   Lang
 >;
-export type AllDocumentTypes = BlogPostDocument;
-/**
- * Primary content in TextBlock → Primary
- *
- */
-interface TextBlockSliceDefaultPrimary {
+/** Content for homepage documents */
+interface HomepageDocumentData {
   /**
-   * content field in *TextBlock → Primary*
+   * Slice Zone field in *homepage*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: text_block.primary.content
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   * - **API ID Path**: homepage.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
    *
    */
-  content: prismic.RichTextField;
+  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice>;
+  /**
+   * Meta Description field in *homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: homepage.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_description: prismic.KeyTextField;
+  /**
+   * Meta Image field in *homepage*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  meta_image: prismic.ImageField<never>;
+  /**
+   * Meta Title field in *homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: homepage.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
 }
 /**
- * Default variation for TextBlock Slice
+ * Slice for *homepage → Slice Zone*
+ *
+ */
+type HomepageDocumentDataSlicesSlice = RichTextSlice | HeroSlice | ImageSlice;
+/**
+ * homepage document from Prismic
+ *
+ * - **API ID**: `homepage`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+  Simplify<HomepageDocumentData>,
+  'homepage',
+  Lang
+>;
+/** Content for page documents */
+interface PageDocumentData {
+  /**
+   * title field in *page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * Slice Zone field in *page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
+  /**
+   * Meta Description field in *page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_description: prismic.KeyTextField;
+  /**
+   * Meta Image field in *page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  meta_image: prismic.ImageField<never>;
+  /**
+   * Meta Title field in *page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+}
+/**
+ * Slice for *page → Slice Zone*
+ *
+ */
+type PageDocumentDataSlicesSlice = HeroSlice | RichTextSlice | ImageSlice;
+/**
+ * page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+  Simplify<PageDocumentData>,
+  'page',
+  Lang
+>;
+export type AllDocumentTypes = BlogPostDocument | HomepageDocument | PageDocument;
+/**
+ * Primary content in Hero → Primary
+ *
+ */
+interface HeroSliceDefaultPrimary {
+  /**
+   * title field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * subtitle field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * ctaText field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.ctaText
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaText: prismic.KeyTextField;
+  /**
+   * ctaHref field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.ctaHref
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaHref: prismic.KeyTextField;
+}
+/**
+ * Default variation for Hero Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Default`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TextBlockSliceDefault = prismic.SharedSliceVariation<
+export type HeroSliceDefault = prismic.SharedSliceVariation<
   'default',
-  Simplify<TextBlockSliceDefaultPrimary>,
+  Simplify<HeroSliceDefaultPrimary>,
   never
 >;
 /**
- * Slice variation for *TextBlock*
+ * Slice variation for *Hero*
  *
  */
-type TextBlockSliceVariation = TextBlockSliceDefault;
+type HeroSliceVariation = HeroSliceDefault;
 /**
- * TextBlock Shared Slice
+ * Hero Shared Slice
  *
- * - **API ID**: `text_block`
- * - **Description**: `TextBlock`
+ * - **API ID**: `hero`
+ * - **Description**: `Hero`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TextBlockSlice = prismic.SharedSlice<'text_block', TextBlockSliceVariation>;
+export type HeroSlice = prismic.SharedSlice<'hero', HeroSliceVariation>;
+/**
+ * Primary content in FeaturedImage → Primary
+ *
+ */
+interface ImageSliceDefaultPrimary {
+  /**
+   * image field in *FeaturedImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+}
+/**
+ * Default variation for FeaturedImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<ImageSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *FeaturedImage*
+ *
+ */
+type ImageSliceVariation = ImageSliceDefault;
+/**
+ * FeaturedImage Shared Slice
+ *
+ * - **API ID**: `image`
+ * - **Description**: `Image`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageSlice = prismic.SharedSlice<'image', ImageSliceVariation>;
+/**
+ * Primary content in RichText → Primary
+ *
+ */
+interface RichTextSliceDefaultPrimary {
+  /**
+   * content field in *RichText → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_text.primary.content
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  content: prismic.RichTextField;
+}
+/**
+ * Default variation for RichText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RichTextSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<RichTextSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *RichText*
+ *
+ */
+type RichTextSliceVariation = RichTextSliceDefault;
+/**
+ * RichText Shared Slice
+ *
+ * - **API ID**: `rich_text`
+ * - **Description**: `RichText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>;
 declare module '@prismicio/client' {
   interface CreateClient {
     (
@@ -160,11 +408,25 @@ declare module '@prismicio/client' {
       BlogPostDocumentData,
       BlogPostDocumentDataSlicesSlice,
       BlogPostDocument,
+      HomepageDocumentData,
+      HomepageDocumentDataSlicesSlice,
+      HomepageDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
+      PageDocument,
       AllDocumentTypes,
-      TextBlockSliceDefaultPrimary,
-      TextBlockSliceDefault,
-      TextBlockSliceVariation,
-      TextBlockSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceDefault,
+      HeroSliceVariation,
+      HeroSlice,
+      ImageSliceDefaultPrimary,
+      ImageSliceDefault,
+      ImageSliceVariation,
+      ImageSlice,
+      RichTextSliceDefaultPrimary,
+      RichTextSliceDefault,
+      RichTextSliceVariation,
+      RichTextSlice,
     };
   }
 }

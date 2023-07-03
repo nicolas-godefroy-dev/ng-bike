@@ -1,12 +1,13 @@
-import { SliceZone } from "@prismicio/react";
+import { SliceZone } from '@prismicio/react'
 
 import { createClient } from "@/libs/prismic";
 import { components as slices } from "@/slices";
 
+type PageProps = { params: { uid: string } }
 
-const Home = async () => {
+const Page = async ({ params }: PageProps) => {
   const client = createClient();
-  const page = await client.getSingle("homepage");
+  const page = await client.getByUID("page", params.uid);
 
   return (
     <main className="flex flex-col items-center justify-between min-h-screen">
@@ -15,4 +16,5 @@ const Home = async () => {
   )
 }
 
-export default Home
+
+export default Page

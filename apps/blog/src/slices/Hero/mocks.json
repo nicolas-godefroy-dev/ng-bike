@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "brush",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "likely",
+				"type": "Text"
+			},
+			"ctaHref": {
+				"__TYPE__": "FieldContent",
+				"value": "outer",
+				"type": "Text"
+			},
+			"ctaText": {
+				"__TYPE__": "FieldContent",
+				"value": "riding",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -26,6 +26,7 @@
     "twrnc",
     "typecheck",
     "unfollow",
+    "unoptimized",
     "whatwg",
     "yarnpkg",
     "zustand"
@@ -37,5 +38,6 @@
     "tw\\.\\w+`([^`]*)", // tw.xxx`...`
     "tw\\(.*?\\)`([^`]*)", // tw(Component)`...`
     "tw\\.\\w+\\(([^)]*)\\)" // tw.xxx('...')
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

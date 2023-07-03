@@ -8,5 +8,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: config.theme,
-  plugins: [],
+  daisyui: {
+    themes: ["forest"],
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui")
+  ],
 }

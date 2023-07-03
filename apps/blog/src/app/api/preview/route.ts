@@ -5,7 +5,7 @@ import { NextRequest } from "next/server";
 import { createClient } from "@/libs/prismic";
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
-export async function GET(request: NextRequest) {
+export const GET = async (request: NextRequest) => {
   const client = createClient();
 
   draftMode().enable();
