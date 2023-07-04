@@ -3219,7 +3219,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-mesh/cache-localforage@npm:^0.94.2":
+"@graphql-mesh/cache-localforage@npm:0.94.2, @graphql-mesh/cache-localforage@npm:^0.94.2":
   version: 0.94.2
   resolution: "@graphql-mesh/cache-localforage@npm:0.94.2"
   dependencies:
@@ -4751,6 +4751,7 @@ __metadata:
   resolution: "@ng-bike/api@workspace:apps/api"
   dependencies:
     "@babel/core": ^7.21.0
+    "@graphql-mesh/cache-localforage": 0.94.2
     "@graphql-mesh/cli": 0.84.0
     "@graphql-mesh/cross-helpers": 0.4.0
     "@graphql-mesh/graphql": 0.94.3

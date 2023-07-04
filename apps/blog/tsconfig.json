@@ -1,11 +1,21 @@
 {
   "extends": "@ng-bike/next-config/tsconfig",
-  "include": ["."],
-  "exclude": ["node_modules", "coverage", "dist", "build"],
+  "include": [
+    ".",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "dist",
+    "build"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   }
 }
