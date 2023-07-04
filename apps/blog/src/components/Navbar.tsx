@@ -21,7 +21,7 @@ export const Navbar = async () => {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             {
               pages.map((page) => (
-                <li key={page.id}><Link href={`/${page.uid}`}>{page.data.title}</Link></li>
+                <li key={page.id}><Link href={`/l/${page.uid}`}>{page.data.title}</Link></li>
               ))
             }
             <li>
@@ -42,7 +42,7 @@ export const Navbar = async () => {
         <ul className="px-1 menu menu-horizontal">
           {
             pages.map((page) => (
-              <li key={page.id}><Link href={`/${page.uid}`}>{page.data.title}</Link></li>
+              <li key={page.id}><Link href={`/l/${page.uid}`}>{page.data.title}</Link></li>
             ))
           }
           <li tabIndex={0}>
