@@ -3,10 +3,10 @@ import React from 'react';
 import { StyleProp, Text, ViewStyle } from 'react-native';
 import Animated from 'react-native-reanimated';
 
+import { WeatherIcon } from './WeatherIcon';
+
 import { useLocationStore } from '@/hooks/useLocationStore';
 import { useWeatherQuery } from '@/libs/ngBike';
-
-import { WeatherIcon } from './WeatherIcon';
 
 export const WEATHER_INDICATOR_HEIGHT = 34;
 
@@ -20,7 +20,7 @@ export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
     { lat: `${latitude}`, lon: `${longitude}` },
     {
       refetchInterval: 1000 * 60 * 30, // 30 minutes,
-    }
+    },
   );
 
   const temp = data?.weather?.main?.temp;

@@ -1,7 +1,10 @@
-const config = require('@ng-bike/next-config/eslint');
+'use strict'
 
 module.exports = {
-  ...config,
+  extends: [require.resolve('@ng-bike/next-config/eslint')],
   root: true,
-  parserOptions: { tsconfigRootDir: __dirname },
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
+  },
 };

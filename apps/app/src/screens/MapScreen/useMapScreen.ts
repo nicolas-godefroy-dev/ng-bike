@@ -3,10 +3,10 @@ import * as Location from 'expo-location';
 import { useCallback, useEffect, useRef } from 'react';
 import MapView, { PanDragEvent, UserLocationChangeEvent } from 'react-native-maps';
 
+import { useLocationStore } from '../../hooks/useLocationStore';
+
 import { useStations } from '@/hooks/useStations/useStations';
 import { Station } from '@/libs/ngBike';
-
-import { useLocationStore } from '../../hooks/useLocationStore';
 
 export const useMapScreen = () => {
   const [status] = Location.useForegroundPermissions({ request: true });
@@ -30,13 +30,13 @@ export const useMapScreen = () => {
         longitude: event.nativeEvent.coordinate.longitude,
       });
     },
-    [setUserLocation]
+    [setUserLocation],
   );
 
   // Disable follow the user location on pan drag
   const onPanDrag = useCallback(
     (_event: PanDragEvent) => unfollowUserLocation(),
-    [unfollowUserLocation]
+    [unfollowUserLocation],
   );
 
   // Center the map on the pressed station
@@ -54,7 +54,7 @@ export const useMapScreen = () => {
         altitude: 1000,
       });
     },
-    [unfollowUserLocation]
+    [unfollowUserLocation],
   );
 
   const handlePressMyLocation = useCallback(() => {

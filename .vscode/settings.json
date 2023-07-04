@@ -1,9 +1,9 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "editor.formatOnSave": true
+    "source.fixAll.eslint": true
   },
-  "eslint.packageManager": "yarn",
   "cSpell.words": [
     "codegen",
     "commitlint",

@@ -3,10 +3,10 @@ import { formatDistance } from '@ng-bike/utils';
 import React from 'react';
 import { Pressable, PressableProps, StyleProp, Text, View, ViewStyle } from 'react-native';
 
+import { StationCapacity, StationCapacitySkeleton } from './StationCapacity';
+
 import { Skeleton } from '@/components/Skeleton';
 import { Station } from '@/libs/ngBike';
-
-import { StationCapacity, StationCapacitySkeleton } from './StationCapacity';
 
 export type StationCapacityMarkerProps = Station & {
   testID?: PressableProps['testID'];

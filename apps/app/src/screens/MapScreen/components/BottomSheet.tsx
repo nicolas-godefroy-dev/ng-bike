@@ -5,12 +5,12 @@ import { FlatListProps, ListRenderItemInfo } from 'react-native';
 import { useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Station } from '@/libs/ngBike';
-
 import { StationListError } from './Station/StationListError';
 import { StationListItem } from './Station/StationListItem';
 import { StationListLoading } from './Station/StationListLoading';
 import { WEATHER_INDICATOR_HEIGHT, WeatherIndicator } from './Weather/WeatherIndicator';
+
+import { Station } from '@/libs/ngBike';
 
 export type BottomSheetProps = {
   stations?: Station[];
@@ -48,7 +48,7 @@ export const BottomSheet = ({
         testID={`bottom-sheet-station-${station.stationId}`}
       />
     ),
-    [onPressStation]
+    [onPressStation],
   );
 
   const ListEmptyComponent: FlatListProps<Station>['ListEmptyComponent'] = useCallback(() => {

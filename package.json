@@ -24,7 +24,7 @@
     "*.{ts,tsx,js,jsx}": [
       "npx eslint --fix"
     ],
-    "*.{md,json}": "npx prettier --write"
+    "*.{ts,tsx,js,jsx,md,json}": "npx prettier --write"
   },
   "dependencies": {
     "@commitlint/cli": "17.6.6",

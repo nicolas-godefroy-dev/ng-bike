@@ -1,17 +1,21 @@
 import { color } from './color';
 
 describe('color', () => {
-  test('returns theme color when a valid token is provided', () => {
+  it('returns theme color when a valid token is provided', () => {
+    expect.hasAssertions();
+
     const validToken = 'primary-500';
     const result = color(validToken);
 
-    expect(result).toEqual(expect.any(String));
+    expect(result).toStrictEqual(expect.any(String));
   });
 
-  test('throws an error when an invalid token is provided', () => {
+  it('throws an error when an invalid token is provided', () => {
+    expect.hasAssertions();
+
     const invalidToken = 'invalid';
     const errorFunction = () => color(invalidToken);
 
-    expect(errorFunction).toThrowError('Color not found in theme');
+    expect(errorFunction).toThrow('Color not found in theme');
   });
 });

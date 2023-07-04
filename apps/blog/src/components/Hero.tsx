@@ -1,5 +1,5 @@
-import { Nullable } from "@ng-bike/utils"
-import Link from "next/link";
+import { Nullable } from '@ng-bike/utils';
+import Link from 'next/link';
 import React from 'react';
 
 type HeroProps = {
@@ -15,9 +15,10 @@ export const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaHref })
       <div className="max-w-md">
         <h1 className="text-5xl font-bold">{title}</h1>
         <p className="py-6">{subtitle}</p>
-        <Link href={ctaHref ?? "#"} className="btn btn-primary">{ctaText}</Link>
+        <Link href={ctaHref ?? '#'} className="btn btn-primary">
+          {ctaText}
+        </Link>
       </div>
     </div>
   </header>
 );
-

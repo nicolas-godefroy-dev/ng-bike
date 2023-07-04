@@ -3,6 +3,8 @@ import { ValidStation } from '../../types';
 
 describe('sanitizeStationName', () => {
   it('should sanitize station name correctly', () => {
+    expect.hasAssertions();
+
     const station = {
       stationId: '123',
       name: 'ABC-0123-XYZ',
@@ -10,6 +12,6 @@ describe('sanitizeStationName', () => {
 
     const sanitizedStation = sanitizeStationName(station);
 
-    expect(sanitizedStation.name).toEqual('ABCXYZ');
+    expect(sanitizedStation.name).toBe('ABCXYZ');
   });
 });

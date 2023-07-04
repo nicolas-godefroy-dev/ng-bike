@@ -22,5 +22,5 @@ export const useLocationStore = create<LocationStore, [['zustand/devtools', neve
     setUserLocation: (userLocation: Coordinate) => set((_state) => ({ userLocation })),
     followUserLocation: () => set((_state) => ({ isFollowingUser: true })),
     unfollowUserLocation: () => set((_state) => ({ isFollowingUser: false })),
-  }))
+  })),
 );

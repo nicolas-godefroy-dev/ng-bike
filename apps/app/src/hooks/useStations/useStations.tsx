@@ -20,8 +20,8 @@ export const useStations = () => {
       const stations = values(
         merge(
           keyBy(res.stationInformation?.data.stations, 'stationId'),
-          keyBy(res.stationStatus?.data.stations, 'stationId')
-        )
+          keyBy(res.stationStatus?.data.stations, 'stationId'),
+        ),
       )
         .filter((station): station is ValidStation => !!station)
         .map(sanitizeStationName)

@@ -1,5 +1,6 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
+import React from 'react';
 
 import { Hero as HeroCmp } from '@/components/Hero';
 /**
@@ -10,9 +11,6 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 /**
  * Component for "Hero" Slices.
  */
-const Hero = ({ slice }: HeroProps): JSX.Element => (
-  <HeroCmp {...slice.primary} />
-);
-
+const Hero = ({ slice }: HeroProps): JSX.Element => <HeroCmp {...slice.primary} />;
 
 export default Hero;

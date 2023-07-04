@@ -11,7 +11,7 @@ export const addStationDistance = (station: ValidStation, point: Coordinate): St
       latitude: station.lat,
       longitude: station.lon,
     },
-    point
+    point,
   );
 
   const stationWithDistance = {

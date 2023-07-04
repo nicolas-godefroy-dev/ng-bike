@@ -1,6 +1,6 @@
-import { Nullable } from "@ng-bike/utils"
-import { ImageFieldImage } from "@prismicio/client";
-import { PrismicImage } from "@prismicio/react";
+import { Nullable } from '@ng-bike/utils';
+import { ImageFieldImage } from '@prismicio/client';
+import { PrismicImage } from '@prismicio/react';
 import React from 'react';
 
 type FeaturedImageProps = {
@@ -10,8 +10,3 @@ type FeaturedImageProps = {
 export const FeaturedImage: React.FC<FeaturedImageProps> = ({ image }) => (
   <PrismicImage field={image} />
 );
-
-
-
-
-

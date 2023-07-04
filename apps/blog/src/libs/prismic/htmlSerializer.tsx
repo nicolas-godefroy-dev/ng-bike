@@ -1,7 +1,8 @@
-import { PrismicRichTextProps } from "@prismicio/react"
-import Image from "next/image"
+import { PrismicRichTextProps } from '@prismicio/react';
+import Image from 'next/image';
+import React from 'react';
 
-type HtmlSerializer = PrismicRichTextProps["components"]
+type HtmlSerializer = PrismicRichTextProps['components'];
 
 export const htmlSerializer: HtmlSerializer = {
   heading1: ({ text }) => <h1>{text}</h1>,
@@ -22,8 +23,12 @@ export const htmlSerializer: HtmlSerializer = {
   span: ({ text }) => <span>{text}</span>,
   image: ({ node }) => (
     <p>
-      <Image src={node.url} alt={node.alt ?? ""} unoptimized />
+      <Image src={node.url} alt={node.alt ?? ''} unoptimized />
     </p>
   ),
-  hyperlink: ({ node, text }) => (<a href={node.data.url} className="link link-primary">{text}</a>),
-}
+  hyperlink: ({ node, text }) => (
+    <a href={node.data.url} className="link link-primary">
+      {text}
+    </a>
+  ),
+};
