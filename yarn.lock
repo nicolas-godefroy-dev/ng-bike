@@ -4030,15 +4030,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/utils@npm:10.0.1, @graphql-tools/utils@npm:^10.0.0, @graphql-tools/utils@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "@graphql-tools/utils@npm:10.0.1"
+"@graphql-tools/utils@npm:10.0.3, @graphql-tools/utils@npm:^10.0.0, @graphql-tools/utils@npm:^10.0.1":
+  version: 10.0.3
+  resolution: "@graphql-tools/utils@npm:10.0.3"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.1
+    dset: ^3.1.2
     tslib: ^2.4.0
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-  checksum: fc6412b6914bcae87f825e1cf5998f3c0e54470d00730054b2e079a4e2f19eeb52626294eb62d684f82ff2ae59c6e1c1854664a0e13de9becf40aa857c437e3d
+  checksum: a05c42ea0ca52f7000660f59dbb80fabc962abb838251f68f96e210ec1cc83dad60251848a0ef0de0dfac4195305257e07c102c711d0f45d4243e4561e39f95f
   languageName: node
   linkType: hard
 
@@ -4766,7 +4767,7 @@ __metadata:
     "@graphql-mesh/transform-type-merging": 0.94.2
     "@graphql-mesh/types": 0.94.2
     "@graphql-mesh/utils": 0.94.2
-    "@graphql-tools/utils": 10.0.1
+    "@graphql-tools/utils": 10.0.3
     "@ng-bike/next-config": "*"
     "@types/node": 18.16.18
     "@types/react": ~18.2.8
