@@ -31,7 +31,7 @@
     "@graphql-mesh/transform-type-merging": "0.94.2",
     "@graphql-mesh/types": "0.94.2",
     "@graphql-mesh/utils": "0.94.2",
-    "@graphql-tools/utils": "10.0.1",
+    "@graphql-tools/utils": "10.0.3",
     "@whatwg-node/fetch": "0.9.7",
     "dotenv": "16.3.1",
     "graphql": "16.7.1",
