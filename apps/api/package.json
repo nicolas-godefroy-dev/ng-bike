@@ -28,7 +28,7 @@
     "@graphql-mesh/transform-prefix": "0.94.3",
     "@graphql-mesh/transform-rename": "0.94.3",
     "@graphql-mesh/transform-type-merging": "0.94.2",
-    "@graphql-mesh/types": "0.94.1",
+    "@graphql-mesh/types": "0.94.2",
     "@graphql-mesh/utils": "0.94.2",
     "@graphql-tools/utils": "10.0.1",
     "@whatwg-node/fetch": "0.9.7",

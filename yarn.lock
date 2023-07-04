@@ -3591,23 +3591,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-mesh/types@npm:0.94.1":
-  version: 0.94.1
-  resolution: "@graphql-mesh/types@npm:0.94.1"
-  dependencies:
-    "@graphql-tools/batch-delegate": ^9.0.0
-    "@graphql-tools/delegate": ^10.0.0
-    "@graphql-typed-document-node/core": ^3.2.0
-  peerDependencies:
-    "@graphql-mesh/store": ^0.94.1
-    "@graphql-tools/utils": ^9.2.1 || ^10.0.0
-    graphql: "*"
-    tslib: ^2.4.0
-  checksum: b3a3139303e5f084065d520c0148f191d28ca7e07f97abb51d1b3fbf64805c58939780cca564fd7e65275f2b820739788a57553136d38d13e15d8b4ba02b08bd
-  languageName: node
-  linkType: hard
-
-"@graphql-mesh/types@npm:^0.94.2":
+"@graphql-mesh/types@npm:0.94.2, @graphql-mesh/types@npm:^0.94.2":
   version: 0.94.2
   resolution: "@graphql-mesh/types@npm:0.94.2"
   dependencies:
@@ -4779,7 +4763,7 @@ __metadata:
     "@graphql-mesh/transform-prefix": 0.94.3
     "@graphql-mesh/transform-rename": 0.94.3
     "@graphql-mesh/transform-type-merging": 0.94.2
-    "@graphql-mesh/types": 0.94.1
+    "@graphql-mesh/types": 0.94.2
     "@graphql-mesh/utils": 0.94.2
     "@graphql-tools/utils": 10.0.1
     "@ng-bike/next-config": "*"
