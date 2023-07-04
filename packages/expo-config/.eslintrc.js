@@ -1,15 +1,13 @@
 module.exports = {
+  root: true,
   extends: [
-    'next/core-web-vitals',
+    'universe/native',
+    '@react-native',
     'prettier',
     'plugin:react-hooks/recommended',
     'plugin:@tanstack/eslint-plugin-query/recommended',
   ],
-  plugins: [
-    'unused-imports',
-    'jsx-expressions',
-    '@tanstack/query',
-  ],
+  plugins: ['unused-imports', 'react-native', 'jsx-expressions', '@tanstack/query'],
   parserOptions: {
     project: './tsconfig.json',
   },
@@ -51,7 +49,7 @@ module.exports = {
       parserOptions: {
         parser: '@babel/eslint-parser',
         requireConfigFile: false,
-      }
+      },
     },
     {
       files: ['*.ts', '*.tsx', '*.jsx'],
@@ -63,6 +61,9 @@ module.exports = {
       },
       rules: {
         'react/jsx-key': ['error', { checkFragmentShorthand: true }],
+        'react-native/no-unused-styles': 2,
+        'react-native/no-raw-text': 2,
+        'react-native/no-single-element-style-arrays': 2,
         'jsx-expressions/strict-logical-expressions': 'error',
         '@typescript-eslint/no-unnecessary-condition': 'warn',
         '@typescript-eslint/await-thenable': 'error',
@@ -89,10 +90,7 @@ module.exports = {
         ],
         '@typescript-eslint/no-confusing-non-null-assertion': 'error',
         '@typescript-eslint/no-extra-non-null-assertion': 'error',
-        '@typescript-eslint/no-floating-promises': [
-          'error',
-          { ignoreIIFE: true },
-        ],
+        '@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true }],
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
@@ -191,4 +189,4 @@ module.exports = {
       },
     },
   ],
-}
+};

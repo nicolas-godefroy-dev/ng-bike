@@ -1,7 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Next",
-  "extends": "@tsconfig/next/tsconfig.json",
+  "display": "React Native",
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "include": ["."],
+  "exclude": ["node_modules", "coverage"],
   "compilerOptions": {
     "strict": true,
     "strictNullChecks": true,

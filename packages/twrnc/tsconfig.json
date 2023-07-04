@@ -1,5 +1,5 @@
 {
-  "extends": "@ng-bike/ts-config-react-native",
+  "extends": "@ng-bike/expo-config/tsconfig",
   "include": ["."],
   "exclude": ["node_modules", "coverage", "babel.config.js", "jest.config.js"]
 }

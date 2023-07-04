@@ -18,10 +18,7 @@
     "lint:fix": "npx eslint --fix ."
   },
   "devDependencies": {
-    "@ng-bike/babel-config-react-native": "*",
-    "@ng-bike/eslint-config-react-native": "*",
-    "@ng-bike/jest-config-react-native": "*",
-    "@ng-bike/ts-config-react-native": "*",
+    "@ng-bike/expo-config": "*",
     "jest": "^29.4.3",
     "typescript": "^5.1.3"
   },

@@ -1,6 +1,0 @@
-# Tests
-coverage
-*.tsbuildinfo
-
-# Node
-node_modules

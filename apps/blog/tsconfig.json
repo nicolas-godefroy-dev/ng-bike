@@ -1,5 +1,5 @@
 {
-  "extends": "@ng-bike/ts-config-next",
+  "extends": "@ng-bike/next-config/tsconfig",
   "include": [
     "next-env.d.ts",
     "prismicio-types.d.ts",

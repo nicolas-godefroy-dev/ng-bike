@@ -15,6 +15,7 @@
     "typecheck": "yarn workspaces foreach -v run typecheck",
     "lint": "yarn workspaces foreach -v run lint",
     "lint:fix": "yarn workspaces foreach -v run lint:fix",
+    "checks": "yarn deps:check && yarn test && yarn lint && yarn typecheck",
     "app:dev": "yarn workspace @ng-bike/app run start",
     "api:dev": "yarn workspace @ng-bike/blog run dev",
     "blog:dev": "yarn workspace @ng-bike/blog run dev"

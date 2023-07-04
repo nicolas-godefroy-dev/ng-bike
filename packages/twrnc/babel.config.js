@@ -1,4 +1,4 @@
-const config = require('@ng-bike/babel-config-react-native');
+const config = require('@ng-bike/expo-config/babel');
 
 module.exports = function (api) {
   api.cache(true);

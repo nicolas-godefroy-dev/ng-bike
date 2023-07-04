@@ -1,6 +1,7 @@
-const config = require('@ng-bike/eslint-config-react-native');
+const config = require('@ng-bike/expo-config/eslint');
 
 module.exports = {
   ...config,
+  root: true,
   parserOptions: { tsconfigRootDir: __dirname },
 };

@@ -22,11 +22,8 @@
     "twrnc": "3.6.1"
   },
   "devDependencies": {
-    "@ng-bike/babel-config-react-native": "*",
-    "@ng-bike/eslint-config-react-native": "*",
-    "@ng-bike/jest-config-react-native": "*",
+    "@ng-bike/expo-config": "*",
     "@ng-bike/tailwind-config": "*",
-    "@ng-bike/ts-config-react-native": "*",
     "jest": "^29.4.3",
     "react": "18.2.0",
     "react-native": "0.71.8",

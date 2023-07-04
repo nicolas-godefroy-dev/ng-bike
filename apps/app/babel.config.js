@@ -1,6 +1,6 @@
 const path = require('path');
 
-const config = require('@ng-bike/babel-config-react-native');
+const config = require('@ng-bike/expo-config/babel');
 
 /**
  * Custom config for expo router
