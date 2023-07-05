@@ -35,7 +35,7 @@
     "@whatwg-node/fetch": "0.9.7",
     "dotenv": "16.3.1",
     "graphql": "16.7.1",
-    "next": "13.4.8",
+    "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tslib": "2.6.0"

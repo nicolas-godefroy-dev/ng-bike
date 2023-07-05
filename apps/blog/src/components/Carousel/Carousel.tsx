@@ -10,7 +10,14 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => (
   <div className="max-w-md p-4 space-x-4 carousel carousel-center bg-neutral rounded-box">
     {images.map((src) => (
       <div className="carousel-item" key={src}>
-        <Image src={src ?? ''} alt="" className="rounded-box" unoptimized />
+        <Image
+          src={src ?? ''}
+          alt=""
+          className="rounded-box"
+          unoptimized
+          width={384}
+          height={128}
+        />
       </div>
     ))}
   </div>

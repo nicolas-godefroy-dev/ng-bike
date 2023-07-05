@@ -2,7 +2,7 @@ import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import React from 'react';
 
-import { RichText as RichTextCmp } from '@/components/RichText';
+import { RichText as RichTextCmp } from '@/components/RichText/RichText';
 
 /**
  * Props for `RichText`.

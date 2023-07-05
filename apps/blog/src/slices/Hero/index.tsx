@@ -2,7 +2,7 @@ import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import React from 'react';
 
-import { Hero as HeroCmp } from '@/components/Hero';
+import { Hero as HeroCmp } from '@/components/Hero/Hero';
 /**
  * Props for `Hero`.
  */

@@ -2,7 +2,7 @@ import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import React from 'react';
 
-import { FeaturedImage as FeaturedImageCmp } from '@/components/FeaturedImage';
+import { FeaturedImage as FeaturedImageCmp } from '@/components/FeaturedImage/FeaturedImage';
 
 /**
  * Props for `Image`.
