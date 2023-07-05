@@ -2,23 +2,18 @@
 
 A Bike Sharing app made in Expo (iOS, Android), React Native. 🚴🚴🏾‍♀️🚴🏽‍♂️
 
-## Architecture
+## Tech Stack
 
-The api and web apps are made with [next.js](https://nextjs.org/), with the [app-router](https://nextjs.org/docs/app).
-
-The mobile apps are made with [expo](https://docs.expo.dev/) and [expo-router](https://expo.github.io/router/docs/).
-
-The styling is made with [tailwind](https://tailwindcss.com/).
-
-The CMS is [prismic](https://prismic.io/) with [slicemachine](https://prismic.io/slice-machine).
-
-The react state managements are made with [react-query](https://tanstack.com/query/v3/) and [zustand](https://github.com/pmndrs/zustand).
-
-The style guide is made with [storybook](https://storybook.js.org/).
-
-The unit and integration tests are made with [jest](https://jestjs.io/).
-
-The end-to-end tests are made with [maestro](https://maestro.mobile.dev/)
+| Tech                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------- |
+| api and web apps [next.js](https://nextjs.org/) with [app-router](https://nextjs.org/docs/app)                   |
+| mobile apps [expo](https://docs.expo.dev/) with [expo-router](https://expo.github.io/router/docs/)               |
+| styling [tailwind](https://tailwindcss.com/)                                                                     |
+| state managements [react-query](https://tanstack.com/query/v3/) and [zustand](https://github.com/pmndrs/zustand) |
+| CMS [prismic](https://prismic.io/) with [slicemachine](https://prismic.io/slice-machine)                         |
+| style guide [storybook](https://storybook.js.org/)                                                               |
+| unit and integration tests [jest](https://jestjs.io/)                                                            |
+| end-to-end tests [maestro](https://maestro.mobile.dev/)                                                          |
 
 ## Apps
 
