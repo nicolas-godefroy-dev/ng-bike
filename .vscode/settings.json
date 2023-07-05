@@ -7,6 +7,7 @@
   "cSpell.words": [
     "codegen",
     "commitlint",
+    "customtypes",
     "fieldset",
     "gbfs",
     "godefroy",
@@ -14,6 +15,7 @@
     "Haptics",
     "netinfo",
     "openapi",
+    "prebuild",
     "Pressable",
     "prismic",
     "prismicio",

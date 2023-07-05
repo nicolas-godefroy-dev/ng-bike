@@ -2,7 +2,6 @@
   "name": "@ng-bike/blog",
   "version": "1.0.0",
   "author": "nicolas-godefroy-dev",
-  "license": "MIT",
   "private": true,
   "sideEffects": false,
   "scripts": {
@@ -14,8 +13,8 @@
     "typecheck": "tsc",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "dev:storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build"
   },
   "dependencies": {
     "@ng-bike/utils": "*",

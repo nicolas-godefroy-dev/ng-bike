@@ -2,10 +2,9 @@
   "name": "@ng-bike/tailwind-config",
   "version": "1.0.0",
   "author": "nicolas-godefroy-dev",
-  "license": "MIT",
   "private": true,
   "sideEffects": false,
-  "main": "tailwind.config.js",
+  "main": "./src/tailwind.config.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nicolas-godefroy-dev/ng-bike",

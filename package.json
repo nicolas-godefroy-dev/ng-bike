@@ -2,12 +2,10 @@
   "name": "@ng-bike",
   "version": "1.0.0",
   "author": "nicolas-godefroy-dev",
-  "license": "MIT",
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*",
-    "packages/scripts/*"
+    "packages/*"
   ],
   "scripts": {
     "deps:check": "syncpack list-mismatches && yarn dedupe --check",
@@ -16,9 +14,11 @@
     "lint": "yarn workspaces foreach -v run lint",
     "lint:fix": "yarn workspaces foreach -v run lint:fix",
     "checks": "yarn deps:check && yarn test && yarn lint && yarn typecheck",
-    "app:dev": "yarn workspace @ng-bike/app run start",
-    "api:dev": "yarn workspace @ng-bike/blog run dev",
-    "blog:dev": "yarn workspace @ng-bike/blog run dev"
+    "dev:app": "yarn workspace @ng-bike/app run start",
+    "dev:api": "yarn workspace @ng-bike/blog run dev",
+    "dev:blog": "yarn workspace @ng-bike/blog run dev",
+    "storybook:blog": "yarn workspace @ng-bike/blog run dev:storybook",
+    "slicemachine:blog": "yarn workspace @ng-bike/blog run start:slicemachine"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
