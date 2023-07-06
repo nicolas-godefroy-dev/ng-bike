@@ -33,7 +33,7 @@
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
+    "@babel/core": "^7.22.6",
     "@ng-bike/next-config": "*",
     "@ng-bike/tailwind-config": "*",
     "@slicemachine/adapter-next": "^0.3.1",

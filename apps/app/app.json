@@ -10,7 +10,10 @@
     "scheme": "ng-bike",
     "userInterfaceStyle": "automatic",
     "privacy": "unlisted",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "githubUrl": "https://github.com/nicolas-godefroy-dev/expo-ng-bike",
     "primaryColor": "#0fa968",
     "splash": {
@@ -21,7 +24,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "extra": {},
     "android": {
       "jsEngine": "hermes"
@@ -47,7 +52,8 @@
           "isIosBackgroundLocationEnabled": false,
           "isAndroidBackgroundLocationEnabled": false
         }
-      ]
+      ],
+      "expo-router"
     ]
   }
 }

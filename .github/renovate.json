@@ -12,6 +12,7 @@
     "schedule": null,
     "stabilityDays": 0
   },
+  "prConcurrentLimit": 5,
   "postUpdateOptions": ["yarnDedupeHighest"],
   "major": {
     "dependencyDashboardApproval": false
@@ -129,6 +130,11 @@
     {
       "groupName": "linting",
       "matchPackagePatterns": [".*(eslint|lint|prettier).*"],
+      "automerge": true
+    },
+    {
+      "groupName": "babel",
+      "matchPackagePatterns": [".*(babel).*"],
       "automerge": true
     },
     {
