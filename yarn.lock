@@ -5364,7 +5364,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.60.1
     "@typescript-eslint/parser": 5.60.1
     "@typescript-eslint/utils": 5.61.0
-    babel-plugin-inline-dotenv: 1.7.0
     babel-plugin-module-resolver: 5.0.0
     eslint: 8.44.0
     eslint-config-prettier: 8.8.0
@@ -12827,20 +12826,6 @@ __metadata:
   version: 0.0.5
   resolution: "babel-plugin-add-react-displayname@npm:0.0.5"
   checksum: a5b52aa14327b1fa2949f32140cd1b0b283b2035881453d71dcedc825a7378aa3a578bff5f76d1632875eedb40612dc4e71585852ce5cb3c2869c180643fd001
-  languageName: node
-  linkType: hard
-
-"babel-plugin-inline-dotenv@npm:1.7.0":
-  version: 1.7.0
-  resolution: "babel-plugin-inline-dotenv@npm:1.7.0"
-  dependencies:
-    dotenv: ^16.0.0
-  peerDependencies:
-    dotenv-expand: ">= 5.0.0"
-  peerDependenciesMeta:
-    dotenv-expand:
-      optional: true
-  checksum: 1203b100b84d247a0db5d1f2565f452e1afa3f747e5ad872ddbf3533b49ec2173ba2c99d22c05fa902914da8de331fbc714132c2eda7b0a2a26fa909dbb10a67
   languageName: node
   linkType: hard
 
