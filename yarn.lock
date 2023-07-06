@@ -5364,7 +5364,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.60.1
     "@typescript-eslint/parser": 5.60.1
     "@typescript-eslint/utils": 5.61.0
-    babel-plugin-inline-dotenv: 1.7.0
     babel-plugin-module-resolver: 5.0.0
     eslint: 8.44.0
     eslint-config-prettier: 8.8.0
@@ -5408,7 +5407,7 @@ __metadata:
     "@types/prettier": 2.7.3
     "@types/react": ~18.2.8
     "@types/react-dom": ~18.2.6
-    "@types/testing-library__jest-dom": 5.14.6
+    "@types/testing-library__jest-dom": 5.14.7
     "@typescript-eslint/eslint-plugin": 5.60.1
     "@typescript-eslint/parser": 5.60.1
     "@typescript-eslint/utils": 5.61.0
@@ -11288,16 +11287,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/testing-library__jest-dom@npm:5.14.6":
-  version: 5.14.6
-  resolution: "@types/testing-library__jest-dom@npm:5.14.6"
-  dependencies:
-    "@types/jest": "*"
-  checksum: 92f81cefeacba3b5c06d4b3fbea0341fe2bcaa6e425c026ae262de39f1148c2588cf3003112aa4ac0880c3972ffb77641a863f3be71518d1d8080402c944e326
-  languageName: node
-  linkType: hard
-
-"@types/testing-library__jest-dom@npm:^5.9.1":
+"@types/testing-library__jest-dom@npm:5.14.7, @types/testing-library__jest-dom@npm:^5.9.1":
   version: 5.14.7
   resolution: "@types/testing-library__jest-dom@npm:5.14.7"
   dependencies:
@@ -12827,20 +12817,6 @@ __metadata:
   version: 0.0.5
   resolution: "babel-plugin-add-react-displayname@npm:0.0.5"
   checksum: a5b52aa14327b1fa2949f32140cd1b0b283b2035881453d71dcedc825a7378aa3a578bff5f76d1632875eedb40612dc4e71585852ce5cb3c2869c180643fd001
-  languageName: node
-  linkType: hard
-
-"babel-plugin-inline-dotenv@npm:1.7.0":
-  version: 1.7.0
-  resolution: "babel-plugin-inline-dotenv@npm:1.7.0"
-  dependencies:
-    dotenv: ^16.0.0
-  peerDependencies:
-    dotenv-expand: ">= 5.0.0"
-  peerDependenciesMeta:
-    dotenv-expand:
-      optional: true
-  checksum: 1203b100b84d247a0db5d1f2565f452e1afa3f747e5ad872ddbf3533b49ec2173ba2c99d22c05fa902914da8de331fbc714132c2eda7b0a2a26fa909dbb10a67
   languageName: node
   linkType: hard
 
