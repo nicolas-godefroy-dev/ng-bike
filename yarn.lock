@@ -5934,15 +5934,15 @@ __metadata:
   linkType: hard
 
 "@prismicio/next@npm:^1.3.2":
-  version: 1.3.2
-  resolution: "@prismicio/next@npm:1.3.2"
+  version: 1.3.3
+  resolution: "@prismicio/next@npm:1.3.3"
   dependencies:
     imgix-url-builder: ^0.0.4
   peerDependencies:
     "@prismicio/client": ^6 || ^7
     next: ^13.4.5
     react: ^18
-  checksum: c68f1b42c28df64a9131a6e2507693e1e1fe086276995b88c3b154cd6e9472e50e452545b3bb10c1544c426ae3935f4bcf300aac02d6416a392aed2702ffc5a8
+  checksum: 3daa0641c4c74f49ab9b2f77e06fe912ef2fabecb8a3e188d4d5c34e75913c46bf4a0a69117ceb4b0f37a0936842d38a68bd8e3e48cd5d7ed41a774f0af12015
   languageName: node
   linkType: hard
 
