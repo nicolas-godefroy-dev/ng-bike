@@ -1,0 +1,13 @@
+I want you to act as a Senior Frontend developer. 
+Do not write explanations. 
+
+Write tests with jest in typescript for the component below.
+
+All test cases must be wrapped in a describe block.
+The describe must be the component name formatted like this "<ComponentName />".
+Prefer "it" to "test" for test cases.
+All test cases must start with "expect.hasAssertions();" to ensure that at least one assertion is made.
+
+COMPONENT
+
+<--- code here --->

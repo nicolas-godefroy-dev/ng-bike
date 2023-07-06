@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-type CardProps = {
-  imageSrc: Nullable<string>;
-  title: Nullable<string>;
-  subtitle: Nullable<string>;
-  ctaText: Nullable<string>;
-  ctaHref: Nullable<string>;
+export type CardProps = {
+  imageSrc?: Nullable<string>;
+  title?: Nullable<string>;
+  subtitle?: Nullable<string>;
+  ctaText?: Nullable<string>;
+  ctaHref?: Nullable<string>;
 };
 
 export const Card: React.FC<CardProps> = ({ imageSrc, title, subtitle, ctaText, ctaHref }) => (

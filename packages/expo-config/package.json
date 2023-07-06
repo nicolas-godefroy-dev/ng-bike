@@ -9,7 +9,7 @@
     "./tsconfig": "./tsconfig.json",
     "./babel": "./babel.config.js",
     "./eslint": "./eslint-config.js",
-    "./jest": "./jest-config.js",
+    "./jest-config": "./jest-config.js",
     "./metro": "./metro.config.js"
   },
   "repository": {

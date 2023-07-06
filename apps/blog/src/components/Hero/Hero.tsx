@@ -3,10 +3,10 @@ import Link from 'next/link';
 import React from 'react';
 
 type HeroProps = {
-  title: Nullable<string>;
-  subtitle: Nullable<string>;
-  ctaText: Nullable<string>;
-  ctaHref: Nullable<string>;
+  title?: Nullable<string>;
+  subtitle?: Nullable<string>;
+  ctaText?: Nullable<string>;
+  ctaHref?: Nullable<string>;
 };
 
 export const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaHref }) => (

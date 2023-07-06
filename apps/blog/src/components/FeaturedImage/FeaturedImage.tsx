@@ -4,7 +4,7 @@ import { PrismicImage } from '@prismicio/react';
 import React from 'react';
 
 type FeaturedImageProps = {
-  image: Nullable<ImageFieldImage>;
+  image?: Nullable<ImageFieldImage>;
 };
 
 export const FeaturedImage: React.FC<FeaturedImageProps> = ({ image }) => (

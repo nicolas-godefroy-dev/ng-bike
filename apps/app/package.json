@@ -9,7 +9,7 @@
     "start": "yarn prebuild && npx expo start --clear",
     "android": "yarn prebuild && npx expo run:android",
     "ios": "yarn prebuild && npx expo run:ios",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "e2e": "maestro test ./**/*.e2e.yaml",
     "typecheck": "yarn prebuild && tsc",
     "lint": "yarn prebuild && npx eslint .",

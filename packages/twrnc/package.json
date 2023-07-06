@@ -11,7 +11,7 @@
     "directory": "packages/twrnc"
   },
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "typecheck": "tsc",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix ."

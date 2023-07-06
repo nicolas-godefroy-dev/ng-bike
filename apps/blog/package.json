@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "slicemachine": "start-slicemachine",
-    "test": "jest --passWithNoTests",
+    "test": "jest --coverage",
     "typecheck": "tsc",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",

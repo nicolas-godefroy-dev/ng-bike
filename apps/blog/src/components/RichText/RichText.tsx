@@ -6,7 +6,7 @@ import React from 'react';
 import { htmlSerializer } from '@/libs/prismic';
 
 type RichTextProps = {
-  content: Nullable<RichTextField>;
+  content?: Nullable<RichTextField>;
 };
 
 export const RichText: React.FC<RichTextProps> = ({ content }) => (
