@@ -1,29 +1,34 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "brush",
-				"type": "Text"
-			},
-			"subtitle": {
-				"__TYPE__": "FieldContent",
-				"value": "likely",
-				"type": "Text"
-			},
-			"ctaHref": {
-				"__TYPE__": "FieldContent",
-				"value": "outer",
-				"type": "Text"
-			},
-			"ctaText": {
-				"__TYPE__": "FieldContent",
-				"value": "riding",
-				"type": "Text"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Commodi ullam eos corrupti"
+      },
+      "subtitle": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Quo error iusto est corporis soluta id quasi doloremque."
+      },
+      "ctaHref": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "#"
+      },
+      "ctaText": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "voluptatem"
+      },
+      "align": {
+        "__TYPE__": "FieldContent",
+        "type": "Select",
+        "value": "center"
+      }
+    },
+    "items": []
+  }
 ]

@@ -1,8 +1,8 @@
 {
-  "id": "hero",
+  "id": "hero_with_background",
   "type": "SharedSlice",
-  "name": "Hero",
-  "description": "Hero",
+  "name": "HeroWithBackground",
+  "description": "HeroWithBackground",
   "variations": [
     {
       "id": "default",
@@ -12,6 +12,14 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": { "width": 1400, "height": 600 },
+            "thumbnails": []
+          }
+        },
         "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } },
         "subtitle": { "type": "Text", "config": { "label": "subtitle", "placeholder": "" } },
         "ctaText": { "type": "Text", "config": { "label": "ctaText", "placeholder": "" } },

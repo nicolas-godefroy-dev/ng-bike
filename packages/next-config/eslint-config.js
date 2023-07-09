@@ -148,7 +148,6 @@ module.exports = {
   rules: {
     // Generic rules
     'unused-imports/no-unused-imports': 'error',
-    'import/no-cycle': 'error',
     'import/order': [
       'warn',
       {
@@ -178,6 +177,7 @@ module.exports = {
     'no-nested-ternary': 'error',
     'no-irregular-whitespace': ['error', { skipComments: true }],
     'react/jsx-key': ['error', { checkFragmentShorthand: true }],
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
     'block-scoped-var': 'error',
     'guard-for-in': 'error',
     'no-constructor-return': 'error',

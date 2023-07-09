@@ -282,6 +282,17 @@ interface HeroSliceDefaultPrimary {
    *
    */
   ctaHref: prismic.KeyTextField;
+  /**
+   * align field in *Hero → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: left
+   * - **API ID Path**: hero.primary.align
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  align: prismic.SelectField<'left' | 'center', 'filled'>;
 }
 /**
  * Default variation for Hero Slice
@@ -310,6 +321,103 @@ type HeroSliceVariation = HeroSliceDefault;
  *
  */
 export type HeroSlice = prismic.SharedSlice<'hero', HeroSliceVariation>;
+/**
+ * Primary content in HeroWithBackground → Primary
+ *
+ */
+interface HeroWithBackgroundSliceDefaultPrimary {
+  /**
+   * image field in *HeroWithBackground → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_with_background.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * title field in *HeroWithBackground → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_with_background.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * subtitle field in *HeroWithBackground → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_with_background.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * ctaText field in *HeroWithBackground → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_with_background.primary.ctaText
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaText: prismic.KeyTextField;
+  /**
+   * ctaHref field in *HeroWithBackground → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_with_background.primary.ctaHref
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaHref: prismic.KeyTextField;
+  /**
+   * align field in *HeroWithBackground → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: left
+   * - **API ID Path**: hero_with_background.primary.align
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  align: prismic.SelectField<'left' | 'center', 'filled'>;
+}
+/**
+ * Default variation for HeroWithBackground Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroWithBackgroundSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<HeroWithBackgroundSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *HeroWithBackground*
+ *
+ */
+type HeroWithBackgroundSliceVariation = HeroWithBackgroundSliceDefault;
+/**
+ * HeroWithBackground Shared Slice
+ *
+ * - **API ID**: `hero_with_background`
+ * - **Description**: `HeroWithBackground`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroWithBackgroundSlice = prismic.SharedSlice<
+  'hero_with_background',
+  HeroWithBackgroundSliceVariation
+>;
 /**
  * Primary content in FeaturedImage → Primary
  *
@@ -400,7 +508,7 @@ declare module '@prismicio/client' {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
   namespace Content {
@@ -419,6 +527,10 @@ declare module '@prismicio/client' {
       HeroSliceDefault,
       HeroSliceVariation,
       HeroSlice,
+      HeroWithBackgroundSliceDefaultPrimary,
+      HeroWithBackgroundSliceDefault,
+      HeroWithBackgroundSliceVariation,
+      HeroWithBackgroundSlice,
       ImageSliceDefaultPrimary,
       ImageSliceDefault,
       ImageSliceVariation,

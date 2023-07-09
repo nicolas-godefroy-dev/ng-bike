@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 
 export const components = {
   hero: dynamic(() => import('./Hero')),
+  hero_with_background: dynamic(() => import('./HeroWithBackground')),
   image: dynamic(() => import('./FeaturedImage')),
   rich_text: dynamic(() => import('./RichText')),
 };
