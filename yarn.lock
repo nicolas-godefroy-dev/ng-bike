@@ -5481,7 +5481,7 @@ __metadata:
     "@ng-bike/tailwind-config": "*"
     husky: 8.0.3
     lint-staged: 13.2.3
-    syncpack: 10.7.2
+    syncpack: 10.7.3
     typescript: ^5.1.3
   languageName: unknown
   linkType: soft
@@ -28871,9 +28871,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"syncpack@npm:10.7.2":
-  version: 10.7.2
-  resolution: "syncpack@npm:10.7.2"
+"syncpack@npm:10.7.3":
+  version: 10.7.3
+  resolution: "syncpack@npm:10.7.3"
   dependencies:
     "@effect/data": 0.12.9
     "@effect/io": 0.27.0
@@ -28903,7 +28903,7 @@ __metadata:
     syncpack-prompt: dist/bin-prompt/index.js
     syncpack-set-semver-ranges: dist/bin-set-semver-ranges/index.js
     syncpack-update: dist/bin-update/index.js
-  checksum: 2d94f5e28274f325b166422c67e1aad1fb2ef16ccf9b800c2db4d4bf209299ce222ae2b7db443d7295145b1e9811ca37e4fb42cba1d7ceb5a6ae2b283aea9060
+  checksum: d8b340b0664138f43d391d2176fb05d7bf23e8036d57114743006b11d0924776da2b36af729cbc7c700aded0e4294cad61c1de3e9902065a4d39fcd512a5243c
   languageName: node
   linkType: hard
 

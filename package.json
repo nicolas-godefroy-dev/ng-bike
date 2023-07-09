@@ -32,7 +32,7 @@
     "@ng-bike/tailwind-config": "*",
     "husky": "8.0.3",
     "lint-staged": "13.2.3",
-    "syncpack": "10.7.2",
+    "syncpack": "10.7.3",
     "typescript": "^5.1.3"
   },
   "resolutions": {
