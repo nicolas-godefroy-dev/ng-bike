@@ -1,4 +1,4 @@
-# Labs
+# Labs 🧑‍🔬
 
 This is a lab project, the purpose is to test new technologies.
 
@@ -43,8 +43,6 @@ To make the implementation more realistic the project implements a real-life app
 
 ## Figma
 
-[FIGMA](https://www.figma.com/file/STwur9wHa2T9eXOTIygLrh/expo-bike-sharing?node-id=0%3A1) file.
+[Figma](https://www.figma.com/file/STwur9wHa2T9eXOTIygLrh/expo-bike-sharing?node-id=0%3A1) source file (components, screens, tokens...).
 
-<p float="left">
-  <img src="./docs/figma.png?raw=true" width="480" />
-</p>
+![Figma source](./docs/figma.png?raw=true)
