@@ -4,9 +4,9 @@ This is a lab project, the purpose is to test new technologies.
 
 To make the implementation more realistic the project implements a real-life app, a bike sharing app.
 
-## Tech Stack
+## Technologies
 
-| Tech                                                                                                             |
+| Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- |
 | api and web apps [next.js](https://nextjs.org/) with [app-router](https://nextjs.org/docs/app)                   |
 | mobile apps [expo](https://docs.expo.dev/) with [expo-router](https://expo.github.io/router/docs/)               |
