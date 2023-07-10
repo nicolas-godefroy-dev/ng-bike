@@ -9,12 +9,12 @@ require:
 
 sources:
   # GBFS api
-  # @see https://transport.data.gouv.fr/gbfs/rouen
+  # @see https://gbfs.urbansharing.com/lovelolibreservice.fr
   # @see https://github.com/MobilityData/gbfs-json-schema/tree/master/v1.1
   - name: Gbfs
     handler:
       jsonSchema:
-        endpoint: 'https://transport.data.gouv.fr/gbfs/rouen'
+        endpoint: 'https://gbfs.urbansharing.com/lovelolibreservice.fr'
         operations:
           - type: Query
             field: gbfs

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://github.com/NABSA/gbfs/blob/v1.1/gbfs.md#gbfsjson",
-  "description": "Auto-discovery file that links to all of the other files publiished by the system.",
+  "$id": "https://github.com/NABSA/gbfs/blob/v2.2/gbfs.md#gbfsjson",
+  "description": "Auto-discovery file that links to all of the other files published by the system.",
   "type": "object",
   "properties": {
     "last_updated": {
@@ -17,7 +17,7 @@
     "version": {
       "description": "GBFS version number to which the feed conforms, according to the versioning framework (added in v1.1).",
       "type": "string",
-      "const": "v1.1"
+      "const": "v2.2"
     },
     "data": {
       "description": "Response data in the form of name:value pairs.",
@@ -39,6 +39,7 @@
                       "gbfs",
                       "gbfs_versions",
                       "system_information",
+                      "vehicle_types",
                       "station_information",
                       "station_status",
                       "free_bike_status",
@@ -46,7 +47,8 @@
                       "system_alerts",
                       "system_calendar",
                       "system_regions",
-                      "system_pricing_plans"
+                      "system_pricing_plans",
+                      "geofencing_zones"
                     ]
                   },
                   "url": {
@@ -57,12 +59,12 @@
                 },
                 "required": ["name", "url"]
               }
-            },
-            "required": true
-          }
-        },
-        "required": true
+            }
+          },
+          "required": ["feeds"]
+        }
       },
+      "minProperties": 1,
       "additionalProperties": false
     }
   },
