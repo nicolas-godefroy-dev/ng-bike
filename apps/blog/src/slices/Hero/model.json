@@ -27,6 +27,53 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "heroWithBackground",
+      "name": "Hero - With Background",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } },
+        "subtitle": { "type": "Text", "config": { "label": "subtitle", "placeholder": "" } },
+        "ctaText": { "type": "Text", "config": { "label": "ctaText", "placeholder": "" } },
+        "ctaHref": { "type": "Text", "config": { "label": "ctaHref", "placeholder": "" } },
+        "align": {
+          "type": "Select",
+          "config": {
+            "label": "align",
+            "placeholder": "",
+            "options": ["left", "center"],
+            "default_value": "left"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "heroWithImage",
+      "name": "Hero - With Image",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } },
+        "subtitle": { "type": "Text", "config": { "label": "subtitle", "placeholder": "" } },
+        "ctaText": { "type": "Text", "config": { "label": "ctaText", "placeholder": "" } },
+        "ctaHref": { "type": "Text", "config": { "label": "ctaHref", "placeholder": "" } },
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        }
+      },
+      "items": {}
     }
   ]
 }

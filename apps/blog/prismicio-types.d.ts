@@ -78,7 +78,7 @@ interface BlogPostDocumentData {
  * Slice for *blog post → Slice Zone*
  *
  */
-type BlogPostDocumentDataSlicesSlice = HeroSlice | ImageSlice | RichTextSlice;
+type BlogPostDocumentDataSlicesSlice = HeroSlice | ImageSlice | RichTextSlice | FaqSlice;
 /**
  * blog post document from Prismic
  *
@@ -144,7 +144,7 @@ interface HomepageDocumentData {
  * Slice for *homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = RichTextSlice | HeroSlice | ImageSlice;
+type HomepageDocumentDataSlicesSlice = RichTextSlice | HeroSlice | ImageSlice | FaqSlice;
 /**
  * homepage document from Prismic
  *
@@ -221,7 +221,7 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | RichTextSlice | ImageSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | RichTextSlice | ImageSlice | FaqSlice;
 /**
  * page document from Prismic
  *
@@ -237,6 +237,75 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
   Lang
 >;
 export type AllDocumentTypes = BlogPostDocument | HomepageDocument | PageDocument;
+/**
+ * Primary content in Faq → Primary
+ *
+ */
+interface FaqSliceDefaultPrimary {
+  /**
+   * title field in *Faq → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+}
+/**
+ * Item in Faq → Items
+ *
+ */
+export interface FaqSliceDefaultItem {
+  /**
+   * question field in *Faq → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.items[].question
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  question: prismic.KeyTextField;
+  /**
+   * answer field in *Faq → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.items[].answer
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  answer: prismic.KeyTextField;
+}
+/**
+ * Default variation for Faq Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FaqSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<FaqSliceDefaultPrimary>,
+  Simplify<FaqSliceDefaultItem>
+>;
+/**
+ * Slice variation for *Faq*
+ *
+ */
+type FaqSliceVariation = FaqSliceDefault;
+/**
+ * Faq Shared Slice
+ *
+ * - **API ID**: `faq`
+ * - **Description**: `Faq`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FaqSlice = prismic.SharedSlice<'faq', FaqSliceVariation>;
 /**
  * Primary content in Hero → Primary
  *
@@ -308,10 +377,159 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
   never
 >;
 /**
+ * Primary content in Hero → Primary
+ *
+ */
+interface HeroSliceHeroWithBackgroundPrimary {
+  /**
+   * title field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * subtitle field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * ctaText field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.ctaText
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaText: prismic.KeyTextField;
+  /**
+   * ctaHref field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.ctaHref
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaHref: prismic.KeyTextField;
+  /**
+   * align field in *Hero → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: left
+   * - **API ID Path**: hero.primary.align
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  align: prismic.SelectField<'left' | 'center', 'filled'>;
+  /**
+   * image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+}
+/**
+ * Hero - With Background variation for Hero Slice
+ *
+ * - **API ID**: `heroWithBackground`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroSliceHeroWithBackground = prismic.SharedSliceVariation<
+  'heroWithBackground',
+  Simplify<HeroSliceHeroWithBackgroundPrimary>,
+  never
+>;
+/**
+ * Primary content in Hero → Primary
+ *
+ */
+interface HeroSliceHeroWithImagePrimary {
+  /**
+   * title field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * subtitle field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * ctaText field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.ctaText
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaText: prismic.KeyTextField;
+  /**
+   * ctaHref field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.ctaHref
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ctaHref: prismic.KeyTextField;
+  /**
+   * image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+}
+/**
+ * Hero - With Image variation for Hero Slice
+ *
+ * - **API ID**: `heroWithImage`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroSliceHeroWithImage = prismic.SharedSliceVariation<
+  'heroWithImage',
+  Simplify<HeroSliceHeroWithImagePrimary>,
+  never
+>;
+/**
  * Slice variation for *Hero*
  *
  */
-type HeroSliceVariation = HeroSliceDefault;
+type HeroSliceVariation = HeroSliceDefault | HeroSliceHeroWithBackground | HeroSliceHeroWithImage;
 /**
  * Hero Shared Slice
  *
@@ -321,103 +539,6 @@ type HeroSliceVariation = HeroSliceDefault;
  *
  */
 export type HeroSlice = prismic.SharedSlice<'hero', HeroSliceVariation>;
-/**
- * Primary content in HeroWithBackground → Primary
- *
- */
-interface HeroWithBackgroundSliceDefaultPrimary {
-  /**
-   * image field in *HeroWithBackground → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_with_background.primary.image
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  image: prismic.ImageField<never>;
-  /**
-   * title field in *HeroWithBackground → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_with_background.primary.title
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  title: prismic.KeyTextField;
-  /**
-   * subtitle field in *HeroWithBackground → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_with_background.primary.subtitle
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  subtitle: prismic.KeyTextField;
-  /**
-   * ctaText field in *HeroWithBackground → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_with_background.primary.ctaText
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  ctaText: prismic.KeyTextField;
-  /**
-   * ctaHref field in *HeroWithBackground → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_with_background.primary.ctaHref
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  ctaHref: prismic.KeyTextField;
-  /**
-   * align field in *HeroWithBackground → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: left
-   * - **API ID Path**: hero_with_background.primary.align
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  align: prismic.SelectField<'left' | 'center', 'filled'>;
-}
-/**
- * Default variation for HeroWithBackground Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Default`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HeroWithBackgroundSliceDefault = prismic.SharedSliceVariation<
-  'default',
-  Simplify<HeroWithBackgroundSliceDefaultPrimary>,
-  never
->;
-/**
- * Slice variation for *HeroWithBackground*
- *
- */
-type HeroWithBackgroundSliceVariation = HeroWithBackgroundSliceDefault;
-/**
- * HeroWithBackground Shared Slice
- *
- * - **API ID**: `hero_with_background`
- * - **Description**: `HeroWithBackground`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HeroWithBackgroundSlice = prismic.SharedSlice<
-  'hero_with_background',
-  HeroWithBackgroundSliceVariation
->;
 /**
  * Primary content in FeaturedImage → Primary
  *
@@ -523,14 +644,19 @@ declare module '@prismicio/client' {
       PageDocumentDataSlicesSlice,
       PageDocument,
       AllDocumentTypes,
+      FaqSliceDefaultPrimary,
+      FaqSliceDefaultItem,
+      FaqSliceDefault,
+      FaqSliceVariation,
+      FaqSlice,
       HeroSliceDefaultPrimary,
       HeroSliceDefault,
+      HeroSliceHeroWithBackgroundPrimary,
+      HeroSliceHeroWithBackground,
+      HeroSliceHeroWithImagePrimary,
+      HeroSliceHeroWithImage,
       HeroSliceVariation,
       HeroSlice,
-      HeroWithBackgroundSliceDefaultPrimary,
-      HeroWithBackgroundSliceDefault,
-      HeroWithBackgroundSliceVariation,
-      HeroWithBackgroundSlice,
       ImageSliceDefaultPrimary,
       ImageSliceDefault,
       ImageSliceVariation,

@@ -1,0 +1,78 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Frequently asked questions"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"question",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "How do I create an account?"
+						}
+					],
+					[
+						"answer",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"question",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Is it available in my city?"
+						}
+					],
+					[
+						"answer",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"question",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Can i use it without a smartphone?"
+						}
+					],
+					[
+						"answer",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+						}
+					]
+				]
+			}
+		]
+	}
+]

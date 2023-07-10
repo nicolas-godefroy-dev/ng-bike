@@ -10,7 +10,7 @@ type RichTextProps = {
 };
 
 export const RichText: React.FC<RichTextProps> = ({ content }) => (
-  <div className="mt-12 mb-24 prose">
+  <div className="w-full max-w-screen-md px-5 mx-auto prose py-9">
     <PrismicRichText field={content} components={htmlSerializer} />
   </div>
 );

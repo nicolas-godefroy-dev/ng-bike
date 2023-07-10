@@ -1,34 +1,149 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "title": {
-        "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "Commodi ullam eos corrupti"
-      },
-      "subtitle": {
-        "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "Quo error iusto est corporis soluta id quasi doloremque."
-      },
-      "ctaHref": {
-        "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "#"
-      },
-      "ctaText": {
-        "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "voluptatem"
-      },
-      "align": {
-        "__TYPE__": "FieldContent",
-        "type": "Select",
-        "value": "center"
-      }
-    },
-    "items": []
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Always the bike you want"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Find a bike, hop in, and relax."
+			},
+			"ctaHref": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "#"
+			},
+			"ctaText": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "See bikes"
+			},
+			"align": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "center"
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "heroWithBackground",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Always the bike you want"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Find a bike, hop in, and relax."
+			},
+			"ctaText": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "See bikes"
+			},
+			"ctaHref": {
+				"__TYPE__": "FieldContent",
+				"value": "several",
+				"type": "Text"
+			},
+			"align": {
+				"__TYPE__": "FieldContent",
+				"value": "left",
+				"type": "Select"
+			},
+			"image": {
+				"origin": {
+					"id": "tG36rvCeqng",
+					"url": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxiaWtlfGVufDB8fHx8MTY4ODg4OTQxOXww&ixlib=rb-4.0.3&q=85",
+					"width": 4440,
+					"height": 2960
+				},
+				"url": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxiaWtlfGVufDB8fHx8MTY4ODg4OTQxOXww&ixlib=rb-4.0.3&q=85",
+				"width": 4440,
+				"height": 2960,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "heroWithImage",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Always the bike you want"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Find a bike, hop in, and relax."
+			},
+			"ctaText": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "See bikes"
+			},
+			"ctaHref": {
+				"__TYPE__": "FieldContent",
+				"value": "onto",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "tG36rvCeqng",
+					"url": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxiaWtlfGVufDB8fHx8MTY4ODg4OTQxOXww&ixlib=rb-4.0.3&q=85",
+					"width": 4440,
+					"height": 2960
+				},
+				"url": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxiaWtlfGVufDB8fHx8MTY4ODg4OTQxOXww&ixlib=rb-4.0.3&q=85",
+				"width": 4440,
+				"height": 2960,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]

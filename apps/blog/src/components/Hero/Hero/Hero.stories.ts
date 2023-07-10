@@ -16,10 +16,9 @@ type Story = StoryObj<typeof Hero>;
 
 export const Default: Story = {
   args: {
-    title: 'Box Office News!',
-    subtitle:
-      'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
-    ctaText: 'Get Started',
+    title: 'Always the bike you want',
+    subtitle: 'Find a bike, hop in, and relax.',
+    ctaText: 'See bikes',
     ctaHref: '#',
     align: 'center',
   },

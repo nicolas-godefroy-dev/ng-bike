@@ -1,0 +1,21 @@
+{
+  "id": "faq",
+  "type": "SharedSlice",
+  "name": "Faq",
+  "description": "Faq",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": { "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } } },
+      "items": {
+        "question": { "type": "Text", "config": { "label": "question", "placeholder": "" } },
+        "answer": { "type": "Text", "config": { "label": "answer", "placeholder": "" } }
+      }
+    }
+  ]
+}

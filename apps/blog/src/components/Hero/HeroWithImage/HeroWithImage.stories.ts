@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { prismicImage } from '@/mocks/prismicImage';
 
-import { HeroWithBackground } from './HeroWithBackground';
+import { HeroWithImage } from './HeroWithImage';
 
-const meta: Meta<typeof HeroWithBackground> = {
-  title: 'components/Hero/HeroWithBackground',
-  component: HeroWithBackground,
+const meta: Meta<typeof HeroWithImage> = {
+  title: 'components/Hero/HeroWithImage',
+  component: HeroWithImage,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -14,7 +14,7 @@ const meta: Meta<typeof HeroWithBackground> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof HeroWithBackground>;
+type Story = StoryObj<typeof HeroWithImage>;
 
 export const Default: Story = {
   args: {
@@ -23,6 +23,5 @@ export const Default: Story = {
     subtitle: 'Find a bike, hop in, and relax.',
     ctaText: 'See bikes',
     ctaHref: '#',
-    align: 'center',
   },
 };

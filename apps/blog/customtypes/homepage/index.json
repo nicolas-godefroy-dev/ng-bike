@@ -13,7 +13,8 @@
           "choices": {
             "rich_text": { "type": "SharedSlice" },
             "hero": { "type": "SharedSlice" },
-            "image": { "type": "SharedSlice" }
+            "image": { "type": "SharedSlice" },
+            "faq": { "type": "SharedSlice" }
           }
         }
       }

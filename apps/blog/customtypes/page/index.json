@@ -15,7 +15,8 @@
           "choices": {
             "hero": { "type": "SharedSlice" },
             "rich_text": { "type": "SharedSlice" },
-            "image": { "type": "SharedSlice" }
+            "image": { "type": "SharedSlice" },
+            "faq": { "type": "SharedSlice" }
           }
         }
       }

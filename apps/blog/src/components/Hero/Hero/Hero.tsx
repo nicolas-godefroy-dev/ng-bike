@@ -27,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="max-w-md">
         <h1 className="text-5xl font-semibold leading-[1.15]">{title}</h1>
         <p className="mt-8 leading-relaxed">{subtitle}</p>
-        <Link href={ctaHref ?? '#'} className="mt-6 btn btn-secondary">
+        <Link href={ctaHref ?? '#'} className="mt-6 btn btn-primary">
           {ctaText}
         </Link>
       </div>
