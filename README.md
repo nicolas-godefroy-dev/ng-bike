@@ -4,18 +4,18 @@ This is a lab project, the purpose is to test new technologies.
 
 To make the implementation more realistic the project implements a real-life app, a bike sharing app.
 
-## Technologies
+## Technologies 🚀
 
 | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- |
-| api and web apps [next.js](https://nextjs.org/) with [app-router](https://nextjs.org/docs/app)                   |
-| mobile apps [expo](https://docs.expo.dev/) with [expo-router](https://expo.github.io/router/docs/)               |
-| styling [tailwind](https://tailwindcss.com/)                                                                     |
-| state managements [react-query](https://tanstack.com/query/v3/) and [zustand](https://github.com/pmndrs/zustand) |
+| API and web apps [next.js](https://nextjs.org/) with [app-router](https://nextjs.org/docs/app)                   |
+| Mobile apps [expo](https://docs.expo.dev/) with [expo-router](https://expo.github.io/router/docs/)               |
+| Styling [tailwind](https://tailwindcss.com/)                                                                     |
+| State managements [react-query](https://tanstack.com/query/v3/) and [zustand](https://github.com/pmndrs/zustand) |
 | CMS [prismic](https://prismic.io/) with [slicemachine](https://prismic.io/slice-machine)                         |
-| style guide [storybook](https://storybook.js.org/)                                                               |
-| unit and integration tests [jest](https://jestjs.io/)                                                            |
-| end-to-end tests [maestro](https://maestro.mobile.dev/)                                                          |
+| Style guide [storybook](https://storybook.js.org/)                                                               |
+| Unit and integration tests [jest](https://jestjs.io/)                                                            |
+| E2E tests [maestro](https://maestro.mobile.dev/)                                                                 |
 
 ## Apps 📱
 
@@ -37,7 +37,7 @@ To make the implementation more realistic the project implements a real-life app
 
 ## Prompts 🤖
 
-| Package                                                               | Description                                             |
+| Prompt                                                                | Description                                             |
 | --------------------------------------------------------------------- | ------------------------------------------------------- |
 | [`prompts/test-react-component`](./packages/test-react-component.txt) | ChatGpt prompt for generate tests for react components. |
 
