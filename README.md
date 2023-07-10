@@ -1,6 +1,8 @@
-# @ng-bike
+# Labs
 
-A Bike Sharing app made in Expo (iOS, Android), React Native. 🚴🚴🏾‍♀️🚴🏽‍♂️
+This is a lab project, the purpose is to test new technologies.
+
+To make the implementation more realistic the project implements a real-life app, a bike sharing app.
 
 ## Tech Stack
 
@@ -35,7 +37,7 @@ A Bike Sharing app made in Expo (iOS, Android), React Native. 🚴🚴🏾‍♀
 
 ## Figma
 
-Feel free to reuse this [FIGMA](https://www.figma.com/file/STwur9wHa2T9eXOTIygLrh/expo-bike-sharing?node-id=0%3A1) file.
+[FIGMA](https://www.figma.com/file/STwur9wHa2T9eXOTIygLrh/expo-bike-sharing?node-id=0%3A1) file.
 
 <p float="left">
   <img src="./docs/figma.png?raw=true" width="480" />
