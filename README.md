@@ -17,15 +17,15 @@ To make the implementation more realistic the project implements a real-life app
 | unit and integration tests [jest](https://jestjs.io/)                                                            |
 | end-to-end tests [maestro](https://maestro.mobile.dev/)                                                          |
 
-## Apps
+## Apps 📱
 
-| App                                  | Description                                                      |
-| ------------------------------------ | ---------------------------------------------------------------- |
-| [`apps/app`](./apps/app/README.md)   | The expo bike sharing app (ios/android).                         |
-| [`apps/api`](./apps/api/README.md)   | The bike sharing api gateway made with GraphQL Mesh and next.js. |
-| [`apps/blog`](./apps/blog/README.md) | The blog made with next.js.                                      |
+| App                                  | Description                                                      | Production                                             |
+| ------------------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------ |
+| [`apps/app`](./apps/app/README.md)   | The expo bike sharing app (ios/android).                         | [link](https://expo.dev/@nicolas-godefroy-dev/ng-bike) |
+| [`apps/api`](./apps/api/README.md)   | The bike sharing api gateway made with GraphQL Mesh and next.js. | [link](https://ng-bike-api.vercel.app/api/graphql)     |
+| [`apps/blog`](./apps/blog/README.md) | The blog made with next.js.                                      | [link](https://ng-bike-blog.vercel.app)                |
 
-## Packages
+## Packages 📦
 
 | Package                                                            | Description                                                                          |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
@@ -35,13 +35,13 @@ To make the implementation more realistic the project implements a real-life app
 | [`packages/twrnc`](./packages/twrnc/README.md)                     | The react-native implementation of tailwind.                                         |
 | [`packages/utils`](./packages/utils/README.md)                     | Set of helpers (functions, types...).                                                |
 
-## Prompts
+## Prompts 🤖
 
 | Package                                                               | Description                                             |
 | --------------------------------------------------------------------- | ------------------------------------------------------- |
 | [`prompts/test-react-component`](./packages/test-react-component.txt) | ChatGpt prompt for generate tests for react components. |
 
-## Figma
+## Figma 🎨
 
 [Figma](https://www.figma.com/file/STwur9wHa2T9eXOTIygLrh/expo-bike-sharing?node-id=0%3A1) source file (components, screens, tokens...).
 
