@@ -35,6 +35,12 @@ To make the implementation more realistic the project implements a real-life app
 | [`packages/twrnc`](./packages/twrnc/README.md)                     | The react-native implementation of tailwind.                                         |
 | [`packages/utils`](./packages/utils/README.md)                     | Set of helpers (functions, types...).                                                |
 
+## Prompts
+
+| Package                                                               | Description                                             |
+| --------------------------------------------------------------------- | ------------------------------------------------------- |
+| [`prompts/test-react-component`](./packages/test-react-component.txt) | ChatGpt prompt for generate tests for react components. |
+
 ## Figma
 
 [FIGMA](https://www.figma.com/file/STwur9wHa2T9eXOTIygLrh/expo-bike-sharing?node-id=0%3A1) file.
