@@ -9110,8 +9110,8 @@ __metadata:
   linkType: hard
 
 "@storybook/addon-styling@npm:^1.3.2":
-  version: 1.3.3
-  resolution: "@storybook/addon-styling@npm:1.3.3"
+  version: 1.3.4
+  resolution: "@storybook/addon-styling@npm:1.3.4"
   dependencies:
     "@babel/template": ^7.20.7
     "@babel/types": ^7.21.5
@@ -9150,7 +9150,7 @@ __metadata:
       optional: true
   bin:
     addon-styling-setup: postinstall.js
-  checksum: 2c1949c635110182e5249ca10686ce2356146ffe1eef9002b4dfebb037bbea06ec0200abb024079617c1996bafadec6e56e1f11679c522b33dfc572123cb1647
+  checksum: 0ec9270747205fea83a99a9c30b6f6928c495035ac209b248a6d92e4ef74cf880742343f8c1100354070368ae3becc61b3ba6bd31ab5c7e92784daaead0c1716
   languageName: node
   linkType: hard
 
