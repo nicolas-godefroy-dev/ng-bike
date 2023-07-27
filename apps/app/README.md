@@ -34,7 +34,7 @@ title: Without Native Changes
 ---
 flowchart LR
   getDevBuild[Get Dev Client]
-  e2eTest[Maestro E2E]
+  e2eTest[Optional Maestro E2E]
   otaUpdate[OTA Update]
   updateReadme[Update JSON Badges]
   getDevBuild --> e2eTest --> otaUpdate --> updateReadme
