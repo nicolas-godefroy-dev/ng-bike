@@ -30,14 +30,24 @@ flowchart LR
 
 ```mermaid
 ---
-title: Without Native Changes
+title: Without Native Changes + E2E Tests (OTA update)
 ---
 flowchart LR
   getDevBuild[Get Dev Client]
-  e2eTest[Optional Maestro E2E]
+  e2eTest[Maestro E2E]
   otaUpdate[OTA Update]
   updateReadme[Update JSON Badges]
   getDevBuild --> e2eTest --> otaUpdate --> updateReadme
+```
+
+```mermaid
+---
+title: Without Native Changes  (OTA update)
+---
+flowchart LR
+  otaUpdate[OTA Update]
+  updateReadme[Update JSON Badges]
+  otaUpdate --> updateReadme
 ```
 
 ### Urgent Submit 🚨
