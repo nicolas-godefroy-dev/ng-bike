@@ -2,14 +2,14 @@
 
 The react-native implementation of tailwind.
 
-## Folder structure
+## Folder structure 📁
 
 | Directory | Description                                                            |
 | --------- | ---------------------------------------------------------------------- |
 | `plugins` | the plugins, to extend the tailwind classes (typography, dark mode...) |
 | `utils`   | the helpers                                                            |
 
-## Commands
+## Commands 📜
 
 | Script      | Description                                                               |
 | ----------- | ------------------------------------------------------------------------- |

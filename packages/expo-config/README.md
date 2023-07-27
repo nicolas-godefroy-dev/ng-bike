@@ -2,7 +2,7 @@
 
 Set of base config files for the expo apps (eslint, metro, babel, typescript, jest).
 
-## Commands
+## Commands 📜
 
 | Script      | Description                                                               |
 | ----------- | ------------------------------------------------------------------------- |

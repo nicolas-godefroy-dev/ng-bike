@@ -2,13 +2,13 @@
 
 Set of helpers (functions, types...)
 
-## Folder structure
+## Folder structure 📁
 
 | Directory | Description               |
 | --------- | ------------------------- |
 | `src`     | contains all the helpers. |
 
-## Commands
+## Commands 📜
 
 | Script      | Description                                                               |
 | ----------- | ------------------------------------------------------------------------- |

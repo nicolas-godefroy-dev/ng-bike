@@ -2,13 +2,13 @@
 
 The tailwind theme for the apps
 
-## Folder structure
+## Folder structure 📁
 
 | Directory | Description                                   |
 | --------- | --------------------------------------------- |
 | `src`     | contains the theme base and the design tokens |
 
-## Commands
+## Commands 📜
 
 | Script      | Description                                                               |
 | ----------- | ------------------------------------------------------------------------- |

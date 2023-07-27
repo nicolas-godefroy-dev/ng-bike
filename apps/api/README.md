@@ -2,14 +2,14 @@
 
 The bike sharing api gateway made with GraphQL Mesh and next.js.
 
-## Folder structure
+## Folder structure 📁
 
 | Directory  | Description                                 |
 | ---------- | ------------------------------------------- |
 | `pages`    | The api routes.                             |
 | `services` | The APIs specs to generate the api gateway. |
 
-## Commands
+## Commands 📜
 
 | Script      | Description                                                               |
 | ----------- | ------------------------------------------------------------------------- |

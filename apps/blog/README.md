@@ -2,7 +2,7 @@
 
 The blog made with next.js.
 
-## Folder structure
+## Folder structure 📁
 
 | Directory     | Description                                           |
 | ------------- | ----------------------------------------------------- |
@@ -15,7 +15,7 @@ The blog made with next.js.
 | `customtypes` | The generated prismic custom types.                   |
 | `public`      | The public files.                                     |
 
-## Commands
+## Commands 📜
 
 | Script            | Description                                                               |
 | ----------------- | ------------------------------------------------------------------------- |

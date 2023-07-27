@@ -19,7 +19,7 @@ To make the implementation more realistic the project implements a real-life app
 
 ## Apps 📱
 
-| App                                  | Description                                                      | Production                                             |
+| Service                              | Description                                                      | Production                                             |
 | ------------------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------ |
 | [`apps/app`](./apps/app/README.md)   | The expo bike sharing app (ios/android).                         | [link](https://expo.dev/@nicolas-godefroy-dev/ng-bike) |
 | [`apps/api`](./apps/api/README.md)   | The bike sharing api gateway made with GraphQL Mesh and next.js. | [link](https://ng-bike-api.vercel.app/api/graphql)     |

@@ -27,9 +27,22 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "extra": {},
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "5a798af8-2a6b-4a0e-a8a1-185ea65cd5df"
+      }
+    },
     "android": {
-      "jsEngine": "hermes"
+      "jsEngine": "hermes",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ],
+      "package": "com.nicolasgodefroydev.ngbike"
     },
     "ios": {
       "jsEngine": "jsc",

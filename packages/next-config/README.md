@@ -2,7 +2,7 @@
 
 Set of base config files for the next apps (eslint, typescript, jest).
 
-## Commands
+## Commands 📜
 
 | Script      | Description                                                               |
 | ----------- | ------------------------------------------------------------------------- |
