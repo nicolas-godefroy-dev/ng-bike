@@ -1,0 +1,31 @@
+{
+  "build": {
+    "base": {
+      "node": "18.16.1"
+    },
+    "development": {
+      "extends": "development-device",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "development-device": {
+      "extends": "base",
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_DEBUG": "1",
+        "EXPO_CONFIG_PLUGIN_VERBOSE_ERRORS": "1"
+      }
+    },
+    "production": {
+      "extends": "base",
+      "releaseChannel": "production",
+      "distribution": "store",
+      "ios": {
+        "applicationArchivePath": "ios/build/*"
+      }
+    }
+  },
+  "cli": { "requireCommit": false }
+}
