@@ -39,7 +39,7 @@ To make the implementation more realistic the project implements a real-life app
 
 | Prompt                                                                | Description                                             |
 | --------------------------------------------------------------------- | ------------------------------------------------------- |
-| [`prompts/test-react-component`](./packages/test-react-component.txt) | ChatGpt prompt for generate tests for react components. |
+| [`prompts/test-react-component`](./prompts/test-react-component.txt) | ChatGpt prompt for generate tests for react components. |
 
 ## Figma 🎨
 
