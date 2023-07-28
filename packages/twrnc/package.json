@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "tailwindcss": "3.3.3",
-    "twrnc": "3.6.2"
+    "twrnc": "3.6.3"
   },
   "devDependencies": {
     "@ng-bike/expo-config": "*",
