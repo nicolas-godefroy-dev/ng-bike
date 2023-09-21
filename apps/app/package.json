@@ -40,7 +40,7 @@
     "expo-splash-screen": "~0.20.4",
     "expo-status-bar": "~1.6.0",
     "expo-updates": "~0.18.8",
-    "graphql": "16.7.1",
+    "graphql": "16.8.1",
     "graphql-request": "6.1.0",
     "graphql-tag": "2.12.6",
     "lodash": "4.17.21",
