@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 18.x.x
       - name: ⚙️ Setup Yarn
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v3.3.2
         with:
           path: node_modules
           key: yarn-cache-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
