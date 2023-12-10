@@ -4826,7 +4826,7 @@ __metadata:
     "@ng-bike/expo-config": "npm:*"
     "@ng-bike/twrnc": "npm:*"
     "@ng-bike/utils": "npm:*"
-    "@react-native-community/netinfo": "npm:9.3.10"
+    "@react-native-community/netinfo": "npm:9.5.0"
     "@react-navigation/native": "npm:6.1.9"
     "@react-navigation/native-stack": "npm:6.9.17"
     "@tanstack/react-query": "npm:4.32.6"
@@ -6241,12 +6241,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/netinfo@npm:9.3.10":
-  version: 9.3.10
-  resolution: "@react-native-community/netinfo@npm:9.3.10"
+"@react-native-community/netinfo@npm:9.5.0":
+  version: 9.5.0
+  resolution: "@react-native-community/netinfo@npm:9.5.0"
   peerDependencies:
     react-native: ">=0.59"
-  checksum: 4c6e35664eca317f096b99c255d46db066a929c3b20dac712420c1d72f0a81fcbf001b05208191645d66e9953a5749d32da07d73236e0e1dada28dbe7e52d80e
+  checksum: 23d6fcd35597837d3cbf3afb04e3314bea3c6c4e1d04288a93c19688c3660c25f5a43af3af3de497ac81182434f0e56d9ec7e58d201ff0ed513666190b361469
   languageName: node
   linkType: hard
 
