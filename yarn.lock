@@ -5257,7 +5257,7 @@ __metadata:
     "@react-navigation/native": 6.1.7
     "@react-navigation/native-stack": 6.9.13
     "@tanstack/react-query": 4.29.23
-    "@types/lodash": 4.14.196
+    "@types/lodash": 4.14.202
     "@types/node": 18.19.3
     "@types/react": ~18.2.8
     "@types/react-dom": ~18.2.6
@@ -11130,10 +11130,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.14.196, @types/lodash@npm:^4.14.167, @types/lodash@npm:^4.14.175":
-  version: 4.14.196
-  resolution: "@types/lodash@npm:4.14.196"
-  checksum: 201d17c3e62ae02a93c99ec78e024b2be9bd75564dd8fd8c26f6ac51a985ab280d28ce2688c3bcdfe785b0991cd9814edff19ee000234c7b45d9a697f09feb6a
+"@types/lodash@npm:4.14.202, @types/lodash@npm:^4.14.167, @types/lodash@npm:^4.14.175":
+  version: 4.14.202
+  resolution: "@types/lodash@npm:4.14.202"
+  checksum: a91acf3564a568c6f199912f3eb2c76c99c5a0d7e219394294213b3f2d54f672619f0fde4da22b29dc5d4c31457cd799acc2e5cb6bd90f9af04a1578483b6ff7
   languageName: node
   linkType: hard
 
@@ -11212,7 +11212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.19.3":
+"@types/node@npm:18.19.3, @types/node@npm:^18.11.9":
   version: 18.19.3
   resolution: "@types/node@npm:18.19.3"
   dependencies:
@@ -11225,15 +11225,6 @@ __metadata:
   version: 16.18.38
   resolution: "@types/node@npm:16.18.38"
   checksum: a3baa141e49ce94486f083eea1240cf38479a73ba663e1bf3f52f85b466125821b6e3ea85ded38fde3901530aca4601291395a50eefcea533a4f3b45171bda28
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^18.11.9":
-  version: 18.19.3
-  resolution: "@types/node@npm:18.19.3"
-  dependencies:
-    undici-types: ~5.26.4
-  checksum: 58c4fa45a78fcec75c78182a4b266395905957633654eb0311c5f9c30ac15c179ea2287ab1af034e46c2db7bb0589ef0000ee64c1de8f568a0aad29eaadb100c
   languageName: node
   linkType: hard
 
