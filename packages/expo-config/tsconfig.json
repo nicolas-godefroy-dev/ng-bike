@@ -5,11 +5,12 @@
   "include": ["."],
   "exclude": ["node_modules", "coverage"],
   "compilerOptions": {
+    "moduleResolution": "node",
     "strict": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "forceConsistentCasingInFileNames": true,
-    "incremental": true,
+    "incremental": false,
     "allowJs": true
   }
 }

@@ -14,7 +14,7 @@
     "lint:fix": "yarn workspaces foreach -v --all run lint:fix",
     "checks": "yarn deps:check && yarn test && yarn lint && yarn typecheck",
     "dev:app": "yarn workspace @ng-bike/app run start",
-    "dev:api": "yarn workspace @ng-bike/blog run dev",
+    "dev:api": "yarn workspace @ng-bike/api run dev",
     "dev:blog": "yarn workspace @ng-bike/blog run dev",
     "storybook:blog": "yarn workspace @ng-bike/blog run dev:storybook",
     "slicemachine:blog": "yarn workspace @ng-bike/blog run start:slicemachine"
