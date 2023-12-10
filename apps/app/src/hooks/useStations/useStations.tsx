@@ -15,6 +15,7 @@ import {
 export const useStations = () => {
   const { userLocation } = useLocationStore();
   const { data, ...restQueryResult } = useStationsQuery<Station[]>(undefined, {
+    queryKey: ['stations'],
     refetchInterval: 1000 * 60, // 1 minute
     select: (res) => {
       const stations = values(

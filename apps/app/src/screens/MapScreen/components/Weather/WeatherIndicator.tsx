@@ -19,6 +19,7 @@ export const WeatherIndicator = ({ style }: WeatherIndicatorProps) => {
   const { data } = useWeatherQuery(
     { lat: `${latitude}`, lon: `${longitude}` },
     {
+      queryKey: ['weather'],
       refetchInterval: 1000 * 60 * 30, // 30 minutes,
     },
   );
