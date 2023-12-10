@@ -24,7 +24,7 @@
     "@react-native-community/netinfo": "9.3.10",
     "@react-navigation/native": "6.1.9",
     "@react-navigation/native-stack": "6.9.17",
-    "@tanstack/react-query": "4.32.6",
+    "@tanstack/react-query": "4.36.1",
     "expo": "^49.0.21",
     "expo-asset": "~8.10.1",
     "expo-blur": "~12.4.1",
