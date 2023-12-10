@@ -4,6 +4,16 @@ This is a lab project, the purpose is to test new technologies.
 
 To make the implementation more realistic the project implements a real-life app, a bike sharing app.
 
+## Getting started 🏁
+
+```bash
+./setup_dev_env.sh
+
+yarn dev:api
+yarn dev:app
+yarn dev:blog
+```
+
 ## Technologies 🚀
 
 | Description                                                                                                      |
