@@ -27,11 +27,11 @@
     "*.{ts,tsx,js,jsx,md,json}": "npx prettier --write"
   },
   "dependencies": {
-    "@commitlint/cli": "17.6.6",
-    "@commitlint/config-conventional": "17.6.6",
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
     "@ng-bike/tailwind-config": "*",
     "husky": "8.0.3",
-    "lint-staged": "13.2.3",
+    "lint-staged": "15.2.0",
     "syncpack": "10.7.2",
     "typescript": "^5.1.3"
   },
