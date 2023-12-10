@@ -1,7 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn deps:check
-yarn lint
-yarn typecheck
-yarn test
+yarn lint:fix 

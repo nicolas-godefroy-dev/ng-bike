@@ -1,5 +1,4 @@
 {
-  "name": "@ng-bike",
   "version": "1.0.0",
   "author": "nicolas-godefroy-dev",
   "private": true,
@@ -9,10 +8,10 @@
   ],
   "scripts": {
     "deps:check": "syncpack list-mismatches && yarn dedupe --check",
-    "test": "yarn workspaces foreach -v run test",
-    "typecheck": "yarn workspaces foreach -v run typecheck",
-    "lint": "yarn workspaces foreach -v run lint",
-    "lint:fix": "yarn workspaces foreach -v run lint:fix",
+    "test": "yarn workspaces foreach -v --all run test",
+    "typecheck": "yarn workspaces foreach -v --all run typecheck",
+    "lint": "yarn workspaces foreach -v --all run lint",
+    "lint:fix": "yarn workspaces foreach -v --all run lint:fix",
     "checks": "yarn deps:check && yarn test && yarn lint && yarn typecheck",
     "dev:app": "yarn workspace @ng-bike/app run start",
     "dev:api": "yarn workspace @ng-bike/blog run dev",
@@ -32,14 +31,14 @@
     "@ng-bike/tailwind-config": "*",
     "husky": "8.0.3",
     "lint-staged": "15.2.0",
-    "syncpack": "10.7.2",
-    "typescript": "^5.1.3"
+    "syncpack": "11.2.1",
+    "typescript": "^5.3.3"
   },
   "resolutions": {
-    "next": "13.4.7",
+    "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.72.1",
+    "react-native": "0.72.6",
     "uuid": "^3.4.0"
   },
   "engines": {
