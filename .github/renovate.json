@@ -15,27 +15,27 @@
     {
       "groupName": "linting",
       "matchPackagePatterns": [".*(eslint|lint|prettier).*"],
-      "automerge": true
+      "automerge": false
     },
     {
       "groupName": "babel",
       "matchPackagePatterns": [".*(babel).*"],
-      "automerge": true
+      "automerge": false
     },
     {
       "groupName": "jest",
       "matchPackagePatterns": [".*(jest|test).*"],
-      "automerge": true
+      "automerge": false
     },
     {
       "groupName": "graphql",
       "matchPackagePatterns": [".*graphql.*"],
-      "automerge": true
+      "automerge": false
     },
     {
       "depTypeList": ["dependencies", "devDependencies"],
       "updateTypes": ["patch", "minor", "major"],
-      "automerge": true
+      "automerge": false
     }
   ]
 }
