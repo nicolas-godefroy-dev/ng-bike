@@ -4865,7 +4865,7 @@ __metadata:
     react-native-reanimated: "npm:~3.6.1"
     react-native-safe-area-context: "npm:4.6.3"
     react-native-screens: "npm:~3.22.0"
-    react-native-svg: "npm:13.9.0"
+    react-native-svg: "npm:13.14.1"
     react-native-svg-transformer: "npm:1.1.0"
     react-native-web: "npm:~0.19.9"
     ts-node: "npm:10.9.2"
@@ -4957,7 +4957,7 @@ __metadata:
     react: "npm:18.2.0"
     react-native: "npm:0.72.6"
     react-native-reanimated: "npm:~3.6.1"
-    react-native-svg: "npm:13.9.0"
+    react-native-svg: "npm:13.14.1"
     react-native-svg-transformer: "npm:1.1.0"
     react-test-renderer: "npm:18.2.0"
     typescript: "npm:^5.3.3"
@@ -22988,16 +22988,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-svg@npm:13.9.0":
-  version: 13.9.0
-  resolution: "react-native-svg@npm:13.9.0"
+"react-native-svg@npm:13.14.1":
+  version: 13.14.1
+  resolution: "react-native-svg@npm:13.14.1"
   dependencies:
     css-select: "npm:^5.1.0"
     css-tree: "npm:^1.1.3"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 01095ba8249cf12b18448ef1ac65e5e18422b5fa62dae400e0898fe80b30de7f07ac2677cf6ee690929c22deb8a11cc234187d92f729501a14e4034cb1f62798
+  checksum: 4889d07dc51605842eedc6a6537580e88c61faa8b10771dfddb5b11e5df92e0fe9bfa64ba1d19375c70be9bddd8d3b27c09af42a3a9b17841408bc3f0eef0acb
   languageName: node
   linkType: hard
 
