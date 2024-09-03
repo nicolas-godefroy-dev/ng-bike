@@ -9,27 +9,26 @@ jobs:
     runs-on: ubuntu-latest
     name: Syncing branches
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
+      - name: ⚙️ Checkout
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Fetch all history to ensure the correct state
+          fetch-depth: 0
 
-      - name: Configure Git
+      - name: ⚙️ Configure Git
         run: |
-          #! Prepare git so we can push a tag
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-      - name: Fetch all branches
+      - name: ⚙️ Fetch all branches
         run: git fetch --all
 
-      - name: Create or overwrite the 'feature/syncing-test' branch
+      - name: ⚙️ Create or overwrite the 'feature/syncing-test' branch
         run: |
           git checkout main
-          git branch -f feature/syncing-test  # Force create/update 'feature/syncing-test' branch to point to 'main'
+          git branch -f feature/syncing-test
 
-      - name: Push 'feature/syncing-test' branch to remote
+      - name: ⚙️ Push 'feature/syncing-test' branch to remote
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push origin feature/syncing-test --force  # Force push 'feature/syncing-test' branch to the remote
+          git push origin feature/syncing-test --force
