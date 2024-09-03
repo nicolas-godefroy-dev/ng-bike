@@ -9,19 +9,27 @@ jobs:
     runs-on: ubuntu-latest
     name: Syncing branches
     steps:
-      - name: ⚙️ Checkout
-        uses: actions/checkout@v4
-
-      - name: ⚙️ Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Checkout the repository
+        uses: actions/checkout@v3
         with:
-          node-version: 18.x.x
+          fetch-depth: 0 # Fetch all history to ensure the correct state
 
-      - name: Opening pull request
-        id: pull
-        uses: tretuna/sync-branches@main
-        with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: 'main'
-          TO_BRANCH: 'feature/syncing-test'
-          PULL_REQUEST_AUTO_MERGE_METHOD: 'rebase'
+      - name: Configure Git
+        run: |
+          #! Prepare git so we can push a tag
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Create or overwrite the 'feature/syncing-test' branch
+        run: |
+          git checkout main
+          git branch -f feature/syncing-test  # Force create/update 'feature/syncing-test' branch to point to 'main'
+
+      - name: Push 'feature/syncing-test' branch to remote
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin feature/syncing-test --force  # Force push 'feature/syncing-test' branch to the remote
