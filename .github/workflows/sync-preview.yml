@@ -1,0 +1,27 @@
+name: Sync preview branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-branches:
+    runs-on: ubuntu-latest
+    name: Syncing branches
+    steps:
+      - name: ⚙️ Checkout
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x.x
+
+      - name: Opening pull request
+        id: pull
+        uses: tretuna/sync-branches@main
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: 'main'
+          TO_BRANCH: 'feature/syncing-test'
+          PULL_REQUEST_AUTO_MERGE_METHOD: 'rebase'
